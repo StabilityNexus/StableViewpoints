@@ -14,7 +14,7 @@ export interface BlogPost {
 }
 
 interface ArticleIndex {
-  articles: string[]
+  articles: Omit<BlogPost, "content">[]
 }
 
 let articlesCache: BlogPost[] | null = null
@@ -25,7 +25,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
   }
 
   try {
-    // Fetch the articles index (just slugs now)
+    // Fetch the articles index
     const indexResponse = await fetch("/articles/articles-index.json")
     if (!indexResponse.ok) {
       throw new Error("Failed to fetch articles index")
@@ -33,13 +33,13 @@ export async function getAllPosts(): Promise<BlogPost[]> {
 
     const indexData: ArticleIndex = await indexResponse.json()
 
-    // Fetch content and metadata for each article from frontmatter
+    // Fetch content for each article
     const postsWithContent = await Promise.all(
-      indexData.articles.map(async (slug) => {
+      indexData.articles.map(async (article) => {
         try {
-          const contentResponse = await fetch(`/articles/${slug}.md`)
+          const contentResponse = await fetch(`/articles/${article.slug}.md`)
           if (!contentResponse.ok) {
-            throw new Error(`Failed to fetch content for ${slug}`)
+            throw new Error(`Failed to fetch content for ${article.slug}`)
           }
 
           const rawContent = await contentResponse.text()
@@ -47,28 +47,22 @@ export async function getAllPosts(): Promise<BlogPost[]> {
           // Parse frontmatter and content
           const { data: frontmatter, content } = matter(rawContent)
 
-          // Extract all metadata from frontmatter
+          // Use frontmatter data if available, otherwise fall back to index data
           return {
-            slug,
-            title: frontmatter.title || "Untitled",
-            author: frontmatter.author || "Anonymous",
-            date: frontmatter.date || new Date().toISOString(),
-            image: frontmatter.image || "/placeholder.svg?height=400&width=600",
-            excerpt: frontmatter.excerpt || content.slice(0, 150) + "...",
-            featured: frontmatter.featured || false,
+            slug: article.slug,
+            title: frontmatter.title || article.title,
+            author: frontmatter.author || article.author,
+            date: frontmatter.date || article.date,
+            image: frontmatter.image || article.image,
+            excerpt: frontmatter.excerpt || article.excerpt,
+            featured: frontmatter.featured !== undefined ? frontmatter.featured : article.featured,
             content: content.trim(), // Only the content without frontmatter
           }
         } catch (error) {
-          console.error(`Error loading article ${slug}:`, error)
+          console.error(`Error loading article ${article.slug}:`, error)
           return {
-            slug,
-            title: "Article Not Found",
-            author: "Unknown",
-            date: new Date().toISOString(),
-            image: "/placeholder.svg?height=400&width=600",
-            excerpt: "This article could not be loaded.",
-            featured: false,
-            content: `# Article Not Found\n\nThe article "${slug}" could not be loaded.`,
+            ...article,
+            content: `# ${article.title}\n\nContent could not be loaded.`,
           }
         }
       }),
