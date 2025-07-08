@@ -45,6 +45,8 @@ export default function Pagination({
 
   const handlePrevious = () => {
     if (hasPrevPage && currentPage > 1) {
+      console.log(hasPrevPage);
+      console.log(currentPage);
       onPageChange(currentPage - 1)
     }
   }
