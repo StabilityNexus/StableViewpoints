@@ -1,5 +1,5 @@
 "use client"
-import { getAllPostsServer } from "@/lib/blog"
+import { getAllPostsServer } from "@/lib/blog-server"
 import HomeClient from "@/components/home-client"
 
 interface BlogPost {
