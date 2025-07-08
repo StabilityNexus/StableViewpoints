@@ -1,6 +1,6 @@
 "use client"
 
-import matter from "gray-matter"
+import blogData from "./blog-data.json"
 
 export interface BlogPost {
   slug: string
@@ -13,95 +13,37 @@ export interface BlogPost {
   featured: boolean
 }
 
-interface ArticleIndex {
-  articles: Omit<BlogPost, "content">[]
+// Get all posts from static data
+export function getAllPosts(): BlogPost[] {
+  // Sort posts: featured first, then by date (newest first)
+  const sortedPosts = [...blogData.posts].sort((a, b) => {
+    // If one is featured and the other isn't, featured comes first
+    if (a.featured && !b.featured) return -1
+    if (!a.featured && b.featured) return 1
+
+    // If both have the same featured status, sort by date
+    return new Date(b.date).getTime() - new Date(a.date).getTime()
+  })
+
+  return sortedPosts
 }
 
-let articlesCache: BlogPost[] | null = null
-
-export async function getAllPosts(): Promise<BlogPost[]> {
-  if (articlesCache) {
-    return articlesCache
-  }
-
-  try {
-    // Fetch the articles index
-    const indexResponse = await fetch("/articles/articles-index.json")
-    if (!indexResponse.ok) {
-      throw new Error("Failed to fetch articles index")
-    }
-
-    const indexData: ArticleIndex = await indexResponse.json()
-
-    // Fetch content for each article
-    const postsWithContent = await Promise.all(
-      indexData.articles.map(async (article) => {
-        try {
-          const contentResponse = await fetch(`/articles/${article.slug}.md`)
-          if (!contentResponse.ok) {
-            throw new Error(`Failed to fetch content for ${article.slug}`)
-          }
-
-          const rawContent = await contentResponse.text()
-
-          // Parse frontmatter and content - only extract content, ignore frontmatter data
-          const { content } = matter(rawContent)
-
-          // Use only data from articles-index.json
-          return {
-            slug: article.slug,
-            title: article.title,
-            author: article.author,
-            date: article.date,
-            image: article.image,
-            excerpt: article.excerpt,
-            featured: article.featured,
-            content: content.trim(), // Only the content without frontmatter
-          }
-        } catch (error) {
-          console.error(`Error loading article ${article.slug}:`, error)
-          return {
-            ...article,
-            content: `# ${article.title}\n\nContent could not be loaded.`,
-          }
-        }
-      }),
-    )
-
-    // Sort posts: featured first, then by date (newest first)
-    const sortedPosts = postsWithContent.sort((a, b) => {
-      // If one is featured and the other isn't, featured comes first
-      if (a.featured && !b.featured) return -1
-      if (!a.featured && b.featured) return 1
-
-      // If both have the same featured status, sort by date
-      return new Date(b.date).getTime() - new Date(a.date).getTime()
-    })
-
-    articlesCache = sortedPosts
-    return sortedPosts
-  } catch (error) {
-    console.error("Error loading articles:", error)
-    return []
-  }
-}
-
-export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
-  const allPosts = await getAllPosts()
+export function getPostBySlug(slug: string): BlogPost | null {
+  const allPosts = getAllPosts()
   return allPosts.find((post) => post.slug === slug) || null
 }
 
-export async function getPaginatedPosts(
+export function getPaginatedPosts(
   page = 1,
   limit = 6,
-): Promise<{
+): {
   posts: BlogPost[]
   totalPages: number
   currentPage: number
   hasNextPage: boolean
   hasPrevPage: boolean
-}> {
-  const allPosts = await getAllPosts()
+} {
+  const allPosts = getAllPosts()
   const totalPosts = allPosts.length
   const totalPages = Math.ceil(totalPosts / limit)
   const startIndex = (page - 1) * limit
