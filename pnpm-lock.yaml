@@ -15,7 +15,7 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       gray-matter:
-        specifier: ^4.0.3
+        specifier: latest
         version: 4.0.3
       lucide-react:
         specifier: ^0.454.0

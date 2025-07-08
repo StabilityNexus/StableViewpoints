@@ -1,5 +1,7 @@
 "use client"
 
+import matter from "gray-matter"
+
 export interface BlogPost {
   slug: string
   title: string
@@ -40,11 +42,21 @@ export async function getAllPosts(): Promise<BlogPost[]> {
             throw new Error(`Failed to fetch content for ${article.slug}`)
           }
 
-          const content = await contentResponse.text()
+          const rawContent = await contentResponse.text()
 
+          // Parse frontmatter and content
+          const { data: frontmatter, content } = matter(rawContent)
+
+          // Use frontmatter data if available, otherwise fall back to index data
           return {
-            ...article,
-            content,
+            slug: article.slug,
+            title: frontmatter.title || article.title,
+            author: frontmatter.author || article.author,
+            date: frontmatter.date || article.date,
+            image: frontmatter.image || article.image,
+            excerpt: frontmatter.excerpt || article.excerpt,
+            featured: frontmatter.featured !== undefined ? frontmatter.featured : article.featured,
+            content: content.trim(), // Only the content without frontmatter
           }
         } catch (error) {
           console.error(`Error loading article ${article.slug}:`, error)
