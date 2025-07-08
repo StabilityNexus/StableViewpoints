@@ -44,17 +44,17 @@ export async function getAllPosts(): Promise<BlogPost[]> {
 
           const rawContent = await contentResponse.text()
 
-          // Parse frontmatter and content
-          const { data: frontmatter, content } = matter(rawContent)
+          // Parse frontmatter and content - only extract content, ignore frontmatter data
+          const { content } = matter(rawContent)
 
-          // Use frontmatter data if available, otherwise fall back to index data
+          // Use only data from articles-index.json
           return {
             slug: article.slug,
-            title: frontmatter.title || article.title,
-            author: frontmatter.author || article.author,
-            date: frontmatter.date || article.date,
-            image: frontmatter.image || article.image,
-            excerpt: frontmatter.excerpt || article.excerpt,
+            title: article.title,
+            author: article.author,
+            date: article.date,
+            image: article.image,
+            excerpt: article.excerpt,
             featured: article.featured,
             content: content.trim(), // Only the content without frontmatter
           }
