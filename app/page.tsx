@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { useSearchParams } from "next/navigation"
+import { useRouter, useSearchParams, usePathname } from "next/navigation"
 import { getPaginatedPosts } from "@/lib/blog"
 import BlogCard from "@/components/blog-card"
 import Pagination from "@/components/pagination"
@@ -26,12 +26,20 @@ interface PaginatedData {
 }
 
 export default function HomePage() {
+  const router = useRouter()
+  const pathname = usePathname()
   const searchParams = useSearchParams()
   const [paginatedData, setPaginatedData] = useState<PaginatedData | null>(null)
   const [loading, setLoading] = useState(true)
+  const [currentPage, setCurrentPage] = useState(1)
 
-  const currentPage = Number.parseInt(searchParams.get("page") || "1", 10)
+  // Update current page when URL changes
+  useEffect(() => {
+    const page = Number.parseInt(searchParams.get("page") || "1", 10)
+    setCurrentPage(page)
+  }, [searchParams])
 
+  // Load posts when current page changes
   useEffect(() => {
     async function loadPosts() {
       setLoading(true)
@@ -47,6 +55,15 @@ export default function HomePage() {
 
     loadPosts()
   }, [currentPage])
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page)
+    if (page === 1) {
+      router.push("/")
+    } else {
+      router.push(`/?page=${page}`)
+    }
+  }
 
   if (loading) {
     return (
@@ -105,6 +122,7 @@ export default function HomePage() {
           totalPages={totalPages}
           hasNextPage={hasNextPage}
           hasPrevPage={hasPrevPage}
+          onPageChange={handlePageChange}
         />
       </main>
 
