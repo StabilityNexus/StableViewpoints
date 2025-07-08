@@ -1,17 +1,75 @@
+"use client"
+
+import { useEffect, useState } from "react"
+import { useSearchParams } from "next/navigation"
 import { getPaginatedPosts } from "@/lib/blog"
 import BlogCard from "@/components/blog-card"
 import Pagination from "@/components/pagination"
 import Link from "next/link"
 import Footer from "@/components/footer"
 
-interface HomePageProps {
-  searchParams: Promise<{ page?: string }>
+interface BlogPost {
+  slug: string
+  title: string
+  author: string
+  date: string
+  image: string
+  excerpt: string
+  featured: boolean
 }
 
-export default async function HomePage({ searchParams }: HomePageProps) {
-  const params = await searchParams
-  const currentPage = Number.parseInt(params.page || "1", 10)
-  const { posts, totalPages, hasNextPage, hasPrevPage } = await getPaginatedPosts(currentPage, 6)
+interface PaginatedData {
+  posts: BlogPost[]
+  totalPages: number
+  hasNextPage: boolean
+  hasPrevPage: boolean
+}
+
+export default function HomePage() {
+  const searchParams = useSearchParams()
+  const [paginatedData, setPaginatedData] = useState<PaginatedData | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  const currentPage = Number.parseInt(searchParams.get("page") || "1", 10)
+
+  useEffect(() => {
+    async function loadPosts() {
+      setLoading(true)
+      try {
+        const data = await getPaginatedPosts(currentPage, 6)
+        setPaginatedData(data)
+      } catch (error) {
+        console.error("Error loading posts:", error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    loadPosts()
+  }, [currentPage])
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#228B22] mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading articles...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (!paginatedData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-gray-600">Failed to load articles.</p>
+        </div>
+      </div>
+    )
+  }
+
+  const { posts, totalPages, hasNextPage, hasPrevPage } = paginatedData
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10">
@@ -26,7 +84,6 @@ export default async function HomePage({ searchParams }: HomePageProps) {
           </div>
           <Link
             href="/submit"
-            target="_blank"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-[#228B22] to-[#91A511] hover:from-[#3E921E] hover:to-[#ADAC0D] text-white px-6 py-3 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
           >
             Submit an Article
