@@ -4,7 +4,6 @@ author: "Thomas Anderson"
 date: "2024-01-04"
 image: "/images/battery-storage.jpg"
 excerpt: "The rapid growth of electric vehicles and their impact on transportation and energy."
-featured: true
 ---
 
 # Electric Vehicle Adoption: Accelerating Change

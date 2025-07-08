@@ -55,7 +55,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
             date: frontmatter.date || article.date,
             image: frontmatter.image || article.image,
             excerpt: frontmatter.excerpt || article.excerpt,
-            featured: frontmatter.featured !== undefined ? frontmatter.featured : article.featured,
+            featured: article.featured,
             content: content.trim(), // Only the content without frontmatter
           }
         } catch (error) {

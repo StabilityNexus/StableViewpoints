@@ -4,7 +4,6 @@ author: "Dr. Elena Petrov"
 date: "2023-12-15"
 image: "/images/battery-storage.jpg"
 excerpt: "How energy storage technology is enabling the renewable energy transition."
-featured: false
 ---
 
 # Energy Storage: The Key to Renewable Success

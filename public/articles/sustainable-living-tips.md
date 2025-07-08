@@ -4,7 +4,6 @@ author: "Emma Green"
 date: "2024-01-15"
 image: "/images/sustainable-living.jpg"
 excerpt: "Discover practical ways to reduce your environmental footprint and live more sustainably without breaking the bank."
-featured: true
 ---
 
 # 10 Simple Tips for Sustainable Living

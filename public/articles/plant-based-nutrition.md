@@ -4,7 +4,6 @@ author: "Dr. Amanda Foster"
 date: "2023-12-22"
 image: "/images/home-garden.jpg"
 excerpt: "The health and environmental benefits of plant-based eating."
-featured: true
 ---
 
 # Plant-Based Nutrition: Health and Sustainability

@@ -4,7 +4,6 @@ author: "Sarah Thompson"
 date: "2023-12-20"
 image: "/images/eco-home.jpg"
 excerpt: "Practical approaches to reducing waste and living more sustainably."
-featured: false
 ---
 
 # Zero Waste Living: Practical Strategies

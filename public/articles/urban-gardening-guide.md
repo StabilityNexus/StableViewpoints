@@ -4,7 +4,6 @@ author: "Lisa Martinez"
 date: "2024-01-18"
 image: "/images/home-garden.jpg"
 excerpt: "Learn how to create a thriving garden in urban environments with limited space."
-featured: false
 ---
 
 # Urban Gardening: Growing Food in Small Spaces

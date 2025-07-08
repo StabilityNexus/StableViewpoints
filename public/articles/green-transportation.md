@@ -4,7 +4,6 @@ author: "Miguel Santos"
 date: "2023-12-18"
 image: "/images/digital-meditation.jpg"
 excerpt: "Exploring sustainable transportation alternatives in cities."
-featured: false
 ---
 
 # Green Transportation Options for Urban Areas

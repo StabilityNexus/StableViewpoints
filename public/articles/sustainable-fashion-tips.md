@@ -4,7 +4,6 @@ author: "Sofia Chen"
 date: "2024-01-12"
 image: "/images/eco-home.jpg"
 excerpt: "How to build a sustainable wardrobe without sacrificing style or breaking the bank."
-featured: false
 ---
 
 # Sustainable Fashion: Style with Purpose

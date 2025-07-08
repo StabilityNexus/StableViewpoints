@@ -41,7 +41,6 @@ author: "Your Name"
 date: "2024-01-25"
 image: "/images/your-image.jpg"
 excerpt: "A brief description of your article that will appear on the homepage."
-featured: false
 ---
 
 # Your Article Title Here
@@ -89,7 +88,7 @@ Don't worry if you're new to GitHub - here's a simple step-by-step guide:
 5. **Use images in your article**:
    - **Header image**: Set in the frontmatter as \`image: "/images/your-header-image.jpg"\`
    - **Inline images**: Use markdown syntax \`![Description](/images/your-image.jpg)\`
-   - **Image paths**: Always start with \`/images/\` (e.g., \`/images/defi-protocol-diagram.png\`)
+   - **Image paths**: Always start with \`/images/\` (e.g., \`/images/defi-protocol-diagram.png\`
 
 6. **Commit your changes**:
    - Scroll down to "Commit new file"
@@ -114,7 +113,7 @@ Don't worry if you're new to GitHub - here's a simple step-by-step guide:
    }
    \`\`\`
    - **Important**: Add a comma after the previous entry and ensure proper JSON formatting
-   - **Featured articles**: Set `"featured": true` if you want your article highlighted (ask us first)
+   - **Featured articles**: Set `"featured": true` if you want your article highlighted with a star (ask us first)
    - Commit the changes with a message like "Add [article title] to index"
 
 8. **Create a Pull Request**:

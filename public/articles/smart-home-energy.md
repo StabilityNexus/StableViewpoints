@@ -4,7 +4,6 @@ author: "Kevin Zhang"
 date: "2023-12-25"
 image: "/images/digital-wellness.jpg"
 excerpt: "How smart home devices can reduce energy consumption and costs."
-featured: false
 ---
 
 # Smart Home Technology for Energy Efficiency

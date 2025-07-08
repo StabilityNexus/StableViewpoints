@@ -4,7 +4,6 @@ author: "Dr. Sarah Johnson"
 date: "2024-01-10"
 image: "/images/solar-panels.jpg"
 excerpt: "Explore the latest developments in renewable energy technology and what they mean for our sustainable future."
-featured: false
 ---
 
 # The Future of Renewable Energy: What to Expect in 2024
