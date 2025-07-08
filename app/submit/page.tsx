@@ -36,9 +36,8 @@ export default function SubmitPage() {
             <p className="text-gray-700 mb-8 leading-relaxed">
               Stable Viewpoints is a digital publication focused on thoughtful perspectives about stability in our
               rapidly changing world. We explore how emerging technologies can be used to bring greater stability to the
-              world.
-              Our mission is to provide well-researched, balanced viewpoints on issues that matter for creating a more
-              stable future.
+              world. Our mission is to provide well-researched, balanced viewpoints on issues that matter for creating a
+              more stable future.
             </p>
 
             {/* Topics We Cover */}
@@ -298,6 +297,55 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                   <div className="flex items-start gap-3">
                     <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
                       7
+                    </span>
+                    <div>
+                      <p className="font-medium text-gray-800">Add your article to the index</p>
+                      <ul className="text-gray-600 list-disc list-inside mt-1 space-y-1">
+                        <li>
+                          Navigate to <code className="bg-gray-100 px-1 rounded">public</code> →{" "}
+                          <code className="bg-gray-100 px-1 rounded">articles</code> folder
+                        </li>
+                        <li>
+                          Click on <code className="bg-gray-100 px-1 rounded">articles-index.json</code>
+                        </li>
+                        <li>Click the pencil icon to edit the file</li>
+                        <li>
+                          Add your article information to the <code className="bg-gray-100 px-1 rounded">articles</code>{" "}
+                          array at the top (it will appear first on the website)
+                        </li>
+                        <li>
+                          <strong>Use this format</strong>:
+                        </li>
+                      </ul>
+                      <div className="bg-gray-900 text-gray-100 p-3 rounded-lg overflow-x-auto mt-2 text-sm">
+                        <pre>{`{
+  "slug": "your-article-title",
+  "title": "Your Article Title Here", 
+  "author": "Your Name",
+  "date": "2024-01-25",
+  "image": "/images/your-header-image.jpg",
+  "excerpt": "A brief description of your article that will appear on the homepage.",
+  "featured": false
+}`}</pre>
+                      </div>
+                      <ul className="text-gray-600 list-disc list-inside mt-2 space-y-1">
+                        <li>
+                          <strong>Important</strong>: Add a comma after the previous entry and ensure proper JSON
+                          formatting
+                        </li>
+                        <li>
+                          <strong>Featured articles</strong>: Set{" "}
+                          <code className="bg-gray-100 px-1 rounded">"featured": true</code> if you want your article
+                          highlighted with a star (ask us first)
+                        </li>
+                        <li>Commit the changes with a message like "Add [article title] to index"</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                      8
                     </span>
                     <div>
                       <p className="font-medium text-gray-800">Create a Pull Request</p>
