@@ -22,7 +22,7 @@ export default function BlogCard({ post }: BlogCardProps) {
       <article className="bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-gradient-to-r from-[#228B22]/10 to-[#FFBF00]/10 relative">
         {/* Featured Star - Discrete yellow star in top right */}
         {post.featured && (
-          <div className="absolute top-3 right-3 z-0">
+          <div className="absolute top-3 right-3 z-2">
             <Star className="w-5 h-5 fill-[#FFBF00] text-[#FFBF00] drop-shadow-sm" />
           </div>
         )}
