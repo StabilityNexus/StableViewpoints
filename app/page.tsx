@@ -68,22 +68,9 @@ export default function HomePage() {
 
   const handlePageChange = useCallback(
     (page: number) => {
-      console.log("handlePageChange");
-      console.log(page);
-      // Ensure page is valid
       if (page < 1) page = 1
-
-      // Update state immediately
       setCurrentPage(page)
-
-      // Update URL
-      //if (page === 1) {
-        // For page 1, use the root path
-        //router.push("/", { scroll: false })
-      //} else {
-        // For other pages, use query parameter
-        router.push(`/?page=${page}`, { scroll: false })
-      //}
+      router.push(`/?page=${page}`, { scroll: false })
     },
     [router],
   )
