@@ -27,8 +27,8 @@ export default function BlogCard({ post }: BlogCardProps) {
           </div>
         )}
 
-        {/* Image - Square aspect ratio */}
-        <div className="relative aspect-square overflow-hidden">
+        {/* Image - Golden ratio aspect ratio (φ:1 ≈ 1.618:1) */}
+        <div className="relative overflow-hidden" style={{ aspectRatio: "1.618 / 1" }}>
           <Image
             src={post.image || "/placeholder.svg"}
             alt={post.title}
