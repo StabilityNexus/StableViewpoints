@@ -39,19 +39,18 @@ export default function Pagination({
   }
 
   const handlePageClick = (page: number) => {
-    if (page !== currentPage) {
-      onPageChange(page)
-    }
+    // Always call onPageChange, even if it's the same page (for consistency)
+    onPageChange(page)
   }
 
   const handlePrevious = () => {
-    if (hasPrevPage) {
+    if (hasPrevPage && currentPage > 1) {
       onPageChange(currentPage - 1)
     }
   }
 
   const handleNext = () => {
-    if (hasNextPage) {
+    if (hasNextPage && currentPage < totalPages) {
       onPageChange(currentPage + 1)
     }
   }
@@ -61,9 +60,9 @@ export default function Pagination({
       {/* Previous Button */}
       <button
         onClick={handlePrevious}
-        disabled={!hasPrevPage}
+        disabled={!hasPrevPage || currentPage <= 1}
         className={`flex items-center gap-1 px-4 py-2 transition-colors shadow-sm ${
-          hasPrevPage
+          hasPrevPage && currentPage > 1
             ? "bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22] hover:text-white cursor-pointer"
             : "bg-gray-100 text-gray-400 cursor-not-allowed"
         }`}
@@ -80,7 +79,7 @@ export default function Pagination({
             onClick={() => handlePageClick(pageNum)}
             className={`px-4 py-2 transition-colors ${
               pageNum === currentPage
-                ? "bg-gradient-to-r from-[#228B22] to-[#91A511] text-white shadow-md"
+                ? "bg-gradient-to-r from-[#228B22] to-[#91A511] text-white shadow-md cursor-default"
                 : "bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22]/10 cursor-pointer"
             }`}
           >
@@ -92,9 +91,9 @@ export default function Pagination({
       {/* Next Button */}
       <button
         onClick={handleNext}
-        disabled={!hasNextPage}
+        disabled={!hasNextPage || currentPage >= totalPages}
         className={`flex items-center gap-1 px-4 py-2 transition-colors shadow-sm ${
-          hasNextPage
+          hasNextPage && currentPage < totalPages
             ? "bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22] hover:text-white cursor-pointer"
             : "bg-gray-100 text-gray-400 cursor-not-allowed"
         }`}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, useCallback } from "react"
 import { useRouter, useSearchParams, usePathname } from "next/navigation"
 import { getPaginatedPosts } from "@/lib/blog"
 import BlogCard from "@/components/blog-card"
@@ -33,11 +33,21 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true)
   const [currentPage, setCurrentPage] = useState(1)
 
+  // Get current page from URL
+  const getPageFromUrl = useCallback(() => {
+    const pageParam = searchParams.get("page")
+    if (!pageParam) return 1
+    const page = Number.parseInt(pageParam, 10)
+    return isNaN(page) || page < 1 ? 1 : page
+  }, [searchParams])
+
   // Update current page when URL changes
   useEffect(() => {
-    const page = Number.parseInt(searchParams.get("page") || "1", 10)
-    setCurrentPage(page)
-  }, [searchParams])
+    const urlPage = getPageFromUrl()
+    if (urlPage !== currentPage) {
+      setCurrentPage(urlPage)
+    }
+  }, [searchParams, getPageFromUrl, currentPage])
 
   // Load posts when current page changes
   useEffect(() => {
@@ -56,14 +66,25 @@ export default function HomePage() {
     loadPosts()
   }, [currentPage])
 
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page)
-    if (page === 1) {
-      router.push("/")
-    } else {
-      router.push(`/?page=${page}`)
-    }
-  }
+  const handlePageChange = useCallback(
+    (page: number) => {
+      // Ensure page is valid
+      if (page < 1) page = 1
+
+      // Update state immediately
+      setCurrentPage(page)
+
+      // Update URL
+      if (page === 1) {
+        // For page 1, use the root path
+        router.push("/", { scroll: false })
+      } else {
+        // For other pages, use query parameter
+        router.push(`/?page=${page}`, { scroll: false })
+      }
+    },
+    [router],
+  )
 
   if (loading) {
     return (
