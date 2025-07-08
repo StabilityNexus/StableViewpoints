@@ -96,7 +96,28 @@ Don't worry if you're new to GitHub - here's a simple step-by-step guide:
    - Add a commit message like "Add article: Your Article Title"
    - Click "Commit new file"
 
-7. **Create a Pull Request**:
+7. **Add your article to the index**:
+   - Navigate to `public` → `articles` folder
+   - Click on `articles-index.json`
+   - Click the pencil icon to edit the file
+   - Add your article information to the `articles` array at the top (it will appear first on the website)
+   - Use this format:
+   \`\`\`json
+   {
+     "slug": "your-article-title",
+     "title": "Your Article Title Here",
+     "author": "Your Name",
+     "date": "2024-01-25",
+     "image": "/images/your-header-image.jpg",
+     "excerpt": "A brief description of your article that will appear on the homepage.",
+     "featured": false
+   }
+   \`\`\`
+   - **Important**: Add a comma after the previous entry and ensure proper JSON formatting
+   - **Featured articles**: Set `"featured": true` if you want your article highlighted (ask us first)
+   - Commit the changes with a message like "Add [article title] to index"
+
+8. **Create a Pull Request**:
    - You'll see a banner saying "This branch is ahead"
    - Click "Contribute" → "Open pull request"
    - Add a title and description for your submission
