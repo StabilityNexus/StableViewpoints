@@ -185,10 +185,10 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                       <p className="text-gray-600">
                         Visit{" "}
                         <Link
-                          href="https://github.com/your-username/stable-viewpoints-blog"
+                          href="https://github.com/StabilityNexus/StableViewpoints"
                           className="text-[#228B22] hover:underline"
                         >
-                          github.com/your-username/stable-viewpoints-blog
+                          github.com/StabilityNexus/StableViewpoints
                         </Link>
                       </p>
                     </div>
