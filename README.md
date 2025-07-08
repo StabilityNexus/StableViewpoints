@@ -81,7 +81,7 @@ Don't worry if you're new to GitHub - here's a simple step-by-step guide:
    - Commit the images with a message like "Add images for [article title]"
 
 4. **Add your article**:
-   - Navigate to \`content\` → \`articles\` folder
+   - Navigate to \`public\` → \`articles\` folder
    - Click "Add file" → "Create new file"
    - Name your file: \`your-article-title.md\` (use hyphens instead of spaces)
    - Paste your article content in the editor
