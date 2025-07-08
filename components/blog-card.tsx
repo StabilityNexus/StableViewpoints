@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Calendar, User, Star } from "lucide-react"
+import { User, Star } from "lucide-react"
 
 interface BlogPost {
   slug: string
@@ -20,16 +20,15 @@ export default function BlogCard({ post }: BlogCardProps) {
   return (
     <Link href={`/a/${post.slug}`} className="group">
       <article className="bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-gradient-to-r from-[#228B22]/10 to-[#FFBF00]/10 relative">
-        {/* Featured Badge */}
+        {/* Featured Star - Discrete yellow star in top right */}
         {post.featured && (
-          <div className="absolute top-4 left-4 z-10 bg-gradient-to-r from-[#E4B905] to-[#FFBF00] text-white px-3 py-1 text-sm font-semibold flex items-center gap-1 shadow-lg">
-            <Star className="w-3 h-3 fill-current" />
-            Featured
+          <div className="absolute top-3 right-3 z-20">
+            <Star className="w-5 h-5 fill-[#FFBF00] text-[#FFBF00] drop-shadow-sm" />
           </div>
         )}
 
-        {/* Image - Square aspect ratio */}
-        <div className="relative aspect-square overflow-hidden">
+        {/* Image - Golden ratio aspect ratio (φ:1 ≈ 1.618:1) */}
+        <div className="relative overflow-hidden" style={{ aspectRatio: "1.618 / 1" }}>
           <Image
             src={post.image || "/placeholder.svg"}
             alt={post.title}

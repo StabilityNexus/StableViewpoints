@@ -4,7 +4,6 @@ author: "David Park"
 date: "2024-01-08"
 image: "/images/mindfulness-app.jpg"
 excerpt: "How mindfulness practices can enhance productivity while maintaining work-life balance."
-featured: false
 ---
 
 # Mindfulness and Productivity: Finding Balance

@@ -4,7 +4,6 @@ author: "Maria Rodriguez"
 date: "2024-01-06"
 image: "/images/eco-home.jpg"
 excerpt: "Exploring sustainable architecture principles that reduce environmental impact."
-featured: false
 ---
 
 # Green Building Design: Architecture for the Future

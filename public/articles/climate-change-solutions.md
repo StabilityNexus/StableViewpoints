@@ -4,7 +4,6 @@ author: "Dr. Michael Torres"
 date: "2024-01-20"
 image: "/images/solar-panels.jpg"
 excerpt: "Exploring innovative approaches to combat climate change through technology and policy."
-featured: true
 ---
 
 # Climate Change Solutions for the Modern World

@@ -1,4 +1,5 @@
-import Link from "next/link"
+"use client"
+
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 interface PaginationProps {
@@ -6,9 +7,16 @@ interface PaginationProps {
   totalPages: number
   hasNextPage: boolean
   hasPrevPage: boolean
+  onPageChange: (page: number) => void
 }
 
-export default function Pagination({ currentPage, totalPages, hasNextPage, hasPrevPage }: PaginationProps) {
+export default function Pagination({
+  currentPage,
+  totalPages,
+  hasNextPage,
+  hasPrevPage,
+  onPageChange,
+}: PaginationProps) {
   if (totalPages <= 1) return null
 
   const getPageNumbers = () => {
@@ -30,56 +38,69 @@ export default function Pagination({ currentPage, totalPages, hasNextPage, hasPr
     return pages
   }
 
+  const handlePageClick = (page: number) => {
+    // Always call onPageChange, even if it's the same page (for consistency)
+    onPageChange(page)
+  }
+
+  const handlePrevious = () => {
+    if (hasPrevPage && currentPage > 1) {
+      onPageChange(currentPage - 1)
+    }
+  }
+
+  const handleNext = () => {
+    if (hasNextPage && currentPage < totalPages) {
+      onPageChange(currentPage + 1)
+    }
+  }
+
   return (
     <div className="flex items-center justify-center gap-2 mt-12">
       {/* Previous Button */}
-      {hasPrevPage ? (
-        <Link
-          href={currentPage === 2 ? "/" : `/?page=${currentPage - 1}`}
-          className="flex items-center gap-1 px-4 py-2 bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22] hover:text-white transition-colors shadow-sm"
-        >
-          <ChevronLeft className="w-4 h-4" />
-          Previous
-        </Link>
-      ) : (
-        <div className="flex items-center gap-1 px-4 py-2 bg-gray-100 text-gray-400 cursor-not-allowed">
-          <ChevronLeft className="w-4 h-4" />
-          Previous
-        </div>
-      )}
+      <button
+        onClick={handlePrevious}
+        disabled={!hasPrevPage || currentPage <= 1}
+        className={`flex items-center gap-1 px-4 py-2 transition-colors shadow-sm ${
+          hasPrevPage && currentPage > 1
+            ? "bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22] hover:text-white cursor-pointer"
+            : "bg-gray-100 text-gray-400 cursor-not-allowed"
+        }`}
+      >
+        <ChevronLeft className="w-4 h-4" />
+        Previous
+      </button>
 
       {/* Page Numbers */}
       <div className="flex items-center gap-1">
         {getPageNumbers().map((pageNum) => (
-          <Link
+          <button
             key={pageNum}
-            href={pageNum === 1 ? "/" : `/?page=${pageNum}`}
+            onClick={() => handlePageClick(pageNum)}
             className={`px-4 py-2 transition-colors ${
               pageNum === currentPage
-                ? "bg-gradient-to-r from-[#228B22] to-[#91A511] text-white shadow-md"
-                : "bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22]/10"
+                ? "bg-gradient-to-r from-[#228B22] to-[#91A511] text-white shadow-md cursor-default"
+                : "bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22]/10 cursor-pointer"
             }`}
           >
             {pageNum}
-          </Link>
+          </button>
         ))}
       </div>
 
       {/* Next Button */}
-      {hasNextPage ? (
-        <Link
-          href={`/?page=${currentPage + 1}`}
-          className="flex items-center gap-1 px-4 py-2 bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22] hover:text-white transition-colors shadow-sm"
-        >
-          Next
-          <ChevronRight className="w-4 h-4" />
-        </Link>
-      ) : (
-        <div className="flex items-center gap-1 px-4 py-2 bg-gray-100 text-gray-400 cursor-not-allowed">
-          Next
-          <ChevronRight className="w-4 h-4" />
-        </div>
-      )}
+      <button
+        onClick={handleNext}
+        disabled={!hasNextPage || currentPage >= totalPages}
+        className={`flex items-center gap-1 px-4 py-2 transition-colors shadow-sm ${
+          hasNextPage && currentPage < totalPages
+            ? "bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22] hover:text-white cursor-pointer"
+            : "bg-gray-100 text-gray-400 cursor-not-allowed"
+        }`}
+      >
+        Next
+        <ChevronRight className="w-4 h-4" />
+      </button>
     </div>
   )
 }

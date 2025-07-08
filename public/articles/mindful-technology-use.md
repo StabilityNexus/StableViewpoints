@@ -4,7 +4,6 @@ author: "Alex Chen"
 date: "2024-01-05"
 image: "/images/digital-wellness.jpg"
 excerpt: "Learn how to maintain a healthy relationship with technology while staying connected in our digital world."
-featured: true
 ---
 
 # Mindful Technology Use in the Digital Age

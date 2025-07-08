@@ -4,7 +4,6 @@ author: "Dr. Rachel Kim"
 date: "2024-01-16"
 image: "/images/digital-wellness.jpg"
 excerpt: "Understanding how taking breaks from technology can improve mental health and productivity."
-featured: false
 ---
 
 # The Science Behind Digital Detox

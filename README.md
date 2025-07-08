@@ -41,7 +41,6 @@ author: "Your Name"
 date: "2024-01-25"
 image: "/images/your-image.jpg"
 excerpt: "A brief description of your article that will appear on the homepage."
-featured: false
 ---
 
 # Your Article Title Here
@@ -81,7 +80,7 @@ Don't worry if you're new to GitHub - here's a simple step-by-step guide:
    - Commit the images with a message like "Add images for [article title]"
 
 4. **Add your article**:
-   - Navigate to \`content\` → \`articles\` folder
+   - Navigate to \`public\` → \`articles\` folder
    - Click "Add file" → "Create new file"
    - Name your file: \`your-article-title.md\` (use hyphens instead of spaces)
    - Paste your article content in the editor
@@ -89,14 +88,35 @@ Don't worry if you're new to GitHub - here's a simple step-by-step guide:
 5. **Use images in your article**:
    - **Header image**: Set in the frontmatter as \`image: "/images/your-header-image.jpg"\`
    - **Inline images**: Use markdown syntax \`![Description](/images/your-image.jpg)\`
-   - **Image paths**: Always start with \`/images/\` (e.g., \`/images/defi-protocol-diagram.png\`)
+   - **Image paths**: Always start with \`/images/\` (e.g., \`/images/defi-protocol-diagram.png\`
 
 6. **Commit your changes**:
    - Scroll down to "Commit new file"
    - Add a commit message like "Add article: Your Article Title"
    - Click "Commit new file"
 
-7. **Create a Pull Request**:
+7. **Add your article to the index**:
+   - Navigate to `public` → `articles` folder
+   - Click on `articles-index.json`
+   - Click the pencil icon to edit the file
+   - Add your article information to the `articles` array at the top (it will appear first on the website)
+   - Use this format:
+   \`\`\`json
+   {
+     "slug": "your-article-title",
+     "title": "Your Article Title Here",
+     "author": "Your Name",
+     "date": "2024-01-25",
+     "image": "/images/your-header-image.jpg",
+     "excerpt": "A brief description of your article that will appear on the homepage.",
+     "featured": false
+   }
+   \`\`\`
+   - **Important**: Add a comma after the previous entry and ensure proper JSON formatting
+   - **Featured articles**: Set `"featured": true` if you want your article highlighted with a star (ask us first)
+   - Commit the changes with a message like "Add [article title] to index"
+
+8. **Create a Pull Request**:
    - You'll see a banner saying "This branch is ahead"
    - Click "Contribute" → "Open pull request"
    - Add a title and description for your submission

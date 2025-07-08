@@ -4,7 +4,6 @@ author: "Jennifer Lee"
 date: "2024-01-02"
 image: "/images/home-garden.jpg"
 excerpt: "Practical methods for conserving water at home and in the community."
-featured: false
 ---
 
 # Water Conservation: Every Drop Counts

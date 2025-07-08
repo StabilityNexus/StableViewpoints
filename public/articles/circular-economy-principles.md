@@ -4,7 +4,6 @@ author: "Dr. Robert Kim"
 date: "2023-12-28"
 image: "/images/sustainable-living.jpg"
 excerpt: "How circular economy principles can transform business and reduce waste."
-featured: false
 ---
 
 # Understanding the Circular Economy

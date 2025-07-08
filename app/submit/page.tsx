@@ -12,7 +12,7 @@ export default function SubmitPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10">
       {/* Header */}
-      <header className="border-b border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20 bg-white/90 backdrop-blur-sm sticky top-0 z-10 shadow-sm">
+      <header className="border-b border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20 bg-white/90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
           <Link
             href="/"
@@ -36,9 +36,8 @@ export default function SubmitPage() {
             <p className="text-gray-700 mb-8 leading-relaxed">
               Stable Viewpoints is a digital publication focused on thoughtful perspectives about stability in our
               rapidly changing world. We explore how emerging technologies can be used to bring greater stability to the
-              world.
-              Our mission is to provide well-researched, balanced viewpoints on issues that matter for creating a more
-              stable future.
+              world. Our mission is to provide well-researched, balanced viewpoints on issues that matter for creating a
+              more stable future.
             </p>
 
             {/* Topics We Cover */}
@@ -144,7 +143,6 @@ author: "Your Name"
 date: "2024-01-25"
 image: "/images/your-image.jpg"
 excerpt: "A brief description of your article that will appear on the homepage."
-featured: false
 ---
 
 # Your Article Title Here
@@ -171,155 +169,269 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                   <span className="bg-[#ADAC0D] text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">
                     3
                   </span>
-                  Submit via GitHub (No Experience Required!)
+                  Submit your Article to the GitHub Repo
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Don't worry if you're new to GitHub - here's a simple step-by-step guide:
                 </p>
 
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                {/* Sub-step 3.1 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#ADAC0D]/20">
+                  <h4 className="text-lg font-semibold text-[#ADAC0D] mb-3 flex items-center gap-3">
+                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       1
                     </span>
-                    <div>
-                      <p className="font-medium text-gray-800">Go to our repository</p>
-                      <p className="text-gray-600">
-                        Visit{" "}
-                        <Link
-                          href="https://github.com/your-username/stable-viewpoints-blog"
-                          className="text-[#228B22] hover:underline"
-                        >
-                          github.com/your-username/stable-viewpoints-blog
-                        </Link>
-                      </p>
-                    </div>
-                  </div>
+                    Go to our repository
+                  </h4>
+                  <p className="text-gray-700">
+                    Visit{" "}
+                    <Link
+                      href="https://github.com/StabilityNexus/StableViewpoints"
+                      className="text-[#228B22] hover:underline font-medium"
+                    >
+                      github.com/StabilityNexus/StableViewpoints
+                    </Link>
+                  </p>
+                </div>
 
-                  <div className="flex items-start gap-3">
-                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                {/* Sub-step 3.2 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#ADAC0D]/20">
+                  <h4 className="text-lg font-semibold text-[#ADAC0D] mb-3 flex items-center gap-3">
+                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       2
                     </span>
-                    <div>
-                      <p className="font-medium text-gray-800">Fork the repository</p>
-                      <p className="text-gray-600">
-                        Click the "Fork" button in the top-right corner. This creates your own copy of the project.
-                      </p>
-                    </div>
-                  </div>
+                    Fork the repository
+                  </h4>
+                  <p className="text-gray-700">
+                    Click the "Fork" button in the top-right corner. This creates your own copy of the project.
+                  </p>
+                </div>
 
-                  <div className="flex items-start gap-3">
-                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                {/* Sub-step 3.3 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#ADAC0D]/20">
+                  <h4 className="text-lg font-semibold text-[#ADAC0D] mb-3 flex items-center gap-3">
+                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       3
                     </span>
-                    <div>
-                      <p className="font-medium text-gray-800">Add your images</p>
-                      <ul className="text-gray-600 list-disc list-inside mt-1 space-y-1">
-                        <li>
-                          In your forked repository, click on <code className="bg-gray-100 px-1 rounded">public</code>{" "}
-                          folder
-                        </li>
-                        <li>
-                          Then click on <code className="bg-gray-100 px-1 rounded">images</code> folder
-                        </li>
-                        <li>Click "Add file" → "Upload files"</li>
-                        <li>Drag and drop your images or click "choose your files"</li>
-                        <li>
-                          <strong>Image requirements</strong>: JPG, PNG, or WebP format, under 2MB each
-                        </li>
-                        <li>
-                          <strong>Naming</strong>: Use descriptive names with hyphens (e.g.,{" "}
-                          <code className="bg-gray-100 px-1 rounded">bitcoin-price-chart.jpg</code>)
-                        </li>
-                        <li>Commit the images with a message like "Add images for [article title]"</li>
-                      </ul>
-                    </div>
-                  </div>
+                    Add your images
+                  </h4>
+                  <ul className="text-gray-700 list-disc list-inside space-y-2">
+                    <li>
+                      In your forked repository, click on <code className="bg-gray-100 px-1 rounded">public</code>{" "}
+                      folder
+                    </li>
+                    <li>
+                      Then click on <code className="bg-gray-100 px-1 rounded">images</code> folder
+                    </li>
+                    <li>Click "Add file" → "Upload files"</li>
+                    <li>Drag and drop your images or click "choose your files"</li>
+                    <li>
+                      <strong>Image requirements</strong>: JPG, PNG, or WebP format, under 2MB each
+                    </li>
+                    <li>
+                      <strong>Naming</strong>: Use descriptive names with hyphens (e.g.,{" "}
+                      <code className="bg-gray-100 px-1 rounded">bitcoin-price-chart.jpg</code>)
+                    </li>
+                    <li>Commit the images with a message like "Add images for [article title]"</li>
+                  </ul>
+                </div>
 
-                  <div className="flex items-start gap-3">
-                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                {/* Sub-step 3.4 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#ADAC0D]/20">
+                  <h4 className="text-lg font-semibold text-[#ADAC0D] mb-3 flex items-center gap-3">
+                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       4
                     </span>
-                    <div>
-                      <p className="font-medium text-gray-800">Add your article</p>
-                      <ul className="text-gray-600 list-disc list-inside mt-1 space-y-1">
-                        <li>
-                          Navigate to <code className="bg-gray-100 px-1 rounded">content</code> →{" "}
-                          <code className="bg-gray-100 px-1 rounded">articles</code> folder
-                        </li>
-                        <li>Click "Add file" → "Create new file"</li>
-                        <li>
-                          Name your file: <code className="bg-gray-100 px-1 rounded">your-article-title.md</code> (use
-                          hyphens instead of spaces)
-                        </li>
-                        <li>Paste your article content in the editor</li>
-                      </ul>
-                    </div>
-                  </div>
+                    Add your article
+                  </h4>
+                  <ul className="text-gray-700 list-disc list-inside space-y-2">
+                    <li>
+                      Navigate to <code className="bg-gray-100 px-1 rounded">public</code> →{" "}
+                      <code className="bg-gray-100 px-1 rounded">articles</code> folder
+                    </li>
+                    <li>Click "Add file" → "Create new file"</li>
+                    <li>
+                      Name your file: <code className="bg-gray-100 px-1 rounded">your-article-title.md</code> (use
+                      hyphens instead of spaces)
+                    </li>
+                    <li>Paste your article content in the editor</li>
+                  </ul>
+                </div>
 
-                  <div className="flex items-start gap-3">
-                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                {/* Sub-step 3.5 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#ADAC0D]/20">
+                  <h4 className="text-lg font-semibold text-[#ADAC0D] mb-3 flex items-center gap-3">
+                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       5
                     </span>
-                    <div>
-                      <p className="font-medium text-gray-800">Use images in your article</p>
-                      <ul className="text-gray-600 list-disc list-inside mt-1 space-y-1">
-                        <li>
-                          <strong>Header image</strong>: Set in the frontmatter as{" "}
-                          <code className="bg-gray-100 px-1 rounded">image: "/images/your-header-image.jpg"</code>
-                        </li>
-                        <li>
-                          <strong>Inline images</strong>: Use markdown syntax{" "}
-                          <code className="bg-gray-100 px-1 rounded">![Description](/images/your-image.jpg)</code>
-                        </li>
-                        <li>
-                          <strong>Image paths</strong>: Always start with{" "}
-                          <code className="bg-gray-100 px-1 rounded">/images/</code> (e.g.,{" "}
-                          <code className="bg-gray-100 px-1 rounded">/images/defi-protocol-diagram.png</code>)
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
+                    Use images in your article
+                  </h4>
+                  <ul className="text-gray-700 list-disc list-inside space-y-2">
+                    <li>
+                      <strong>Header image</strong>: Set in the frontmatter as{" "}
+                      <code className="bg-gray-100 px-1 rounded">image: "/images/your-header-image.jpg"</code>
+                    </li>
+                    <li>
+                      <strong>Inline images</strong>: Use markdown syntax{" "}
+                      <code className="bg-gray-100 px-1 rounded">![Description](/images/your-image.jpg)</code>
+                    </li>
+                    <li>
+                      <strong>Image paths</strong>: Always start with{" "}
+                      <code className="bg-gray-100 px-1 rounded">/images/</code> (e.g.,{" "}
+                      <code className="bg-gray-100 px-1 rounded">/images/defi-protocol-diagram.png</code>)
+                    </li>
+                  </ul>
+                </div>
 
-                  <div className="flex items-start gap-3">
-                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                {/* Sub-step 3.6 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#ADAC0D]/20">
+                  <h4 className="text-lg font-semibold text-[#ADAC0D] mb-3 flex items-center gap-3">
+                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       6
                     </span>
-                    <div>
-                      <p className="font-medium text-gray-800">Commit your changes</p>
-                      <ul className="text-gray-600 list-disc list-inside mt-1 space-y-1">
-                        <li>Scroll down to "Commit new file"</li>
-                        <li>Add a commit message like "Add article: Your Article Title"</li>
-                        <li>Click "Commit new file"</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
-                      7
-                    </span>
-                    <div>
-                      <p className="font-medium text-gray-800">Create a Pull Request</p>
-                      <ul className="text-gray-600 list-disc list-inside mt-1 space-y-1">
-                        <li>You'll see a banner saying "This branch is ahead"</li>
-                        <li>Click "Contribute" → "Open pull request"</li>
-                        <li>Add a title and description for your submission</li>
-                        <li>
-                          <strong>Include</strong>: List of images you've added and their purpose
-                        </li>
-                        <li>Click "Create pull request"</li>
-                      </ul>
-                    </div>
-                  </div>
+                    Commit your changes
+                  </h4>
+                  <ul className="text-gray-700 list-disc list-inside space-y-2">
+                    <li>Scroll down to "Commit new file"</li>
+                    <li>Add a commit message like "Add article: Your Article Title"</li>
+                    <li>Click "Commit new file"</li>
+                  </ul>
                 </div>
               </div>
 
-              {/* Step 4 */}
+              {/* Step 4 - Add to Index */}
               <div className="mb-8 p-6 bg-gradient-to-r from-[#C8B209]/5 to-[#E4B905]/5 rounded-lg border border-[#C8B209]/10">
                 <h3 className="text-2xl font-semibold text-[#C8B209] mb-4 flex items-center gap-3">
                   <span className="bg-[#C8B209] text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">
                     4
+                  </span>
+                  Add your Article to the Index
+                </h3>
+
+                {/* Sub-step 4.1 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#C8B209]/20">
+                  <h4 className="text-lg font-semibold text-[#C8B209] mb-3 flex items-center gap-3">
+                    <span className="bg-[#C8B209] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                      1
+                    </span>
+                    Navigate to the articles index
+                  </h4>
+                  <p className="text-gray-700">
+                    Go to <code className="bg-gray-100 px-1 rounded">public</code> →{" "}
+                    <code className="bg-gray-100 px-1 rounded">articles</code> folder, then click on{" "}
+                    <code className="bg-gray-100 px-1 rounded">articles-index.json</code>
+                  </p>
+                </div>
+
+                {/* Sub-step 4.2 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#C8B209]/20">
+                  <h4 className="text-lg font-semibold text-[#C8B209] mb-3 flex items-center gap-3">
+                    <span className="bg-[#C8B209] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                      2
+                    </span>
+                    Edit the file
+                  </h4>
+                  <p className="text-gray-700">
+                    Click the pencil icon to edit the file, then add your article information to the{" "}
+                    <code className="bg-gray-100 px-1 rounded">articles</code> array at the top (it will appear first on
+                    the website)
+                  </p>
+                </div>
+
+                {/* Sub-step 4.3 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#C8B209]/20">
+                  <h4 className="text-lg font-semibold text-[#C8B209] mb-3 flex items-center gap-3">
+                    <span className="bg-[#C8B209] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                      3
+                    </span>
+                    Use this format
+                  </h4>
+                  <div className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
+                    <pre className="text-sm">{`{
+  "slug": "your-article-title",
+  "title": "Your Article Title Here", 
+  "author": "Your Name",
+  "date": "2024-01-25",
+  "image": "/images/your-header-image.jpg",
+  "excerpt": "A brief description of your article that will appear on the homepage.",
+  "featured": false
+}`}</pre>
+                  </div>
+                </div>
+
+                {/* Sub-step 4.4 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#C8B209]/20">
+                  <h4 className="text-lg font-semibold text-[#C8B209] mb-3 flex items-center gap-3">
+                    <span className="bg-[#C8B209] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                      4
+                    </span>
+                    Important formatting notes
+                  </h4>
+                  <ul className="text-gray-700 list-disc list-inside space-y-2">
+                    <li>Add a comma after the previous entry and ensure proper JSON formatting</li>
+                    <li>
+                      <strong>Featured articles</strong>: Set{" "}
+                      <code className="bg-gray-100 px-1 rounded">"featured": true</code> if you want your article
+                      highlighted with a star (ask us first)
+                    </li>
+                    <li>Commit the changes with a message like "Add [article title] to index"</li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Step 5 - Create Pull Request */}
+              <div className="mb-8 p-6 bg-gradient-to-r from-[#E4B905]/5 to-[#FFBF00]/5 rounded-lg border border-[#E4B905]/10">
+                <h3 className="text-2xl font-semibold text-[#E4B905] mb-4 flex items-center gap-3">
+                  <span className="bg-[#E4B905] text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">
+                    5
+                  </span>
+                  Create a Pull Request
+                </h3>
+
+                {/* Sub-step 5.1 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#E4B905]/20">
+                  <h4 className="text-lg font-semibold text-[#E4B905] mb-3 flex items-center gap-3">
+                    <span className="bg-[#E4B905] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                      1
+                    </span>
+                    Start the pull request
+                  </h4>
+                  <p className="text-gray-700">
+                    You'll see a banner saying "This branch is ahead". Click "Contribute" → "Open pull request"
+                  </p>
+                </div>
+
+                {/* Sub-step 5.2 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#E4B905]/20">
+                  <h4 className="text-lg font-semibold text-[#E4B905] mb-3 flex items-center gap-3">
+                    <span className="bg-[#E4B905] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                      2
+                    </span>
+                    Add details
+                  </h4>
+                  <p className="text-gray-700">
+                    Add a title and description for your submission. <strong>Include</strong>: List of images you've
+                    added and their purpose
+                  </p>
+                </div>
+
+                {/* Sub-step 5.3 */}
+                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#E4B905]/20">
+                  <h4 className="text-lg font-semibold text-[#E4B905] mb-3 flex items-center gap-3">
+                    <span className="bg-[#E4B905] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
+                      3
+                    </span>
+                    Submit
+                  </h4>
+                  <p className="text-gray-700">Click "Create pull request" to submit your article for review</p>
+                </div>
+              </div>
+
+              {/* Step 6 - Review Process */}
+              <div className="mb-8 p-6 bg-gradient-to-r from-[#FFBF00]/5 to-[#FFC517]/5 rounded-lg border border-[#FFBF00]/10">
+                <h3 className="text-2xl font-semibold text-[#FFBF00] mb-4 flex items-center gap-3">
+                  <span className="bg-[#FFBF00] text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">
+                    6
                   </span>
                   Review Process
                 </h3>

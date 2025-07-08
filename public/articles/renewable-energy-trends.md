@@ -4,7 +4,6 @@ author: "James Wilson"
 date: "2024-01-14"
 image: "/images/solar-installation.jpg"
 excerpt: "The latest developments in renewable energy technology and market adoption."
-featured: true
 ---
 
 # 2024 Renewable Energy Trends to Watch
