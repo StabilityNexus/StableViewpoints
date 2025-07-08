@@ -293,31 +293,51 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
-                      7
-                    </span>
-                    <div>
-                      <p className="font-medium text-gray-800">Add your article to the index</p>
-                      <ul className="text-gray-600 list-disc list-inside mt-1 space-y-1">
-                        <li>
-                          Navigate to <code className="bg-gray-100 px-1 rounded">public</code> →{" "}
-                          <code className="bg-gray-100 px-1 rounded">articles</code> folder
-                        </li>
-                        <li>
-                          Click on <code className="bg-gray-100 px-1 rounded">articles-index.json</code>
-                        </li>
-                        <li>Click the pencil icon to edit the file</li>
-                        <li>
-                          Add your article information to the <code className="bg-gray-100 px-1 rounded">articles</code>{" "}
-                          array at the top (it will appear first on the website)
-                        </li>
-                        <li>
-                          <strong>Use this format</strong>:
-                        </li>
-                      </ul>
-                      <div className="bg-gray-900 text-gray-100 p-3 rounded-lg overflow-x-auto mt-2 text-sm">
-                        <pre>{`{
+                  {/* Step 7 - Add to Index */}
+                  <div className="mb-8 p-6 bg-gradient-to-r from-[#C8B209]/5 to-[#E4B905]/5 rounded-lg border border-[#C8B209]/10">
+                    <h3 className="text-2xl font-semibold text-[#C8B209] mb-4 flex items-center gap-3">
+                      <span className="bg-[#C8B209] text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">
+                        7
+                      </span>
+                      Add your article to the index
+                    </h3>
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <span className="bg-[#C8B209] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                          1
+                        </span>
+                        <div>
+                          <p className="font-medium text-gray-800">Navigate to the articles index</p>
+                          <p className="text-gray-600">
+                            Go to <code className="bg-gray-100 px-1 rounded">public</code> →{" "}
+                            <code className="bg-gray-100 px-1 rounded">articles</code> folder, then click on{" "}
+                            <code className="bg-gray-100 px-1 rounded">articles-index.json</code>
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <span className="bg-[#C8B209] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                          2
+                        </span>
+                        <div>
+                          <p className="font-medium text-gray-800">Edit the file</p>
+                          <p className="text-gray-600">
+                            Click the pencil icon to edit the file, then add your article information to the{" "}
+                            <code className="bg-gray-100 px-1 rounded">articles</code> array at the top (it will appear
+                            first on the website)
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <span className="bg-[#C8B209] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                          3
+                        </span>
+                        <div>
+                          <p className="font-medium text-gray-800">Use this format</p>
+                          <div className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mt-2">
+                            <pre className="text-sm">{`{
   "slug": "your-article-title",
   "title": "Your Article Title Here", 
   "author": "Your Name",
@@ -326,46 +346,82 @@ Remember to cite your sources and provide value to our readers!`}</pre>
   "excerpt": "A brief description of your article that will appear on the homepage.",
   "featured": false
 }`}</pre>
+                          </div>
+                        </div>
                       </div>
-                      <ul className="text-gray-600 list-disc list-inside mt-2 space-y-1">
-                        <li>
-                          <strong>Important</strong>: Add a comma after the previous entry and ensure proper JSON
-                          formatting
-                        </li>
-                        <li>
-                          <strong>Featured articles</strong>: Set{" "}
-                          <code className="bg-gray-100 px-1 rounded">"featured": true</code> if you want your article
-                          highlighted with a star (ask us first)
-                        </li>
-                        <li>Commit the changes with a message like "Add [article title] to index"</li>
-                      </ul>
+
+                      <div className="flex items-start gap-3">
+                        <span className="bg-[#C8B209] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                          4
+                        </span>
+                        <div>
+                          <p className="font-medium text-gray-800">Important formatting notes</p>
+                          <ul className="text-gray-600 list-disc list-inside mt-1 space-y-1">
+                            <li>Add a comma after the previous entry and ensure proper JSON formatting</li>
+                            <li>
+                              <strong>Featured articles</strong>: Set{" "}
+                              <code className="bg-gray-100 px-1 rounded">"featured": true</code> if you want your
+                              article highlighted with a star (ask us first)
+                            </li>
+                            <li>Commit the changes with a message like "Add [article title] to index"</li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3">
-                    <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
-                      8
-                    </span>
-                    <div>
-                      <p className="font-medium text-gray-800">Create a Pull Request</p>
-                      <ul className="text-gray-600 list-disc list-inside mt-1 space-y-1">
-                        <li>You'll see a banner saying "This branch is ahead"</li>
-                        <li>Click "Contribute" → "Open pull request"</li>
-                        <li>Add a title and description for your submission</li>
-                        <li>
-                          <strong>Include</strong>: List of images you've added and their purpose
-                        </li>
-                        <li>Click "Create pull request"</li>
-                      </ul>
+                  {/* Step 8 - Create Pull Request */}
+                  <div className="mb-8 p-6 bg-gradient-to-r from-[#E4B905]/5 to-[#FFBF00]/5 rounded-lg border border-[#E4B905]/10">
+                    <h3 className="text-2xl font-semibold text-[#E4B905] mb-4 flex items-center gap-3">
+                      <span className="bg-[#E4B905] text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">
+                        8
+                      </span>
+                      Create a Pull Request
+                    </h3>
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <span className="bg-[#E4B905] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                          1
+                        </span>
+                        <div>
+                          <p className="font-medium text-gray-800">Start the pull request</p>
+                          <p className="text-gray-600">
+                            You'll see a banner saying "This branch is ahead". Click "Contribute" → "Open pull request"
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <span className="bg-[#E4B905] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                          2
+                        </span>
+                        <div>
+                          <p className="font-medium text-gray-800">Add details</p>
+                          <p className="text-gray-600">
+                            Add a title and description for your submission. <strong>Include</strong>: List of images
+                            you've added and their purpose
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <span className="bg-[#E4B905] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mt-1">
+                          3
+                        </span>
+                        <div>
+                          <p className="font-medium text-gray-800">Submit</p>
+                          <p className="text-gray-600">Click "Create pull request" to submit your article for review</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Step 4 */}
-              <div className="mb-8 p-6 bg-gradient-to-r from-[#C8B209]/5 to-[#E4B905]/5 rounded-lg border border-[#C8B209]/10">
-                <h3 className="text-2xl font-semibold text-[#C8B209] mb-4 flex items-center gap-3">
-                  <span className="bg-[#C8B209] text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">
+              {/* Step 4 - Review Process */}
+              <div className="mb-8 p-6 bg-gradient-to-r from-[#FFBF00]/5 to-[#FFC517]/5 rounded-lg border border-[#FFBF00]/10">
+                <h3 className="text-2xl font-semibold text-[#FFBF00] mb-4 flex items-center gap-3">
+                  <span className="bg-[#FFBF00] text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">
                     4
                   </span>
                   Review Process
