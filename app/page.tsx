@@ -68,6 +68,8 @@ export default function HomePage() {
 
   const handlePageChange = useCallback(
     (page: number) => {
+      console.log("handlePageChange");
+      console.log(page);
       // Ensure page is valid
       if (page < 1) page = 1
 
