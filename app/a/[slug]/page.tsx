@@ -1,4 +1,5 @@
 import BlogPostClientPage from "./BlogPostClientPage"
+import { getAllPostsServer, getPostBySlugServer } from "@/lib/blog-server"
 import fs from "fs"
 import path from "path"
 
@@ -20,6 +21,18 @@ export async function generateStaticParams() {
   }
 }
 
-export default function BlogPostPage() {
-  return <BlogPostClientPage />
+interface BlogPostPageProps {
+  params: Promise<{ slug: string }>
+}
+
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const { slug } = await params
+
+  // Load all posts at build time
+  const allPosts = await getAllPostsServer()
+
+  // Find the specific post
+  const post = getPostBySlugServer(allPosts, slug)
+
+  return <BlogPostClientPage post={post} />
 }

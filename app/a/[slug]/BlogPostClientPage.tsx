@@ -1,8 +1,5 @@
 "use client"
 
-import { useEffect, useState } from "react"
-import { useParams } from "next/navigation"
-import { getPostBySlug } from "@/lib/blog"
 import Link from "next/link"
 import { ArrowLeft, Calendar, User } from "lucide-react"
 import Image from "next/image"
@@ -20,49 +17,12 @@ interface BlogPost {
   featured: boolean
 }
 
-export default function BlogPostClientPage() {
-  const params = useParams()
-  const [post, setPost] = useState<BlogPost | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [notFound, setNotFound] = useState(false)
+interface BlogPostClientPageProps {
+  post: BlogPost | null
+}
 
-  const slug = params.slug as string
-
-  useEffect(() => {
-    async function loadPost() {
-      setLoading(true)
-      try {
-        const postData = await getPostBySlug(slug)
-        if (postData) {
-          setPost(postData)
-        } else {
-          setNotFound(true)
-        }
-      } catch (error) {
-        console.error("Error loading post:", error)
-        setNotFound(true)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    if (slug) {
-      loadPost()
-    }
-  }, [slug])
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#228B22] mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading article...</p>
-        </div>
-      </div>
-    )
-  }
-
-  if (notFound || !post) {
+export default function BlogPostClientPage({ post }: BlogPostClientPageProps) {
+  if (!post) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 flex items-center justify-center">
         <div className="text-center">
