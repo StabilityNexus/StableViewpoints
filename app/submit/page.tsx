@@ -305,7 +305,7 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                   <span className="bg-[#C8B209] text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">
                     4
                   </span>
-                  Add your article to the index
+                  Add your Article to the Index
                 </h3>
 
                 {/* Sub-step 4.1 */}
