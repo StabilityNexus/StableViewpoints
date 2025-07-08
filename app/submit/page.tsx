@@ -169,7 +169,7 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                   <span className="bg-[#ADAC0D] text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold">
                     3
                   </span>
-                  Submit via GitHub (No Experience Required!)
+                  Submit your Article to the GitHub Repo
                 </h3>
                 <p className="text-gray-700 mb-4">
                   Don't worry if you're new to GitHub - here's a simple step-by-step guide:
