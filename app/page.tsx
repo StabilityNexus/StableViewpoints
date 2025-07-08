@@ -54,7 +54,7 @@ export default function HomePage() {
     async function loadPosts() {
       setLoading(true)
       try {
-        const data = await getPaginatedPosts(currentPage, 6)
+        const data = await getPaginatedPosts(currentPage, 12)
         setPaginatedData(data)
       } catch (error) {
         console.error("Error loading posts:", error)
