@@ -143,7 +143,6 @@ author: "Your Name"
 date: "2024-01-25"
 image: "/images/your-image.jpg"
 excerpt: "A brief description of your article that will appear on the homepage."
-featured: false
 ---
 
 # Your Article Title Here
