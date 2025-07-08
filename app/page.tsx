@@ -77,13 +77,13 @@ export default function HomePage() {
       setCurrentPage(page)
 
       // Update URL
-      if (page === 1) {
+      //if (page === 1) {
         // For page 1, use the root path
-        router.push("/", { scroll: false })
-      } else {
+        //router.push("/", { scroll: false })
+      //} else {
         // For other pages, use query parameter
         router.push(`/?page=${page}`, { scroll: false })
-      }
+      //}
     },
     [router],
   )
