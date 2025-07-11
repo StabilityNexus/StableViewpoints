@@ -17,13 +17,10 @@ interface BlogCardProps {
 }
 
 // Conditionally set BASE_PATH depending on environment
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH === "production" ? "/StableViewpoints" : ""
+const BASE_PATH = process.env.NODE_ENV === "production" ? "/StableViewpoints" : ""
 
 export default function BlogCard({ post }: BlogCardProps) {
-  // Compute image URL with BASE_PATH if local
-  const imageUrl = post.image.startsWith("/")
-    ? `${BASE_PATH}${post.image}`
-    : post.image
+ 
 
   return (
     <Link href={`/a/${post.slug}`} className="group">
@@ -38,7 +35,11 @@ export default function BlogCard({ post }: BlogCardProps) {
         {/* Image - Golden ratio aspect ratio (φ:1 ≈ 1.618:1) */}
         <div className="relative overflow-hidden" style={{ aspectRatio: "1.618 / 1" }}>
           <Image
-            src={imageUrl}
+            src={
+                  post.image.startsWith("/") 
+                    ? `${BASE_PATH}${post.image}` 
+                    : post.image
+                }
             alt={post.title}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
