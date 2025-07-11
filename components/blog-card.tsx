@@ -16,7 +16,15 @@ interface BlogCardProps {
   post: BlogPost
 }
 
+// Conditionally set BASE_PATH depending on environment
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH === "production" ? "/StableViewpoints" : ""
+
 export default function BlogCard({ post }: BlogCardProps) {
+  // Compute image URL with BASE_PATH if local
+  const imageUrl = post.image.startsWith("/")
+    ? `${BASE_PATH}${post.image}`
+    : post.image
+
   return (
     <Link href={`/a/${post.slug}`} className="group">
       <article className="bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-gradient-to-r from-[#228B22]/10 to-[#FFBF00]/10 relative">
@@ -30,7 +38,7 @@ export default function BlogCard({ post }: BlogCardProps) {
         {/* Image - Golden ratio aspect ratio (φ:1 ≈ 1.618:1) */}
         <div className="relative overflow-hidden" style={{ aspectRatio: "1.618 / 1" }}>
           <Image
-            src={post.image || "/placeholder.svg"}
+            src={imageUrl}
             alt={post.title}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -53,10 +61,6 @@ export default function BlogCard({ post }: BlogCardProps) {
               <User className="w-4 h-4" />
               <span>{post.author}</span>
             </div>
-            {/*<div className="flex items-center gap-1 group-hover:text-[#E4B905] transition-colors">
-              <Calendar className="w-4 h-4" />
-              <span>{new Date(post.date).toLocaleDateString()}</span>
-            </div> */}
           </div>
         </div>
       </article>

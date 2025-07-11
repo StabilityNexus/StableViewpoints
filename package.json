@@ -17,6 +17,7 @@
     "next-mdx-remote": "^5.0.0",
     "react": "^19",
     "react-dom": "^19",
+    "serve": "^14.2.4",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
   },

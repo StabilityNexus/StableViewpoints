@@ -1,5 +1,3 @@
-"use client"
-
 import blogData from "./blog-data.json"
 
 export interface BlogPost {
