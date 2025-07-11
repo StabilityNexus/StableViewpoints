@@ -8,8 +8,8 @@ export async function generateStaticParams() {
 }
 
 export default async function Page(props: { params: { slug: string } }) {
-  const { slug } =await props.params  
-  const post = await getPostBySlug(slug)
+  const { slug } = props.params  
+  const post = getPostBySlug(slug)
 
   if (!post) {
     notFound() 
