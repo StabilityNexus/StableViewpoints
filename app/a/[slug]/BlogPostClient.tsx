@@ -8,7 +8,7 @@ import Footer from "@/components/footer"
 import { BlogPost } from "@/lib/blog"
 
 // Conditionally set BASE_PATH based on environment
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH === "production" ? "/StableViewpoints" : ""
+const BASE_PATH = process.env.NODE_ENV === "production" ? "/StableViewpoints" : ""
 
 export default function BlogPostPage({ post }: { post: BlogPost }) {
   return (
