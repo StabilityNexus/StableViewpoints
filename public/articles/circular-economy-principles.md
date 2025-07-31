@@ -1,12 +1,12 @@
 ---
-title: "Understanding the Circular Economy"
+title: "Understanding and Testing the Circular Economy"
 author: "Dr. Robert Kim"
 date: "2023-12-28"
 image: "/images/sustainable-living.jpg"
 excerpt: "How circular economy principles can transform business and reduce waste."
 ---
 
-# Understanding the Circular Economy
+# Understanding and Testing the Circular Economy
 
 The circular economy represents a fundamental shift from the traditional linear "take-make-dispose" model.
 
