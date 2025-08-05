@@ -1,15 +1,16 @@
-import { BlogPost, getPostBySlug, getAllPosts } from "@/lib/blog"
+import { getPostBySlugServer } from "@/lib/blog-server"
 import BlogPostPage from "./BlogPostClient"
 import { notFound } from "next/navigation"
+import articlesIndex from '../../../public/articles/articles-index.json'
 
 export async function generateStaticParams() {
-  const posts = getAllPosts()
-  return posts.map((post) => ({ slug: post.slug }))
+  // Use articles-index.json directly for static generation
+  return articlesIndex.articles.map((article) => ({ slug: article.slug }))
 }
 
 export default async function Page(props: { params: { slug: string } }) {
-  const { slug } = props.params  
-  const post = getPostBySlug(slug)
+  const { slug } = await props.params  
+  const post = getPostBySlugServer(slug)
 
   if (!post) {
     notFound() 

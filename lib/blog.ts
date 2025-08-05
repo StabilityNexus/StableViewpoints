@@ -1,4 +1,4 @@
-import blogData from "./blog-data.json"
+import articlesIndex from '../public/articles/articles-index.json'
 
 export interface BlogPost {
   slug: string
@@ -11,10 +11,15 @@ export interface BlogPost {
   featured: boolean
 }
 
-// Get all posts from static data
+// Get all posts from articles index (client-safe)
 export function getAllPosts(): BlogPost[] {
+  const posts: BlogPost[] = articlesIndex.articles.map(article => ({
+    ...article,
+    content: `# ${article.title}\n\nThis is a placeholder content for ${article.title}. The full content would be loaded from the markdown file.`
+  }))
+
   // Sort posts: featured first, then by date (newest first)
-  const sortedPosts = [...blogData.posts].sort((a, b) => {
+  const sortedPosts = posts.sort((a, b) => {
     // If one is featured and the other isn't, featured comes first
     if (a.featured && !b.featured) return -1
     if (!a.featured && b.featured) return 1
