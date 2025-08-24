@@ -1,9 +1,9 @@
 ---
-title: "Stablecoins: The Key to a Stable Decentralized Economy"
+title: "What Is the Djed Alliance?"
 author: "Wen-Chiao Su"
 date: "2024-03-13"
 image: "/images/what-is-the-djed-alliance.webp"
-excerpt: "Exploring how the Djed Stablecoin Protocol aims to bring stability to the decentralized economy."
+excerpt: "Learn about the Djed Alliance and its mission to bring stability to the decentralized economy through the Djed Stablecoin Protocol."
 ---
 
 ![](../images/what-is-the-djed-alliance.webp)
