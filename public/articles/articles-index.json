@@ -162,6 +162,14 @@
       "excerpt": "How energy storage technology is enabling the renewable energy transition.",
       "featured": false
     },
- public/articles/what-is-the-djed-alliance.md
+    {
+      "slug": "what-is-the-djed-alliance",
+      "title": "What is the Djed Alliance?",
+      "author": "",
+      "date": "",
+      "image": "/images/what-is-the-djed-alliance.webp",
+      "excerpt": "",
+      "featured": false
+    }
   ]
 }
