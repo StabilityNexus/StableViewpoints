@@ -162,14 +162,6 @@
       "excerpt": "How energy storage technology is enabling the renewable energy transition.",
       "featured": false
     },
-    {
-      "slug": "what-is-the-djed-alliance",
-      "title": "What is the Djed Alliance?",
-      "author": "Wen-Chiao Su",
-      "date": "2024-03-13",
-      "image": "/images/what-is-the-djed-alliance.webp",
-      "excerpt": "Learn about the Djed Alliance and its mission to bring stability to the decentralized economy through the Djed Stablecoin Protocol.",
-      "featured": false
-    }
+ public/articles/what-is-the-djed-alliance.md
   ]
 }
