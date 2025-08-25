@@ -2,7 +2,7 @@
 title: "The Djed Alliance in Google Summer of Code"
 author: "Zahnentferner"
 date: "2024-03-15"
-image: "/images/djed-gsoc.jpg"
+image: "/images/the-djed-alliance-in-google-summer-of-code.webp"
 excerpt: "How the Djed Alliance collaborates with AOSSIE to mentor students in Google Summer of Code, advancing the solidity implementation and frontend of the Djed stablecoin protocol."
 ---
 
