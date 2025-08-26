@@ -20,7 +20,7 @@ interface BlogCardProps {
 const BASE_PATH = process.env.NODE_ENV === "production" ? "/StableViewpoints" : ""
 
 export default function BlogCard({ post }: BlogCardProps) {
- 
+
 
   return (
     <Link href={`/a/${post.slug}`} className="group">
@@ -33,16 +33,17 @@ export default function BlogCard({ post }: BlogCardProps) {
         )}
 
         {/* Image - Golden ratio aspect ratio (φ:1 ≈ 1.618:1) */}
-        <div className="relative overflow-hidden" style={{ aspectRatio: "1.618 / 1" }}>
+        <div className="relative w-full">
           <Image
             src={
-                  post.image.startsWith("/") 
-                    ? `${BASE_PATH}${post.image}` 
-                    : post.image
-                }
+              post.image.startsWith("/")
+                ? `${BASE_PATH}${post.image}`
+                : post.image
+            }
             alt={post.title}
-            fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            width={1200}       // pick a large enough base width
+            height={630}       // aspect ratio will be preserved, height auto-scales
+            className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-br from-[#228B22]/10 via-transparent to-[#FFBF00]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
