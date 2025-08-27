@@ -34,7 +34,7 @@ Your article should be written in Markdown format (\`.md\` file) and include:
 
 Create a file with this structure:
 
-\`\`\`markdown
+```markdown
 ---
 title: "Your Article Title Here"
 author: "Your Name"
@@ -58,7 +58,7 @@ Your article content goes here. You can use:
 Break up your content with clear subheadings to improve readability.
 
 Remember to cite your sources and provide value to our readers!
-\`\`\`
+```
 
 ### Step 3: Submit via GitHub
 
