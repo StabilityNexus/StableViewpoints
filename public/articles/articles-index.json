@@ -1,6 +1,7 @@
 {
   "articles": [
     {
+<<<<<<< HEAD
       "slug": "sustainable-living-tips",
       "title": "10 Simple Tips for Sustainable Living",
       "author": "Emma Green",
@@ -17,6 +18,15 @@
       "image": "/images/sustainable-living.jpg",
       "excerpt": "Discover practical ways to reduce your environmental footprint and live more sustainably without breaking the bank.",
       "featured": true
+=======
+      "slug": "common-treasuries-governance",
+      "title": "Common Treasuries and their Governance",
+      "author": "Zahnentferner",
+      "date": "2025-10-24",
+      "image": "/images/governance.jpg",
+      "excerpt": "A surgical reflection on how shared treasuries and governance systems inevitably enable power imbalances, deception, and political extraction.",
+      "featured": false
+>>>>>>> b0adf3a (Set featured false for Common Treasuries and their Governance)
     },
     {
       "slug": "future-of-renewable-energy",
