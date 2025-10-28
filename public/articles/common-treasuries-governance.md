@@ -10,8 +10,6 @@ excerpt: "A surgical reflection on how shared treasuries and governance systems 
 
 Imagine that Alice, Bob and Charlie have, respectively, $33, $33 and $34. Suppose that, instead of spending their money individually, according to their own wishes, they decide to deposit their money in a common treasury. So, now they have a common treasury of $100 and they must collectively decide what to do with it. And, even before that, they must agree on the governance processes that will be followed to reach these decisions.
 
-![governance in action](/images/governance.jpg)
-
 This intentionally simplified example is at the core of a wide range of real world situations in which we often find ourselves in. For example:
 
 - Alice, Bob and Charlie could be shareholders of a company, the "common treasury" could be the bank account of the company, and the governance process could be to execute whatever the founder/director/CEO decides.
