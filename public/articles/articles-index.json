@@ -4,9 +4,18 @@
       "slug": "common-treasuries-governance",
       "title": "Common Treasuries and their Governance",
       "author": "Zahnentferner",
-      "date": "2025-10-24",
+      "date": "2025-05-08",
       "image": "/images/governance.jpg",
       "excerpt": "A surgical reflection on how shared treasuries and governance systems inevitably enable power imbalances, deception, and political extraction.",
+      "featured": false
+    },
+     {
+      "slug": "introducing-gluon-on-ergo",
+      "title": "Introducing Gluon, the future of stablecoin protocols on Ergo",
+      "author": "Wen-Chiao Su",
+      "date": "2024-05-01",
+      "image": "/images/introducing-gluon-on-ergo.webp",
+      "excerpt": "Gluon brings a physics-inspired, governance-free stablecoin protocol to the Ergo blockchain.",
       "featured": false
     },
     {
