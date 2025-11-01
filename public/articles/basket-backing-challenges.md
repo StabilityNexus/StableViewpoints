@@ -1,7 +1,7 @@
 ---
 title: "The Challenges and Problems of Backing by a Basket of Assets"
 author: "Zahnentferner"
-date: "2025-06-13"
+date: "2024-06-13"
 image: "/images/challenges-of-basket-backing.webp"
 excerpt: "Exploring the hidden pitfalls of backing a stablecoin with a basket of assets instead of a single asset."
 ---
