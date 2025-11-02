@@ -1,7 +1,7 @@
 ---
 title: "Common Treasuries and their Governance"
 author: "Zahnentferner"
-date: "2025-10-24"
+date: "2025-05-08"
 image: "/images/governance.jpg"
 excerpt: "A surgical reflection on how shared treasuries and governance systems inevitably enable power imbalances, deception, and political extraction."
 ---
