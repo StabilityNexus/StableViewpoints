@@ -10,7 +10,16 @@
       "featured": false
     },
      {
+      "slug": "challenges-of-backing-by-basket-of-assets",
+      "title": "The Challenges and Problems of Backing by a Basket of Assets",
+      "author": "Zahnentferner",
+      "date": "2024-06-13",
+      "image": "/images/challenges-of-basket-backing.webp",
+      "excerpt": "Exploring the hidden pitfalls of backing a stablecoin with a basket of assets instead of a single asset.",
       "slug": "introducing-gluon-on-ergo",
+      "featured": false
+    },
+    {
       "title": "Introducing Gluon, the future of stablecoin protocols on Ergo",
       "author": "Wen-Chiao Su",
       "date": "2024-05-01",
