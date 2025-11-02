@@ -1,7 +1,7 @@
 ---
 title: "Common Treasuries and their Governance"
 author: "Zahnentferner"
-date: "2025-10-24"
+date: "2025-05-08"
 image: "/images/governance.jpg"
 excerpt: "A surgical reflection on how shared treasuries and governance systems inevitably enable power imbalances, deception, and political extraction."
 ---
@@ -9,8 +9,6 @@ excerpt: "A surgical reflection on how shared treasuries and governance systems 
 # Common Treasuries and their Governance
 
 Imagine that Alice, Bob and Charlie have, respectively, $33, $33 and $34. Suppose that, instead of spending their money individually, according to their own wishes, they decide to deposit their money in a common treasury. So, now they have a common treasury of $100 and they must collectively decide what to do with it. And, even before that, they must agree on the governance processes that will be followed to reach these decisions.
-
-![governance in action](/images/governance.jpg)
 
 This intentionally simplified example is at the core of a wide range of real world situations in which we often find ourselves in. For example:
 
