@@ -7,9 +7,6 @@ import { MarkdownRenderer } from "@/lib/markdown-renderer"
 import Footer from "@/components/footer"
 import { BlogPost } from "@/lib/blog"
 
-// Conditionally set BASE_PATH based on environment
-const BASE_PATH = process.env.NODE_ENV === "production" ? "/StableViewpoints" : ""
-
 export default function BlogPostPage({ post }: { post: BlogPost }) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10">
@@ -35,7 +32,7 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
               <Image 
                 src={
                   post.image.startsWith("/") 
-                    ? `${BASE_PATH}${post.image}` 
+                    ? `${post.image}` 
                     : post.image
                 }
                 alt={post.title} 
