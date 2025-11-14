@@ -11,6 +11,9 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
+  module.exports = {
+    basePath: '',
+  }
 }
 
 export default nextConfig;
