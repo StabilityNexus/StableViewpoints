@@ -16,8 +16,6 @@ interface BlogCardProps {
   post: BlogPost
 }
 
-const BASE_PATH = process.env.NODE_ENV === "production" ? "/StableViewpoints" : ""
-
 export default function BlogCard({ post }: BlogCardProps) {
   return (
     <Link href={`/a/${post.slug}`} className="group h-full">
