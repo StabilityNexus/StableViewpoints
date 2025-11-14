@@ -33,7 +33,7 @@ export default function BlogCard({ post }: BlogCardProps) {
           <Image
             src={
               post.image.startsWith("/")
-                ? `${BASE_PATH}${post.image}`
+                ? `${post.image}`
                 : post.image
             }
             alt={post.title}
