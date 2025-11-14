@@ -12,8 +12,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: "Stable Viewpoints",
-  description: "Thoughtful perspectives on the world around us",
-    generator: 'v0.dev'
+  description: "An independent and decentralized publication focused on stability.",
 }
 
 export default function RootLayout({
