@@ -13,6 +13,9 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Stable Viewpoints",
   description: "An independent and decentralized publication focused on stability.",
+  icons: {
+    icon: '/images/favicon.ico'
+  }
 }
 
 export default function RootLayout({
