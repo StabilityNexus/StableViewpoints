@@ -1,7 +1,7 @@
 ---
 title: "Understanding Gluon through Liquidity Pools"
 author: "Zahnentferner"
-date: "2025-08-18"
+date: "2024-08-18"
 image: "/images/understanding-gluon-if-you-know-liquidity-pools.webp"
 excerpt: "A breakdown of how Gluon mimics a liquidity pool model, but with one reserve token and dual output."
 ---
@@ -12,7 +12,7 @@ Gluon is a novel stablecoin protocol researched and developed by The Stable Orde
 
 **Gluon behaves similarly to the *dual* of a liquidity pool.**
 
-Want to see it in action? Check it out over here: https://gluon.gold.
+Want to see it in action? Check it out over here: [<u>https://gluon.gold</u>](https://gluon.gold).
 
 Interacting with it while reading this will help you get a better feel for how it works.
 
@@ -46,4 +46,4 @@ This is the third in a series of articles about understanding Gluon.
 
 Read the [<u>previous articles</u>](https://news.stability.nexus/). Join the Stability Nexus’s [<u>Discord</u>](https://discord.gg/YzDKeEfWtS) and [<u>Telegram</u>](https://t.me/StabilityNexus), and follow Gluon on X, to be notified of future articles.
 
-Use Gluon Gold on Ergo at https://gluon.gold.
+Use Gluon Gold on Ergo at [<u>https://gluon.gold</u>](https://gluon.gold).
