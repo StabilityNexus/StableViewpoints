@@ -1,9 +1,9 @@
 ---
 title: "Bug Bounty Program for Gluon on Ergo"
 author: "Zahnentferner"
-date: "2024-07-2024"
-image: "/images/collateralized-vs-backed-stablecoins.webp"
-excerpt: "Discover how crypto-collateralized and crypto-backed stablecoins differ—and what it means for holders."
+date: "2024-07-10"
+image: "/images/gluon-stablecoin-bug-bounty-program.webp"
+excerpt: "Gluon is launching a bug bounty program on Ergo — security researchers are invited to report vulnerabilities."
 ---
 
 # Bug Bounty Program for Gluon on Ergo
