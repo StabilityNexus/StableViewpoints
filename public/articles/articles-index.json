@@ -1,58 +1,112 @@
 {
   "articles": [
      {
-      "slug": "common-treasuries-governance",
-      "title": "Common Treasuries and their Governance",
-      "author": "Zahnentferner",
-      "date": "2025-05-08",
-      "image": "/images/governance.jpg",
-      "excerpt": "A surgical reflection on how shared treasuries and governance systems inevitably enable power imbalances, deception, and political extraction.",
-      "featured": false
+        "slug": "gluon-explained-freedom-from-reserve-ration-constraints",
+        "title": "Understanding Gluon if you know Djed: Freedom from Reserve Ratio Constraints",
+        "author": "Zahnentferner",
+        "date": "2025-08-18",
+        "image": "/images/understanding-gluon-reserve-ratios.webp",
+        "excerpt": "A show of how Gluon removes fixed reserve ratio limits, enabling continuous operations with variable cost.",
+        "featured": false
     },
     {
-      "slug": "collateralized-vs-backed-stablecoins",
-      "title": "Crypto-Collateralized vs Crypto-Backed Stablecoins, from a Stablecoin Holder’s Perspective",
-      "author": "Zahnentferner",
-      "date": "2024-06-28",
-      "image": "/images/collateralized-vs-backed-stablecoins.webp",
-      "excerpt": "Discover how crypto-collateralized and crypto-backed stablecoins differ—and what it means for holders.",
-      "featured": false
-    },
-     {
-      "slug": "challenges-of-backing-by-basket-of-assets",
-      "title": "The Challenges and Problems of Backing by a Basket of Assets",
-      "author": "Zahnentferner",
-      "date": "2024-06-13",
-      "image": "/images/challenges-of-basket-backing.webp",
-      "excerpt": "Exploring the hidden pitfalls of backing a stablecoin with a basket of assets instead of a single asset.",
-      "featured": false
+        "slug": "common-treasuries-governance",
+        "title": "Common Treasuries and their Governance",
+        "author": "Zahnentferner",
+        "date": "2025-05-08",
+        "image": "/images/governance.jpg",
+        "excerpt": "A surgical reflection on how shared treasuries and governance systems inevitably enable power imbalances, deception, and political extraction.",
+        "featured": false
     },
     {
-      "slug": "introducing-gluon-on-ergo",
-      "title": "Introducing Gluon, the future of stablecoin protocols on Ergo",
-      "author": "Wen-Chiao Su",
-      "date": "2024-05-01",
-      "image": "/images/introducing-gluon-on-ergo.webp",
-      "excerpt": "Gluon brings a physics-inspired, governance-free stablecoin protocol to the Ergo blockchain.",
-      "featured": false
+        "slug": "stability-role-in-crypto-adoption",
+        "title": "Why Stability Matters: The Role of Stablecoins in Crypto Adoption",
+        "author": "John Walter Munene Njeru",
+        "date": "2025-04-03",
+        "image": "/images/stablecoins.webp",
+        "excerpt": "Discover how stablecoins address crypto volatility, enhance adoption, and bridge the gap between digital assets and traditional finance.",
+        "featured": false
     },
     {
-      "slug": "what-is-the-djed-alliance",
-      "title": "What Is the Djed Alliance?",
-      "author": "Wen-Chiao Su",
-      "date": "2024-03-13",
-      "image": "/images/what-is-the-djed-alliance.webp",
-      "excerpt": "Learn about the Djed Alliance and its mission to bring stability to the decentralized economy through the Djed Stablecoin Protocol.",
-      "featured": false
+        "slug": "gluon-explained-liquidity-pools",
+        "title": "Understanding Gluon through Liquidity Pools",
+        "author": "Zahnentferner",
+        "date": "2024-08-18",
+        "image": "/images/understanding-gluon-if-you-know-liquidity-pools.webp",
+        "excerpt": "A breakdown of how Gluon mimics a liquidity pool model, but with one reserve token and dual output.",
+        "featured": false
     },
     {
-      "slug": "djed-alliance-google-summer-of-code",
-      "title": "The Djed Alliance in Google Summer of Code",
-      "author": "Zahnentferner",
-      "date": "2024-03-15",
-      "image": "/images/the-djed-alliance-in-google-summer-of-code.webp",
-      "excerpt": "How the Djed Alliance collaborates with AOSSIE to mentor students in Google Summer of Code, advancing the solidity implementation and frontend of the Djed stablecoin protocol.",
-      "featured": false
+        "slug": "gluon-explained-simultaenous-minting-and-redemption",
+        "title": "Understanding Gluon if you know Djed: Simultaneous Minting and Simultaneous Redemption",
+        "author": "Zahnentferner",
+        "date": "2024-08-17",
+        "image": "/images/understanding-gluon-if-you-know-djed.webp",
+        "excerpt": "A deep dive into how Gluon’s paired minting and redemption differ from Djed’s model.",
+        "featured": false
+    },
+    {
+        "slug": "gluon-gold-vs-paxos-gold",
+        "title": "Gluon Gold vs Paxos Gold: Understanding the Benefits and Risks",
+        "author": "TheStophe",
+        "date": "2024-07-19",
+        "image": "/images/gluon-gold-vs-paxos-gold.webp",
+        "excerpt": "Compare Gluon Gold and Paxos Gold: insights into structure, dynamics and risk in gold-backed tokens.",
+        "featured": false
+    },
+    {
+        "slug": "gluon-on-ergo-bug-bounty-program",
+        "title": "Bug Bounty Program for Gluon on Ergo",
+        "author": "Zahnentferner",
+        "date": "2024-07-10",
+        "image": "/images/gluon-stablecoin-bug-bounty-program.webp",
+        "excerpt": "Gluon is launching a bug bounty program on Ergo — security researchers are invited to report vulnerabilities.",
+        "featured": false
+    },
+    {
+        "slug": "collateralized-vs-backed-stablecoins",
+        "title": "Crypto-Collateralized vs Crypto-Backed Stablecoins, from a Stablecoin Holder’s Perspective",
+        "author": "Zahnentferner",
+        "date": "2024-06-28",
+        "image": "/images/collateralized-vs-backed-stablecoins.webp",
+        "excerpt": "Discover how crypto-collateralized and crypto-backed stablecoins differ—and what it means for holders.",
+        "featured": false
+    },
+    {
+        "slug": "challenges-of-backing-by-basket-of-assets",
+        "title": "The Challenges and Problems of Backing by a Basket of Assets",
+        "author": "Zahnentferner",
+        "date": "2024-06-13",
+        "image": "/images/challenges-of-basket-backing.webp",
+        "excerpt": "Exploring the hidden pitfalls of backing a stablecoin with a basket of assets instead of a single asset.",
+        "featured": false
+    },
+    {
+        "slug": "introducing-gluon-on-ergo",
+        "title": "Introducing Gluon, the future of stablecoin protocols on Ergo",
+        "author": "Wen-Chiao Su",
+        "date": "2024-05-01",
+        "image": "/images/introducing-gluon-on-ergo.webp",
+        "excerpt": "Gluon brings a physics-inspired, governance-free stablecoin protocol to the Ergo blockchain.",
+        "featured": false
+    },
+    {
+        "slug": "djed-alliance-google-summer-of-code",
+        "title": "The Djed Alliance in Google Summer of Code",
+        "author": "Zahnentferner",
+        "date": "2024-03-15",
+        "image": "/images/the-djed-alliance-in-google-summer-of-code.webp",
+        "excerpt": "How the Djed Alliance collaborates with AOSSIE to mentor students in Google Summer of Code, advancing the solidity implementation and frontend of the Djed stablecoin protocol.",
+        "featured": false
+    },
+    {
+        "slug": "what-is-the-djed-alliance",
+        "title": "What Is the Djed Alliance?",
+        "author": "Wen-Chiao Su",
+        "date": "2024-03-13",
+        "image": "/images/what-is-the-djed-alliance.webp",
+        "excerpt": "Learn about the Djed Alliance and its mission to bring stability to the decentralized economy through the Djed Stablecoin Protocol.",
+        "featured": false
     }
   ]
 }
