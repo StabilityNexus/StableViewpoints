@@ -12,11 +12,11 @@ Gluon is the second stablecoin protocol researched and developed by The Stable O
 
 It comes after the Djed Stablecoin Protocol, which has been implemented and deployed across multiple chains such as:
 
-- [<u>SigmaUSD (on Ergo)</u>](https://sigmausd.io/),
-- [<u>Milkomeda Djed</u>](https://milkomeda-c1.djed.one/),
-- [<u>Djed by COTI</u>](https://djed.xyz/) (on Cardano),
-- [<u>Zephyr</u>](https://zephyrprotocol.com/), and
-- [<u>Ethereum Classic Stable Dollar</u>](https://etc.djed.one/).
+- [SigmaUSD (on Ergo)](https://sigmausd.io/),
+- [Milkomeda Djed](https://milkomeda-c1.djed.one/),
+- [Djed by COTI](https://djed.xyz/) (on Cardano),
+- [Zephyr](https://zephyrprotocol.com/), and
+- [Ethereum Classic Stable Dollar](https://etc.djed.one/).
 
 If you know any of these Djed-based stablecoins, you might be asking yourself:
 
@@ -66,6 +66,6 @@ Through this approach, Gluon aims to offer users more flexibility and potentiall
 
 It’s a delicate balance of encouraging use while discouraging actions that could destabilize the ecosystem.
 
-Join the Stability Nexus’s [<u>Discord</u>](https://discord.gg/YzDKeEfWtS) and [<u>Telegram</u>](https://t.me/StabilityNexus), and follow [<u>Gluon</u>](https://x.com/GluonStable) on X, to be notified of future articles.
+Join the Stability Nexus’s [Discord](https://discord.gg/YzDKeEfWtS) and [Telegram](https://t.me/StabilityNexus), and follow [Gluon](https://x.com/GluonStable) on X, to be notified of future articles.
 
 Remember to use Gluon Gold on Ergo at https://gluon.gold.

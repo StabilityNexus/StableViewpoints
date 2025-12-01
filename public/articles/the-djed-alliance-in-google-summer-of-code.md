@@ -8,8 +8,6 @@ excerpt: "How the Djed Alliance collaborates with AOSSIE to mentor students in G
 
 # The Djed Alliance in Google Summer of Code
 
-![The Djed Alliance in Google Summer of Code](../images/the-djed-alliance-in-google-summer-of-code.webp)
-
 In cooperation with AOSSIE, the Australian Open Source Software Innovation and Education association, some members of The Stable Order will be mentoring Google Summer of Code students interested in contributing to the Solidity implementation of the Djed stablecoin protocol and its frontend.
 
 We encourage all interested students to apply!

@@ -12,7 +12,7 @@ Gluon is the second stablecoin protocol researched and developed by The Stable O
 
 *How is Gluon different from Djed?*
 
-This is the second article in a series addressing this question. Read the [<u>first article</u>](https://news.stability.nexus/understanding-gluon-if-you-know-djed-simultaneous-minting-and-simultaneous-redemption-479105ff6954) before reading this one! And try Gluon at [<u>https://gluon.gold</u>](https://gluon.gold).
+This is the second article in a series addressing this question. Read the [first article](https://news.stability.nexus/understanding-gluon-if-you-know-djed-simultaneous-minting-and-simultaneous-redemption-479105ff6954) before reading this one! And try Gluon at [https://gluon.gold](https://gluon.gold).
 
 An important difference between Djed and Gluon is that, unlike Djed, Gluon does not have any minimum reserve ratio or maximum reserve ratio parameters, below or above which some operations are disabled.
 
@@ -26,6 +26,6 @@ Therefore, it is recommended that holders of the stable tokeon (e.g. GAU) pay cl
 
 This is the second in a series of articles about understanding Gluon.
 
-Read the [<u>previous articles</u>](https://news.stability.nexus/). Join the Stability Nexus’s [<u>Discord</u>](https://discord.gg/YzDKeEfWtS) and [<u>Telegram</u>](https://t.me/StabilityNexus), and follow Gluon on X, to be notified of future articles.
+Read the [previous articles](https://news.stability.nexus/). Join the Stability Nexus’s [Discord](https://discord.gg/YzDKeEfWtS) and [Telegram](https://t.me/StabilityNexus), and follow Gluon on X, to be notified of future articles.
 
-Remember to use Gluon Gold on Ergo at [<u>https://gluon.gold</u>](https://gluon.gold).
+Remember to use Gluon Gold on Ergo at [https://gluon.gold](https://gluon.gold).

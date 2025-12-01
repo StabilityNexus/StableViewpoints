@@ -16,7 +16,10 @@ This article examines the trade-offs between these two options, focusing on the 
 
 ### Paxos Gold Overview
 
-![paxos-gold-overview](/images/paxos-gold-overview.webp)
+<figure>
+  <img src="/images/paxos-gold-overview.webp" alt="paxos-gold-overview">
+  <figcaption>A photo of paxos gold overview</figcaption>
+</figure>
 
 <u>[Paxos Gold (PAXG)](https://paxos.com/paxgold/)</u> operates under traditional finance (TradFi) custody services, offering users the security of physical gold stored in London Bullion Market Association (LBMA) approved vaults. It is backed by real gold, each token representing one fine troy ounce. Paxos, the entity behind PAXG, ensures that the gold is audited and the token complies with regulatory standards set by the New York State Department of Financial Services. This centralized approach facilitates lower costs and easy redemption but introduces potential risks related to centralization and counter-party dependencies.
 
@@ -67,9 +70,9 @@ Cons:
 - **Susceptibility to the Volatility of ERG:** If the price of ERG falls too much, it may happen that every GAU becomes backed by an amount of ERGs that is worth less than 1 gram of gold.
 
 ## Conclusion
-Choosing between <u>[Gluon Gold](https://gluon.gold/)</u> and Paxos Gold depends largely on one’s comfort with (de)centralization and the associated risks of each model. While Paxos Gold offers a regulated and secure way to invest in gold with the convenience of digital assets, Gluon Gold appeals to those seeking a more decentralized and transparent approach, potentially mitigating certain traditional risks but introducing new dynamics inherent to crypto-backed assets.
+Choosing between [Gluon Gold](https://gluon.gold/) and Paxos Gold depends largely on one’s comfort with (de)centralization and the associated risks of each model. While Paxos Gold offers a regulated and secure way to invest in gold with the convenience of digital assets, Gluon Gold appeals to those seeking a more decentralized and transparent approach, potentially mitigating certain traditional risks but introducing new dynamics inherent to crypto-backed assets.
 
 As the digital asset landscape continues to evolve, understanding these nuances will help users make informed decisions aligned with their risk tolerance and goals.
 
 Join the Stability Nexus
-Join our <u>[discord](https://discord.gg/8yhY6Esn)</u> or <u>[telegram](https://t.me/StabilityNexus)</u> and learn more about the The Stable Order and the <u>[Stability](https://docs.stability.nexus/)</u> Nexus. Plus subscribe here on <u>[Medium](https://news.stability.nexus/)</u>. Cheers!
+Join our [discord](https://discord.gg/8yhY6Esn) or [telegram](https://t.me/StabilityNexus) and learn more about the The Stable Order and the [Stability](https://docs.stability.nexus/) Nexus. Plus subscribe here on [Medium](https://news.stability.nexus/). Cheers!
