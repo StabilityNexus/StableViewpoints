@@ -12,7 +12,7 @@ Gluon is a novel stablecoin protocol researched and developed by The Stable Orde
 
 **Gluon behaves similarly to the *dual* of a liquidity pool.**
 
-Want to see it in action? Check it out over here: [<u>https://gluon.gold</u>](https://gluon.gold).
+Want to see it in action? Check it out over here: [https://gluon.gold](https://gluon.gold).
 
 Interacting with it while reading this will help you get a better feel for how it works.
 
@@ -44,6 +44,6 @@ Remember, like all crypto projects, Gluon is new and experimental. Always do you
 
 This is the third in a series of articles about understanding Gluon.
 
-Read the [<u>previous articles</u>](https://news.stability.nexus/). Join the Stability Nexus’s [<u>Discord</u>](https://discord.gg/YzDKeEfWtS) and [<u>Telegram</u>](https://t.me/StabilityNexus), and follow Gluon on X, to be notified of future articles.
+Read the [previous articles](https://news.stability.nexus/). Join the Stability Nexus’s [Discord](https://discord.gg/YzDKeEfWtS) and [Telegram](https://t.me/StabilityNexus), and follow Gluon on X, to be notified of future articles.
 
-Use Gluon Gold on Ergo at [<u>https://gluon.gold</u>](https://gluon.gold).
+Use Gluon Gold on Ergo at [https://gluon.gold](https://gluon.gold).

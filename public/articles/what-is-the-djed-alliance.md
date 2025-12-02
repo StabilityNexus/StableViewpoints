@@ -6,8 +6,6 @@ image: "/images/what-is-the-djed-alliance.webp"
 excerpt: "Learn about the Djed Alliance and its mission to bring stability to the decentralized economy through the Djed Stablecoin Protocol."
 ---
 
-![](../images/what-is-the-djed-alliance.webp)
-
 # Stablecoins: The Key to a Stable Decentralized Economy
 
 Most cryptocurrencies are speculative and volatile, making them risky for transactions. Stablecoins, pegged to fiat currencies or assets like cryptocurrencies, aim to address this volatility. However, many stablecoins struggle to maintain their value during market downturns, even if they’re fiat-backed. Without a reliable medium for transaction, mainstream adoption of the decentralized economy is challenging.

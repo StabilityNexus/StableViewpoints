@@ -1,7 +1,7 @@
 {
   "articles": [
-     {
-        "slug": "gluon-explained-freedom-from-reserve-ration-constraints",
+     {  
+        "slug": "understanding-gluon-free-reserve-ratio-constraints",
         "title": "Understanding Gluon if you know Djed: Freedom from Reserve Ratio Constraints",
         "author": "Zahnentferner",
         "date": "2025-08-18",
@@ -19,7 +19,7 @@
         "featured": false
     },
     {
-        "slug": "stability-role-in-crypto-adoption",
+        "slug": "stablecoins-role-in-crypto-adoption",
         "title": "Why Stability Matters: The Role of Stablecoins in Crypto Adoption",
         "author": "John Walter Munene Njeru",
         "date": "2025-04-03",
@@ -28,7 +28,7 @@
         "featured": false
     },
     {
-        "slug": "gluon-explained-liquidity-pools",
+        "slug": "understanding-gluon-through-liquidity-pools",
         "title": "Understanding Gluon through Liquidity Pools",
         "author": "Zahnentferner",
         "date": "2024-08-18",
@@ -37,7 +37,7 @@
         "featured": false
     },
     {
-        "slug": "gluon-explained-simultaneous-minting-and-redemption",
+        "slug": "understanding-gluon-simultaneous-minting-redemption",
         "title": "Understanding Gluon if you know Djed: Simultaneous Minting and Simultaneous Redemption",
         "author": "Zahnentferner",
         "date": "2024-08-17",
@@ -55,7 +55,7 @@
         "featured": false
     },
     {
-        "slug": "gluon-on-ergo-bug-bounty-program",
+        "slug": "bug-bounty-program",
         "title": "Bug Bounty Program for Gluon on Ergo",
         "author": "Zahnentferner",
         "date": "2024-07-10",
@@ -64,7 +64,7 @@
         "featured": false
     },
     {
-        "slug": "collateralized-vs-backed-stablecoins",
+        "slug": "collateralized-vs-backed-stablecoins-holders-perspective",
         "title": "Crypto-Collateralized vs Crypto-Backed Stablecoins, from a Stablecoin Holder’s Perspective",
         "author": "Zahnentferner",
         "date": "2024-06-28",
@@ -73,7 +73,7 @@
         "featured": false
     },
     {
-        "slug": "challenges-of-backing-by-basket-of-assets",
+        "slug": "basket-backing-challenges",
         "title": "The Challenges and Problems of Backing by a Basket of Assets",
         "author": "Zahnentferner",
         "date": "2024-06-13",
@@ -91,7 +91,7 @@
         "featured": false
     },
     {
-        "slug": "djed-alliance-google-summer-of-code",
+        "slug": "the-djed-alliance-in-google-summer-of-code",
         "title": "The Djed Alliance in Google Summer of Code",
         "author": "Zahnentferner",
         "date": "2024-03-15",
