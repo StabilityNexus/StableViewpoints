@@ -192,7 +192,7 @@ console.log(`Volume of neutrons to protons over ${n} days:`, volumeNeutronsToPro
 Displaying these to the user will give them a good idea of the trend of the protocol.
 
 ### More Stats
-For a more complete list of statistics you can use (for example TVL), take a look at the README in the SDK’s GitHub repository: https://github.com/StabilityNexus/Gluon-Ergo-SDK/blob/main/README.md
+For a more complete list of statistics you can use (for example TVL), take a look at the README in the SDK’s GitHub repository: [here](https://github.com/StabilityNexus/Gluon-Ergo-SDK/blob/main/README.md)
 
 ## Conclusion
 The Gluon Gold SDK provides a comprehensive set of tools for interacting with the Gluon protocol on the Ergo blockchain. By integrating this SDK into your website, you can offer users the ability to perform complex financial operations directly from their browsers. Whether it’s fission, fusion, or transmutation, the SDK simplifies these processes and provides detailed transaction data to enhance user experience.
