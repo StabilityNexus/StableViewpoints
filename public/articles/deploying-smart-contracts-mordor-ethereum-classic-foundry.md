@@ -1,5 +1,5 @@
 ---
-title: "The Challenges and Problems of Backing by a Basket of Assets"
+title: "Deploying Smart Contracts on Mordor and Ethereum Classic Using Foundry"
 author: "Kanishk Sogani"
 date: "2025-03-17"
 image: "/images/deploying-smart-contracts-using-foundry.webp"
@@ -83,7 +83,8 @@ If you already have a deployment script, you can reuse it. Otherwise, create a D
 
 ```
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;import "forge-std/Script.sol";
+pragma solidity ^0.8.20;
+import "forge-std/Script.sol";
 import "../src/YourContract.sol";
 contract DeployContract is Script {
  function setUp() public {}
@@ -151,6 +152,6 @@ You can verify your contract deployment and add the respective networks to your 
 - [Chainlist to Add Networks:](https://chainlist.org/?search=mordor&testnets=true)
 - [Add Ethereum Classic to Wallet](https://chainlist.org/?search=etc)
 
-## Conlusion
+## Conclusion
 
 By following these steps, you can successfully deploy smart contracts on both Mordor and Ethereum Classic using Foundry. Ensuring the correct EVM version and handling legacy transactions appropriately will help prevent common deployment issues.
