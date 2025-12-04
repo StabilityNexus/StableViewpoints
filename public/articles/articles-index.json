@@ -1,6 +1,6 @@
 {
-  "articles": [
-     {  
+  "articles":  [
+    {
         "slug": "understanding-gluon-free-reserve-ratio-constraints",
         "title": "Understanding Gluon if you know Djed: Freedom from Reserve Ratio Constraints",
         "author": "Zahnentferner",
@@ -70,6 +70,15 @@
         "date": "2024-06-28",
         "image": "/images/collateralized-vs-backed-stablecoins.webp",
         "excerpt": "Discover how crypto-collateralized and crypto-backed stablecoins differ—and what it means for holders.",
+        "featured": false
+    },
+    {
+        "slug": "gluon-sdk-tutorial",
+        "title": "Building a Website with the Gluon Gold SDK: A Step-by-Step Guide",
+        "author": "anon_real",
+        "date": "2024-06-24",
+        "image": "/images/gluon-sdk-tutorial.webp",
+        "excerpt": "Discover how to integrate Gluon Gold SDK to build a website enabling gold‑pegged ERG‑stablecoin operations directly in the browser.",
         "featured": false
     },
     {
