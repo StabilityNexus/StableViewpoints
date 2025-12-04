@@ -127,7 +127,7 @@ forge script script/Deploy.s.sol:DeployContract \
  --broadcast \
  --evm_version paris \
  --legacy
- ```
++ ```
 
  Make sure you have PRIVATE_KEY set in your .env file before running the deployment script.
 
