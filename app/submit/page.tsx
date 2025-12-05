@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { ArrowLeft, Upload, FileText, ImageIcon, CheckCircle, Users, MessageCircle } from "lucide-react"
 import Footer from "@/components/footer"
+import ThemeToggle from "@/components/theme-toggle"
 
 export const metadata = {
   title: "Submit an Article | Stable Viewpoints",
@@ -10,30 +11,31 @@ export const metadata = {
 
 export default function SubmitPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 dark:from-slate-950 dark:via-emerald-950 dark:to-slate-900 transition-colors text-gray-900 dark:text-gray-100">
       {/* Header */}
-      <header className="border-b border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20 bg-white/90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+      <header className="border-b border-[#228B22]/10 dark:border-white/10 bg-white/90 dark:bg-slate-900/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm transition-colors">
         <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
           <Link
             href="/"
-            className="inline-flex items-center text-[#228B22] hover:text-[#3E921E] transition-colors font-semibold"
+            className="inline-flex items-center text-[#228B22] hover:text-[#3E921E] dark:text-amber-200 dark:hover:text-amber-300 transition-colors font-semibold"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Stable Viewpoints
           </Link>
+          <ThemeToggle />
         </div>
       </header>
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 py-12">
-        <div className="bg-white shadow-xl overflow-hidden border border-gradient-to-r from-[#228B22]/10 to-[#FFBF00]/10">
+        <div className="bg-white dark:bg-slate-950/50 shadow-xl overflow-hidden border border-[#228B22]/10 dark:border-white/10 transition-colors">
           <div className="p-8 md:p-12">
             {/* Title */}
             <h1 className="text-4xl md:text-5xl font-bold font-playfair bg-gradient-to-r from-[#228B22] via-[#91A511] to-[#E4B905] bg-clip-text text-transparent mb-6 leading-tight pb-2">
               Submit an Article
             </h1>
 
-            <p className="text-gray-700 mb-8 leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-200 mb-8 leading-relaxed">
               Stable Viewpoints is a digital publication focused on thoughtful perspectives about stability in our
               rapidly changing world. We explore how emerging technologies can be used to bring greater stability to the
               world. Our mission is to provide well-researched, balanced viewpoints on issues that matter for creating a
@@ -49,37 +51,37 @@ export default function SubmitPage() {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-gradient-to-r from-[#228B22]/5 to-[#91A511]/5 p-4 rounded-lg border border-[#228B22]/10">
                   <h3 className="font-semibold text-[#228B22] mb-2">Blockchain & Cryptocurrencies</h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
                     Digital assets, blockchain technology, cryptocurrency adoption, regulatory frameworks
                   </p>
                 </div>
                 <div className="bg-gradient-to-r from-[#91A511]/5 to-[#ADAC0D]/5 p-4 rounded-lg border border-[#91A511]/10">
                   <h3 className="font-semibold text-[#91A511] mb-2">Artificial Intelligence</h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
                     AI governance, machine learning applications, ethical AI development, automation impact
                   </p>
                 </div>
                 <div className="bg-gradient-to-r from-[#ADAC0D]/5 to-[#C8B209]/5 p-4 rounded-lg border border-[#ADAC0D]/10">
                   <h3 className="font-semibold text-[#ADAC0D] mb-2">Economic & Financial Stability</h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
                     Monetary policy, financial markets, economic resilience, inflation dynamics
                   </p>
                 </div>
                 <div className="bg-gradient-to-r from-[#C8B209]/5 to-[#E4B905]/5 p-4 rounded-lg border border-[#C8B209]/10">
                   <h3 className="font-semibold text-[#C8B209] mb-2">Decentralized Finance (DeFi)</h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
                     Protocol analysis, yield farming, liquidity provision, DeFi security
                   </p>
                 </div>
                 <div className="bg-gradient-to-r from-[#E4B905]/5 to-[#FFBF00]/5 p-4 rounded-lg border border-[#E4B905]/10">
                   <h3 className="font-semibold text-[#E4B905] mb-2">Technology & Society</h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
                     Digital transformation, cybersecurity, privacy rights, technological disruption
                   </p>
                 </div>
                 <div className="bg-gradient-to-r from-[#FFBF00]/5 to-[#FFC517]/5 p-4 rounded-lg border border-[#FFBF00]/10">
                   <h3 className="font-semibold text-[#FFBF00] mb-2">Monetary Systems</h3>
-                  <p className="text-gray-600 text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
                     Central bank digital currencies (CBDCs), stablecoins, alternative monetary frameworks
                   </p>
                 </div>
@@ -89,7 +91,7 @@ export default function SubmitPage() {
             {/* How to Submit */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How to Submit an Article</h2>
-              <p className="text-gray-700 mb-8 leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-200 mb-8 leading-relaxed">
                 We welcome contributions from writers, researchers, and experts who share our commitment to thoughtful,
                 well-researched content. Here's how to submit your article:
               </p>
@@ -102,10 +104,10 @@ export default function SubmitPage() {
                   </span>
                   Prepare Your Article
                 </h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-700 dark:text-gray-200 mb-4">
                   Your article should be written in Markdown format (.md file) and include:
                 </p>
-                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <ul className="list-disc list-inside text-gray-700 dark:text-gray-200 space-y-2">
                   <li>
                     <strong>Title</strong>: Clear and descriptive
                   </li>
@@ -135,7 +137,7 @@ export default function SubmitPage() {
                   </span>
                   Format Your Article
                 </h3>
-                <p className="text-gray-700 mb-4">Create a file with this structure:</p>
+                <p className="text-gray-700 dark:text-gray-200 mb-4">Create a file with this structure:</p>
                 <div className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
                   <pre className="text-sm">{`---
 title: "Your Article Title Here"
@@ -171,19 +173,19 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                   </span>
                   Submit your Article to the GitHub Repo
                 </h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-700 dark:text-gray-200 mb-4">
                   Don't worry if you're new to GitHub - here's a simple step-by-step guide:
                 </p>
 
                 {/* Sub-step 3.1 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#ADAC0D]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#ADAC0D]/20">
                   <h4 className="text-lg font-semibold text-[#ADAC0D] mb-3 flex items-center gap-3">
                     <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       1
                     </span>
                     Go to our repository
                   </h4>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 dark:text-gray-200">
                     Visit{" "}
                     <Link
                       href="https://github.com/StabilityNexus/StableViewpoints"
@@ -195,27 +197,27 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                 </div>
 
                 {/* Sub-step 3.2 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#ADAC0D]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#ADAC0D]/20">
                   <h4 className="text-lg font-semibold text-[#ADAC0D] mb-3 flex items-center gap-3">
                     <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       2
                     </span>
                     Fork the repository
                   </h4>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 dark:text-gray-200">
                     Click the "Fork" button in the top-right corner. This creates your own copy of the project.
                   </p>
                 </div>
 
                 {/* Sub-step 3.3 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#ADAC0D]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#ADAC0D]/20">
                   <h4 className="text-lg font-semibold text-[#ADAC0D] mb-3 flex items-center gap-3">
                     <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       3
                     </span>
                     Add your images
                   </h4>
-                  <ul className="text-gray-700 list-disc list-inside space-y-2">
+                  <ul className="text-gray-700 dark:text-gray-200 list-disc list-inside space-y-2">
                     <li>
                       In your forked repository, click on <code className="bg-gray-100 px-1 rounded">public</code>{" "}
                       folder
@@ -237,14 +239,14 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                 </div>
 
                 {/* Sub-step 3.4 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#ADAC0D]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#ADAC0D]/20">
                   <h4 className="text-lg font-semibold text-[#ADAC0D] mb-3 flex items-center gap-3">
                     <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       4
                     </span>
                     Add your article
                   </h4>
-                  <ul className="text-gray-700 list-disc list-inside space-y-2">
+                  <ul className="text-gray-700 dark:text-gray-200 list-disc list-inside space-y-2">
                     <li>
                       Navigate to <code className="bg-gray-100 px-1 rounded">public</code> →{" "}
                       <code className="bg-gray-100 px-1 rounded">articles</code> folder
@@ -259,14 +261,14 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                 </div>
 
                 {/* Sub-step 3.5 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#ADAC0D]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#ADAC0D]/20">
                   <h4 className="text-lg font-semibold text-[#ADAC0D] mb-3 flex items-center gap-3">
                     <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       5
                     </span>
                     Use images in your article
                   </h4>
-                  <ul className="text-gray-700 list-disc list-inside space-y-2">
+                  <ul className="text-gray-700 dark:text-gray-200 list-disc list-inside space-y-2">
                     <li>
                       <strong>Header image</strong>: Set in the frontmatter as{" "}
                       <code className="bg-gray-100 px-1 rounded">image: "/images/your-header-image.jpg"</code>
@@ -284,14 +286,14 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                 </div>
 
                 {/* Sub-step 3.6 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#ADAC0D]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#ADAC0D]/20">
                   <h4 className="text-lg font-semibold text-[#ADAC0D] mb-3 flex items-center gap-3">
                     <span className="bg-[#ADAC0D] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       6
                     </span>
                     Commit your changes
                   </h4>
-                  <ul className="text-gray-700 list-disc list-inside space-y-2">
+                  <ul className="text-gray-700 dark:text-gray-200 list-disc list-inside space-y-2">
                     <li>Scroll down to "Commit new file"</li>
                     <li>Add a commit message like "Add article: Your Article Title"</li>
                     <li>Click "Commit new file"</li>
@@ -309,14 +311,14 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                 </h3>
 
                 {/* Sub-step 4.1 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#C8B209]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#C8B209]/20">
                   <h4 className="text-lg font-semibold text-[#C8B209] mb-3 flex items-center gap-3">
                     <span className="bg-[#C8B209] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       1
                     </span>
                     Navigate to the articles index
                   </h4>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 dark:text-gray-200">
                     Go to <code className="bg-gray-100 px-1 rounded">public</code> →{" "}
                     <code className="bg-gray-100 px-1 rounded">articles</code> folder, then click on{" "}
                     <code className="bg-gray-100 px-1 rounded">articles-index.json</code>
@@ -324,14 +326,14 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                 </div>
 
                 {/* Sub-step 4.2 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#C8B209]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#C8B209]/20">
                   <h4 className="text-lg font-semibold text-[#C8B209] mb-3 flex items-center gap-3">
                     <span className="bg-[#C8B209] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       2
                     </span>
                     Edit the file
                   </h4>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 dark:text-gray-200">
                     Click the pencil icon to edit the file, then add your article information to the{" "}
                     <code className="bg-gray-100 px-1 rounded">articles</code> array at the top (it will appear first on
                     the website)
@@ -339,7 +341,7 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                 </div>
 
                 {/* Sub-step 4.3 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#C8B209]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#C8B209]/20">
                   <h4 className="text-lg font-semibold text-[#C8B209] mb-3 flex items-center gap-3">
                     <span className="bg-[#C8B209] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       3
@@ -360,14 +362,14 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                 </div>
 
                 {/* Sub-step 4.4 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#C8B209]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#C8B209]/20">
                   <h4 className="text-lg font-semibold text-[#C8B209] mb-3 flex items-center gap-3">
                     <span className="bg-[#C8B209] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       4
                     </span>
                     Important formatting notes
                   </h4>
-                  <ul className="text-gray-700 list-disc list-inside space-y-2">
+                  <ul className="text-gray-700 dark:text-gray-200 list-disc list-inside space-y-2">
                     <li>Add a comma after the previous entry and ensure proper JSON formatting</li>
                     <li>
                       <strong>Featured articles</strong>: Set{" "}
@@ -389,41 +391,41 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                 </h3>
 
                 {/* Sub-step 5.1 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#E4B905]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#E4B905]/20">
                   <h4 className="text-lg font-semibold text-[#E4B905] mb-3 flex items-center gap-3">
                     <span className="bg-[#E4B905] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       1
                     </span>
                     Start the pull request
                   </h4>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 dark:text-gray-200">
                     You'll see a banner saying "This branch is ahead". Click "Contribute" → "Open pull request"
                   </p>
                 </div>
 
                 {/* Sub-step 5.2 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#E4B905]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#E4B905]/20">
                   <h4 className="text-lg font-semibold text-[#E4B905] mb-3 flex items-center gap-3">
                     <span className="bg-[#E4B905] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       2
                     </span>
                     Add details
                   </h4>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 dark:text-gray-200">
                     Add a title and description for your submission. <strong>Include</strong>: List of images you've
                     added and their purpose
                   </p>
                 </div>
 
                 {/* Sub-step 5.3 */}
-                <div className="mb-6 p-4 bg-white/50 rounded-lg border border-[#E4B905]/20">
+                <div className="mb-6 p-4 bg-white/50 dark:bg-slate-900/40 rounded-lg border border-[#E4B905]/20">
                   <h4 className="text-lg font-semibold text-[#E4B905] mb-3 flex items-center gap-3">
                     <span className="bg-[#E4B905] text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">
                       3
                     </span>
                     Submit
                   </h4>
-                  <p className="text-gray-700">Click "Create pull request" to submit your article for review</p>
+                  <p className="text-gray-700 dark:text-gray-200">Click "Create pull request" to submit your article for review</p>
                 </div>
               </div>
 
@@ -438,25 +440,25 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-[#228B22]" />
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 dark:text-gray-200">
                       <strong>Initial Review</strong>: We'll review your submission as soon as possible
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <MessageCircle className="w-5 h-5 text-[#91A511]" />
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 dark:text-gray-200">
                       <strong>Feedback</strong>: If changes are needed, we'll provide constructive feedback
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Upload className="w-5 h-5 text-[#E4B905]" />
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 dark:text-gray-200">
                       <strong>Publication</strong>: Once approved, your article will be published on the site
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Users className="w-5 h-5 text-[#FFBF00]" />
-                    <span className="text-gray-700">
+                    <span className="text-gray-700 dark:text-gray-200">
                       <strong>Promotion</strong>: We'll share your article on our social media channels
                     </span>
                   </div>
@@ -474,7 +476,7 @@ Remember to cite your sources and provide value to our readers!`}</pre>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-gradient-to-r from-[#228B22]/5 to-[#91A511]/5 p-6 rounded-lg border border-[#228B22]/10">
                   <h3 className="text-xl font-semibold text-[#228B22] mb-4">Technical Requirements</h3>
-                  <ul className="text-gray-700 space-y-2">
+                  <ul className="text-gray-700 dark:text-gray-200 space-y-2">
                     <li>
                       <strong>Formats</strong>: JPG, PNG, or WebP
                     </li>
@@ -492,7 +494,7 @@ Remember to cite your sources and provide value to our readers!`}</pre>
 
                 <div className="bg-gradient-to-r from-[#91A511]/5 to-[#ADAC0D]/5 p-6 rounded-lg border border-[#91A511]/10">
                   <h3 className="text-xl font-semibold text-[#91A511] mb-4">Content Guidelines</h3>
-                  <ul className="text-gray-700 space-y-2">
+                  <ul className="text-gray-700 dark:text-gray-200 space-y-2">
                     <li>
                       <strong>Copyright</strong>: Only use images you own or have permission to use
                     </li>
@@ -511,7 +513,7 @@ Remember to cite your sources and provide value to our readers!`}</pre>
 
               <div className="mt-6 p-6 bg-gradient-to-r from-[#ADAC0D]/5 to-[#C8B209]/5 rounded-lg border border-[#ADAC0D]/10">
                 <h3 className="text-xl font-semibold text-[#ADAC0D] mb-4">Naming Convention</h3>
-                <ul className="text-gray-700 space-y-2">
+                <ul className="text-gray-700 dark:text-gray-200 space-y-2">
                   <li>Use descriptive, lowercase names with hyphens</li>
                   <li>
                     <strong>Examples</strong>:{" "}
@@ -533,7 +535,7 @@ Remember to cite your sources and provide value to our readers!`}</pre>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-gradient-to-r from-[#E4B905]/5 to-[#FFBF00]/5 p-6 rounded-lg border border-[#E4B905]/10">
                   <h3 className="text-xl font-semibold text-[#E4B905] mb-4">Content Standards</h3>
-                  <ul className="text-gray-700 space-y-2">
+                  <ul className="text-gray-700 dark:text-gray-200 space-y-2">
                     <li>
                       <strong>Original work only</strong> - no plagiarism or previously published content
                     </li>
@@ -551,7 +553,7 @@ Remember to cite your sources and provide value to our readers!`}</pre>
 
                 <div className="bg-gradient-to-r from-[#FFBF00]/5 to-[#FFC517]/5 p-6 rounded-lg border border-[#FFBF00]/10">
                   <h3 className="text-xl font-semibold text-[#FFBF00] mb-4">Technical Requirements</h3>
-                  <ul className="text-gray-700 space-y-2">
+                  <ul className="text-gray-700 dark:text-gray-200 space-y-2">
                     <li>
                       <strong>Markdown format</strong> (.md file)
                     </li>
@@ -569,7 +571,7 @@ Remember to cite your sources and provide value to our readers!`}</pre>
             {/* Contact */}
             <section className="mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Questions?</h2>
-              <p className="text-gray-700 mb-6">
+              <p className="text-gray-700 dark:text-gray-200 mb-6">
                 If you have questions about the submission process or want to discuss a potential article idea, contact
                 us via:
               </p>
@@ -596,7 +598,7 @@ Remember to cite your sources and provide value to our readers!`}</pre>
 
             {/* Footer Message */}
             <div className="border-t border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20 pt-8">
-              <p className="text-gray-600 italic text-center">
+              <p className="text-gray-600 dark:text-gray-300 italic text-center">
                 Stable Viewpoints is committed to fostering thoughtful dialogue about the challenges and opportunities
                 of our time. We believe that through careful analysis and open discussion, we can work together toward a
                 more stable future.

@@ -19,7 +19,7 @@ interface BlogCardProps {
 export default function BlogCard({ post }: BlogCardProps) {
   return (
     <Link href={`/a/${post.slug}`} className="group h-full">
-      <article className="flex flex-col h-full bg-white shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-gradient-to-r from-[#228B22]/10 to-[#FFBF00]/10 relative rounded-lg">
+      <article className="flex flex-col h-full bg-white/95 dark:bg-slate-900/80 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-[#228B22]/10 dark:border-white/10 relative rounded-lg">
 
         {post.featured && (
           <div className="absolute top-3 right-3 z-20">
@@ -44,14 +44,14 @@ export default function BlogCard({ post }: BlogCardProps) {
         </div>
 
         <div className="flex flex-col flex-grow p-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:bg-gradient-to-r group-hover:from-[#228B22] group-hover:to-[#91A511] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3 line-clamp-2 group-hover:bg-gradient-to-r group-hover:from-[#228B22] group-hover:to-[#91A511] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
             {post.title}
           </h2>
 
-          <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+          <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
 
-          <div className="mt-auto flex items-center justify-between text-sm text-gray-500">
-            <div className="flex items-center gap-1 group-hover:text-[#228B22] transition-colors">
+          <div className="mt-auto flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
+            <div className="flex items-center gap-1 group-hover:text-[#228B22] dark:group-hover:text-[#E4B905] transition-colors">
               <User className="w-4 h-4" />
               <span>{post.author}</span>
             </div>
