@@ -2,7 +2,7 @@
 title: "Improving Dapp Stability by Eliminating Dependencies to Centralized Services: A Complete Guide to Deploying a Next.js Application to GitHub Pages"
 author: "Anjali Jha"
 date: "2024-12-21"
-image: "images/deploy-next-app.png"
+image: "/images/deploy-next-app.png"
 excerpt: "Comprehensive guide to boosting DApp stability by removing reliance on centralized services and embracing decentralized infrastructure."
 ---
 
