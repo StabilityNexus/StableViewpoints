@@ -28,6 +28,51 @@
         "featured": false
     },
     {
+        "slug": "deploying-smart-contracts-mordor-ethereum-classic-foundry",
+        "title": "Deploying Smart Contracts on Mordor and Ethereum Classic Using Foundry",
+        "author": "Kanishk Sogani",
+        "date": "2025-03-17",
+        "image": "/images/deploying-smart-contracts-using-foundry.webp",
+        "excerpt": "Guide: deploying smart contracts on Mordor and Ethereum Classic using Foundry.",
+        "featured": false
+    },
+    {
+        "slug": "on-burning",
+        "title": "On Burning…",
+        "author": "Zahnentferner",
+        "date": "2025-02-08",
+        "image": "/images/on-burning.webp",
+        "excerpt": "How token burning works, why projects use it, and what its effects really are.",
+        "featured": false
+    },
+    {
+        "slug": "hybrid-crypto-backed-collateralized-stablecoin-problem",
+        "title": "A Problem in Hybrid Crypto Backed and Collateralized Stablecoins",
+        "author": "Zahnentferner",
+        "date": "2025-02-07",
+        "image": "/images/a-problem-in-hybrid-crypto-backed-and-collateralized-stablecoins.webp",
+        "excerpt": "Why hybrid crypto-backed + collateralized stablecoins create flawed incentives.",
+        "featured": false
+    },
+    {
+        "slug": "deploy-next-app-to-github-pages-guide",
+        "title": "Improving Dapp Stability by Eliminating Dependencies to Centralized Services: A Complete Guide to Deploying a Next.js Application to GitHub Pages",
+        "author": "Anjali Jha",
+        "date": "2024-12-21",
+        "image": "/images/deploy-next-app.png",
+        "excerpt": "Comprehensive guide to boosting DApp stability by removing reliance on centralized services and embracing decentralized infrastructure.",
+        "featured": false
+    },
+    {
+        "slug": "deploy-react-app-to-github-pages-guide",
+        "title": "Improving Dapp Stability by Eliminating Dependencies to Centralized Services: A Complete Guide for Deployment of a React.js Application to GitHub Pages",
+        "author": "Zain",
+        "date": "2024-12-08",
+        "image": "/images/deploy-react-app.webp",
+        "excerpt": "Step-by-step guide to deploying a React.js application to GitHub Pages — ideal for decentralized web projects.",
+        "featured": false
+    },
+    {
         "slug": "understanding-gluon-through-liquidity-pools",
         "title": "Understanding Gluon through Liquidity Pools",
         "author": "Zahnentferner",
