@@ -103,13 +103,13 @@ Don't worry if you're new to GitHub - here's a simple step-by-step guide:
    - Use this format:
    ``` json
    {
-      "slug": "your-article-title",      // Must exactly match your markdown filename (without .md)
+      "slug": "your-article-filename", // Must exactly match your markdown filename (without the ".md" extension)
       "title": "Your Article Title Here",
       "author": "Your Name",
-      "date": "YYYY-MM-DD",             // Example: "2024-01-25"
+      "date": "YYYY-MM-DD", // Example: "2024-01-25"
       "image": "/images/your-header-image.jpg",
-      "excerpt": "A brief description of your article that appears on the homepage.",
-      "featured": false                 // Set to true only if the article should be highlighted (ask first)
+      "excerpt": "A brief description of your article that appears on the homepage.", // Meta description for SEO
+      "featured": false // Set to true only if the article should be highlighted (ask first)
    }
    ```
    - **Important**: Add a comma after the previous entry and ensure proper JSON formatting
