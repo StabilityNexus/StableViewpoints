@@ -114,13 +114,13 @@ export default function HomePage() {
       shadow-sm
     "
   >
-    <div className="max-w-6xl mx-auto px-4 py-6 flex justify-between items-center">
+   <div className="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+
       {/* Left: Title */}
       <div>
         <h1
           className="
-            text-5xl font-bold font-playfair leading-tight pb-2
-            bg-gradient-to-r
+            text-3xl md:text-4xl font-bold font-playfair leading-tight pb-2 bg-gradient-to-r
             from-[#228B22] via-[#E4B905] to-[#FFBF00]
             bg-clip-text text-transparent
             drop-shadow-sm
@@ -129,7 +129,7 @@ export default function HomePage() {
           Stable Viewpoints
         </h1>
 
-        <p className="mt-2 text-lg text-zinc-600 dark:text-zinc-400">
+        <p className="mt-0.5 text-sm md:text-base text-zinc-600 dark:text-zinc-400">
           Independent Articles about Stability
         </p>
       </div>
@@ -147,7 +147,7 @@ export default function HomePage() {
             bg-gradient-to-r from-[#228B22] to-[#91A511]
             hover:from-[#3E921E] hover:to-[#ADAC0D]
             text-white
-            px-6 py-3 font-semibold
+            px-4 py-2 text-sm font-medium
             transition-all duration-300
             shadow-lg hover:shadow-xl
             transform hover:-translate-y-0.5
