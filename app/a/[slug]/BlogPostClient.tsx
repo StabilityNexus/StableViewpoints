@@ -1,5 +1,6 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import { ArrowLeft, Calendar, User } from "lucide-react"
 import Image from "next/image"
@@ -8,6 +9,8 @@ import Footer from "@/components/footer"
 import { BlogPost } from "@/lib/blog"
 
 export default function BlogPostPage({ post }: { post: BlogPost }) {
+  const [copied, setCopied] = useState(false)
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10">
       {/* Header */}
@@ -73,14 +76,18 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
               <div className="flex flex-wrap items-center gap-3">
                 {/* Twitter/X Share */}
                 <button
+                  type="button"
                   onClick={() => {
                     const text = encodeURIComponent(post.title)
                     const url = encodeURIComponent(window.location.href)
-                    window.open(
+                    const shareWindow = window.open(
                       `https://twitter.com/intent/tweet?text=${text}&url=${url}`,
                       '_blank',
                       'width=550,height=420'
                     )
+                    if (!shareWindow) {
+                      alert('Please allow popups to share this article.')
+                    }
                   }}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#228B22] to-[#5A981A] hover:from-[#3E921E] hover:to-[#91A511] text-white text-sm font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                   aria-label="Share on Twitter"
@@ -93,15 +100,19 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
 
                 {/* LinkedIn Share */}
                 <button
+                  type="button"
                   onClick={() => {
                     const url = encodeURIComponent(window.location.href)
                     const title = encodeURIComponent(post.title)
                     const summary = encodeURIComponent(post.excerpt || '')
-                    window.open(
+                    const shareWindow = window.open(
                       `https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&summary=${summary}`,
                       '_blank',
                       'width=550,height=420'
                     )
+                    if (!shareWindow) {
+                      alert('Please allow popups to share this article.')
+                    }
                   }}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#91A511] to-[#ADAC0D] hover:from-[#ADAC0D] hover:to-[#C8B209] text-white text-sm font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                   aria-label="Share on LinkedIn"
@@ -114,14 +125,18 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
 
                 {/* Facebook Share */}
                 <button
+                  type="button"
                   onClick={() => {
                     const url = encodeURIComponent(window.location.href)
                     const quote = encodeURIComponent(post.title)
-                    window.open(
+                    const shareWindow = window.open(
                       `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`,
                       '_blank',
                       'width=550,height=420'
                     )
+                    if (!shareWindow) {
+                      alert('Please allow popups to share this article.')
+                    }
                   }}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#C8B209] to-[#E4B905] hover:from-[#E4B905] hover:to-[#FFBF00] text-white text-sm font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                   aria-label="Share on Facebook"
@@ -134,24 +149,36 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
 
                 {/* Copy Link */}
                 <button
+                  type="button"
                   onClick={() => {
-                    navigator.clipboard.writeText(window.location.href).then(() => {
-                      // Show temporary success feedback
-                      const btn = document.activeElement as HTMLButtonElement
-                      const originalText = btn.innerHTML
-                      btn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Copied!'
-                      setTimeout(() => {
-                        btn.innerHTML = originalText
-                      }, 2000)
-                    })
+                    navigator.clipboard.writeText(window.location.href)
+                      .then(() => {
+                        setCopied(true)
+                        setTimeout(() => setCopied(false), 2000)
+                      })
+                      .catch((err) => {
+                        console.error('Failed to copy:', err)
+                        alert('Failed to copy link. Please copy manually.')
+                      })
                   }}
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#E4B905] to-[#FFBF00] hover:from-[#FFBF00] hover:to-[#FFC517] text-white text-sm font-medium transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
                   aria-label="Copy link to clipboard"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                  </svg>
-                  Copy Link
+                  {copied ? (
+                    <>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Copied!
+                    </>
+                  ) : (
+                    <>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                      Copy Link
+                    </>
+                  )}
                 </button>
               </div>
             </div>
