@@ -34,9 +34,9 @@ export default function Footer() {
             <p className="text-gray-600">Fostering thoughtful dialogue toward a more stable future.</p>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
             <span className="text-gray-600 font-medium">Connect with us:</span>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3 sm:gap-4">
               <Link
                 href="https://t.me/StabilityNexus"
                 target="_blank"
