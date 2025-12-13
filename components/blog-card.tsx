@@ -44,9 +44,12 @@ export default function BlogCard({ post }: BlogCardProps) {
         </div>
 
         <div className="flex flex-col flex-grow p-6">
-          <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:bg-gradient-to-r group-hover:from-[#228B22] group-hover:to-[#91A511] group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3 line-clamp-2 
+            group-hover:bg-gradient-to-r group-hover:from-[#228B22] group-hover:to-[#91A511] 
+            dark:group-hover:from-[#4ade80] dark:group-hover:to-[#facc15]
+            group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
             {post.title}
-          </h2>
+        </h2>
 
           <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
 
