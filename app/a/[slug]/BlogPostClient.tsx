@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { ArrowLeft, Calendar, User } from "lucide-react"
 import Image from "next/image"
@@ -10,6 +10,13 @@ import { BlogPost } from "@/lib/blog"
 
 export default function BlogPostPage({ post }: { post: BlogPost }) {
   const [copied, setCopied] = useState(false)
+  const copiedTimeoutRef = useRef<number | null>(null)
+
+  useEffect(() => {
+    return () => {
+      if (copiedTimeoutRef.current != null) window.clearTimeout(copiedTimeoutRef.current)
+    }
+  }, [])
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10">
@@ -33,11 +40,7 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
           {post.image && (
             <div className="relative h-64 md:h-96">
               <Image
-                src={
-                  post.image.startsWith("/")
-                    ? `${post.image}`
-                    : post.image
-                }
+                src={post.image}
                 alt={post.title}
                 fill
                 className="object-cover"
@@ -83,7 +86,7 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
                     const shareWindow = window.open(
                       `https://twitter.com/intent/tweet?text=${text}&url=${url}`,
                       '_blank',
-                      'width=550,height=420'
+                      'noopener,noreferrer,width=550,height=420'
                     )
                     if (!shareWindow) {
                       alert('Please allow popups to share this article.')
@@ -108,7 +111,7 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
                     const shareWindow = window.open(
                       `https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&summary=${summary}`,
                       '_blank',
-                      'width=550,height=420'
+                      'noopener,noreferrer,width=550,height=420'
                     )
                     if (!shareWindow) {
                       alert('Please allow popups to share this article.')
@@ -132,7 +135,7 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
                     const shareWindow = window.open(
                       `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${quote}`,
                       '_blank',
-                      'width=550,height=420'
+                      'noopener,noreferrer,width=550,height=420'
                     )
                     if (!shareWindow) {
                       alert('Please allow popups to share this article.')
@@ -151,10 +154,15 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
                 <button
                   type="button"
                   onClick={() => {
+                    if (!window.isSecureContext || !navigator.clipboard?.writeText) {
+                      alert('Copy is only available on HTTPS. Please copy the URL from the address bar.')
+                      return
+                    }
                     navigator.clipboard.writeText(window.location.href)
                       .then(() => {
+                        if (copiedTimeoutRef.current != null) window.clearTimeout(copiedTimeoutRef.current)
                         setCopied(true)
-                        setTimeout(() => setCopied(false), 2000)
+                        copiedTimeoutRef.current = window.setTimeout(() => setCopied(false), 2000)
                       })
                       .catch((err) => {
                         console.error('Failed to copy:', err)
