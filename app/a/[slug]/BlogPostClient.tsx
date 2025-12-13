@@ -155,7 +155,7 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
                   type="button"
                   onClick={() => {
                     if (!window.isSecureContext || !navigator.clipboard?.writeText) {
-                      alert('Copy is only available on HTTPS. Please copy the URL from the address bar.')
+                      alert('Copy is only available in a secure context (HTTPS or localhost). Please copy the URL from the address bar.')
                       return
                     }
                     navigator.clipboard.writeText(window.location.href)
@@ -189,6 +189,11 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
                   )}
                 </button>
               </div>
+            </div>
+
+            {/* Screen reader announcement for copy feedback */}
+            <div role="status" aria-live="polite" className="sr-only">
+              {copied && "Link copied to clipboard"}
             </div>
 
             <div className="prose prose-lg max-w-none">
