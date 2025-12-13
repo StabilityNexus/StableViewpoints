@@ -9,12 +9,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.454.0",
     "next": "15.2.4",
     "next-mdx-remote": "^5.0.0",
+    "next-themes": "^0.4.6",
     "react": "^19",
     "react-dom": "^19",
     "serve": "^14.2.4",

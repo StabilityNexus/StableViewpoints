@@ -24,7 +24,7 @@ const LinkedInIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20 bg-gradient-to-r from-[#228B22]/5 via-[#91A511]/5 to-[#FFBF00]/5 backdrop-blur-sm mt-20">
+    <footer className="border-t border-gray-200 bg-gradient-to-r from-[#228B22]/5 via-[#91A511]/5 to-[#FFBF00]/5 backdrop-blur-sm mt-20">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
