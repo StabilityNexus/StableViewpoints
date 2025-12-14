@@ -12,7 +12,7 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10">
       {/* Header */}
       <header className="border-b border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20 bg-white/90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
-        <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div className="max-w-4xl mx-auto px-4 py-2 flex justify-between items-center">
           <Link
             href="/"
             className="inline-flex items-center text-[#228B22] hover:text-[#3E921E] transition-colors font-semibold"
