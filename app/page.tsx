@@ -68,11 +68,12 @@ export default function HomePage() {
   const handlePageChange = useCallback(
     (page: number) => {
       if (page < 1) page = 1
-      setCurrentPage(page)
-      router.push(`/?page=${page}`, { scroll: false })
-    },
-    [router],
+         setCurrentPage(page)
+         router.push(`/?page=${page}`, { scroll: false })
+        },
+        [router]
   )
+
 
   if (loading) {
     return (
@@ -108,12 +109,29 @@ export default function HomePage() {
             </h1>
             <p className="text-gray-600 mt-2 text-lg">Independent Articles about Stability</p>
           </div>
-          <Link
-            href="/submit"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#228B22] to-[#91A511] hover:from-[#3E921E] hover:to-[#ADAC0D] text-white px-6 py-3 font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-          >
-            Submit an Article
-          </Link>
+            <Link
+               href="/submit"
+                  className={`
+                     inline-flex items-center gap-2
+                     bg-gradient-to-r from-[#228B22] to-[#91A511]
+                     hover:from-[#3E921E] hover:to-[#ADAC0D]
+                     text-white
+                     px-3 py-2 text-sm
+                     sm:px-6 sm:py-3 sm:text-base
+                     font-semibold
+                     transition-all duration-300
+                     shadow-lg hover:shadow-xl
+                     transform hover:-translate-y-0.5
+                     rounded-md
+                    `}
+            >
+                   Submit an Article
+              </Link>
+
+
+
+
+
         </div>
       </header>
 
