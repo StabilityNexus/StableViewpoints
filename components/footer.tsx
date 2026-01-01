@@ -1,7 +1,7 @@
 import { Twitter } from "lucide-react"
 import Link from "next/link"
 
-// Custom Telegram icon since Lucide doesn't have one
+// Custom Telegram icon
 const TelegramIcon = () => (
   <svg viewBox="0 0 24 24" className="w-5 h-5" fill="currentColor">
     <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
@@ -23,54 +23,67 @@ const LinkedInIcon = () => (
 )
 
 export default function Footer() {
+  const currentUrl = typeof window !== 'undefined' ? window.location.href : ''
+
   return (
     <footer className="border-t border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20 bg-gradient-to-r from-[#228B22]/5 via-[#91A511]/5 to-[#FFBF00]/5 backdrop-blur-sm mt-20">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+
+          {/* Project Info */}
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold font-playfair bg-gradient-to-r from-[#228B22] to-[#E4B905] bg-clip-text text-transparent mb-2">
               Stable Viewpoints
             </h3>
-            <p className="text-gray-600">Fostering thoughtful dialogue toward a more stable future.</p>
+            <p className="text-gray-600">
+              Fostering thoughtful dialogue toward a more stable future.
+            </p>
           </div>
 
-          <div className="flex items-center gap-6">
+          {/* Social Media Icons */}
+          <div className="flex flex-col md:flex-row items-center gap-6">
             <span className="text-gray-600 font-medium">Connect with us:</span>
             <div className="flex items-center gap-4">
-              <Link
-                href="https://t.me/StabilityNexus"
-                target="_blank"
-                className="p-3 rounded-full bg-gradient-to-r from-[#228B22] to-[#5A981A] hover:from-[#3E921E] hover:to-[#91A511] text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                aria-label="Telegram"
-              >
+              <Link href="https://t.me/StabilityNexus" target="_blank" className="p-3 rounded-full bg-gradient-to-r from-[#228B22] to-[#5A981A] hover:from-[#3E921E] hover:to-[#91A511] text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5" aria-label="Telegram">
                 <TelegramIcon />
               </Link>
-              <Link
-                href="https://discord.gg/fuuWX4AbJt"
-                target="_blank"
-                className="p-3 rounded-full bg-gradient-to-r from-[#91A511] to-[#ADAC0D] hover:from-[#ADAC0D] hover:to-[#C8B209] text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                aria-label="Discord"
-              >
+              <Link href="https://discord.gg/fuuWX4AbJt" target="_blank" className="p-3 rounded-full bg-gradient-to-r from-[#91A511] to-[#ADAC0D] hover:from-[#ADAC0D] hover:to-[#C8B209] text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5" aria-label="Discord">
                 <DiscordIcon />
               </Link>
-              <Link
-                href="https://www.linkedin.com/company/stability-nexus/"
-                target="_blank"
-                className="p-3 rounded-full bg-gradient-to-r from-[#C8B209] to-[#E4B905] hover:from-[#E4B905] hover:to-[#FFBF00] text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                aria-label="LinkedIn"
-              >
+              <Link href="https://www.linkedin.com/company/stability-nexus/" target="_blank" className="p-3 rounded-full bg-gradient-to-r from-[#C8B209] to-[#E4B905] hover:from-[#E4B905] hover:to-[#FFBF00] text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5" aria-label="LinkedIn">
                 <LinkedInIcon />
               </Link>
-              <Link
-                href="https://twitter.com/StabilityNexus"
-                target="_blank"
-                className="p-3 rounded-full bg-gradient-to-r from-[#E4B905] to-[#FFBF00] hover:from-[#FFBF00] hover:to-[#FFC517] text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                aria-label="Twitter"
-              >
+              <Link href="https://twitter.com/StabilityNexus" target="_blank" className="p-3 rounded-full bg-gradient-to-r from-[#E4B905] to-[#FFBF00] hover:from-[#FFBF00] hover:to-[#FFC517] text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5" aria-label="Twitter">
                 <Twitter className="w-5 h-5" />
               </Link>
             </div>
           </div>
+
+          {/* Sharing Buttons */}
+          <div className="mt-6 flex items-center gap-4">
+            <span className="text-gray-600 font-medium">Share this project:</span>
+
+            {/* Twitter Share */}
+            <a href={`https://twitter.com/intent/tweet?text=Check out Stable Viewpoints!&url=${currentUrl}`} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-blue-500 hover:bg-blue-600 text-white transition-all" aria-label="Share on Twitter">
+              <Twitter className="w-5 h-5" />
+            </a>
+
+            {/* LinkedIn Share */}
+            <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-blue-700 hover:bg-blue-800 text-white transition-all" aria-label="Share on LinkedIn">
+              <LinkedInIcon />
+            </a>
+
+            {/* Telegram Share */}
+            <a href={`https://t.me/share/url?url=${currentUrl}&text=Check out Stable Viewpoints!`} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-blue-400 hover:bg-blue-500 text-white transition-all" aria-label="Share on Telegram">
+              <TelegramIcon />
+            </a>
+
+            {/* Discord Share */}
+            <a href={`https://discord.com/channels/@me`} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-indigo-500 hover:bg-indigo-600 text-white transition-all" aria-label="Share on Discord">
+              <DiscordIcon />
+            </a>
+          </div>
+
         </div>
       </div>
     </footer>
