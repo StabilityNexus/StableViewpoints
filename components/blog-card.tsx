@@ -19,6 +19,7 @@ interface BlogCardProps {
 export default function BlogCard({ post }: BlogCardProps) {
   return (
     <Link href={`/a/${post.slug}`} className="group h-full">
+      <article className="flex flex-col h-full bg-white/95 dark:bg-slate-900/80 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-[#228B22]/10 dark:border-white/10 relative rounded-lg">
       <article className="flex flex-col h-full bg-white dark:bg-gray-800 shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 border border-gradient-to-r from-[#228B22]/10 to-[#FFBF00]/10 relative rounded-lg">
 
         {post.featured && (
