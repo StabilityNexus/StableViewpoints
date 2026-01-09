@@ -24,18 +24,18 @@ const LinkedInIcon = () => (
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20 bg-gradient-to-r from-[#228B22]/5 via-[#91A511]/5 to-[#FFBF00]/5 backdrop-blur-sm mt-20">
+    <footer className="border-t border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20 bg-gradient-to-r from-[#228B22]/5 via-[#91A511]/5 to-[#FFBF00]/5 backdrop-blur-sm mt-20 ">
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-bold font-playfair bg-gradient-to-r from-[#228B22] to-[#E4B905] bg-clip-text text-transparent mb-2">
               Stable Viewpoints
             </h3>
-            <p className="text-gray-600">Fostering thoughtful dialogue toward a more stable future.</p>
+            <p className="text-gray-600 dark:text-gray-300">Fostering thoughtful dialogue toward a more stable future.</p>
           </div>
 
           <div className="flex items-center gap-6">
-            <span className="text-gray-600 font-medium">Connect with us:</span>
+            <span className="text-gray-600 font-medium dark:text-gray-300">Connect with us:</span>
             <div className="flex items-center gap-4">
               <Link
                 href="https://t.me/StabilityNexus"
