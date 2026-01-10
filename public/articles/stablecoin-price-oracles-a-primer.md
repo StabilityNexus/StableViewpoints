@@ -22,7 +22,7 @@ Different types of stablecoin protocols use oracles in different ways.
 
 For example, when a crypto-collateralized stablecoin protocol uses price oracles, it monitors the price of the collateral asset. When the price of the collateral asset drops and the collateral ratio of a loan drops below a predefined threshold, the protocol enables the liquidation of the loan and the use of its collateral to buy back stablecoins and protect the peg.
 
-Similarly, when a crypto-backed stablecoin protocol (e.g. Djed or Gluon) uses price oracles, it monitors the price of the reserve asset and uses this price to know much of the reserve asset should be given back to users who redeem stablecoins and how much of the reserver asset should be required from users who want to mint stablecoins.
+Similarly, when a crypto-backed stablecoin protocol (e.g. Djed or Gluon) uses price oracles, it monitors the price of the reserve asset and uses this price to know much of the reserve asset should be given back to users who redeem stablecoins and how much of the reserve asset should be required from users who want to mint stablecoins.
 
 Independently of the type of stablecoin, accurate price feeds are key to ensuring that stablecoin protocols function without de-pegging.
 
