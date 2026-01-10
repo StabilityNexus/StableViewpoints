@@ -3,7 +3,7 @@ title: "Unleashing the Potential of Djed Powered by COTI"
 author: "Zahnentferner"
 date: "2025-01-31"
 image: "/images/UI of Djed powered by COTI.webp"
-excerpt: "AIn-depth analysis of Djed powered by COTI, its design, limitations, and opportunities to unlock its full potential within Cardano’s ecosystem."
+excerpt: "An In-depth analysis of Djed powered by COTI, its design, limitations, and opportunities to unlock its full potential within Cardano’s ecosystem."
 ---
 
 # Unleashing the Potential of Djed Powered by COTI
@@ -95,7 +95,7 @@ But the title of Djed's paper states that Djed is algorithmic and the "Related W
 
 Learn more:
 
-- [Demistifying Algorithmic Stablecoins](https://medium.com/djed-alliance/demystifying-algorithmic-stablecoins-4392e3b42b0e).
+- [Demystifying Algorithmic Stablecoins](https://medium.com/djed-alliance/demystifying-algorithmic-stablecoins-4392e3b42b0e).
 - [Crypto-backed versus Crypto-Collateralized Stablecoins](https://viewpoints.stability.nexus/a/collateralized-vs-backed-stablecoins-holders-perspective/).
 
 ## Outdated Djed Version
