@@ -117,7 +117,7 @@ Whereas the base coin halved in value, the reservecoin’s value was divided by 
 
 - To maintain a healthy reserve ratio range, the Djed stablecoin protocol adjusts the ease of reservecoin redemption based on the reserve ratio. When the reserve ratio is low, redeeming reservecoins can further reduce the ratio even more. The approach to managing this varies across Djed versions:
 
-- In the versions implemented in SigmaUSD, Djed powered by COTI and Zephyr, direct redemption is disabled if the reserve ratio falls below a minimum threshold. When this happens, a reservecoin holder wishing to dispose of reversecoins must resort to selling them in a secondary market.
+- In the versions implemented in SigmaUSD, Djed powered by COTI and Zephyr, direct redemption is disabled if the reserve ratio falls below a minimum threshold. When this happens, a reservecoin holder wishing to dispose of reservecoins must resort to selling them in a secondary market.
 
 - In the “Extended Djed” version, redemption of reservecoins is always possible, but fees increase as the reserve ratio decreases from the optimal level.
 In the “Osiris” version of Djed, implemented in Milkomeda Djed Osiris, redemption is allowed below the threshold only if enough stablecoins are redeemed simultaneously to prevent further reduction in the reserve ratio.
