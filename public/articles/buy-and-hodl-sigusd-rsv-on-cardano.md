@@ -42,7 +42,7 @@ Using Rosen Bridge you can transfer your assets between any two supported blockc
 To transfer your assets to Ergo, follow the following steps:
 
 - Make sure you have your desired amount of ADA in a Cardano wallet such as [Eternl](https://eternl.io/).
-- Vsit [app.rosen.tech](https://app.rosen.tech/) and select Cardano as source and Ergo as target blockchains.
+- Visit [app.rosen.tech](https://app.rosen.tech/) and select Cardano as source and Ergo as target blockchains.
 
 ![Full History of Djed Alliance](../images/rosen-bridge.webp)
 
