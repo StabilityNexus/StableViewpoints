@@ -12,13 +12,13 @@ excerpt: "Explores why native stablecoins matter for blockchain ecosystems, boos
 
 TL;DR: All stablecoins carry inherent risks, which vary from low to high based on their structural design. The use of bridges while promoting asset interoperability, introduces an additional point of failure. When stablecoins are transferred across chains using bridges, the original assets are locked in the bridge, and derivative tokens are issued on the target chain. However, if the bridge is exploited, holders of the derivative will not be able to recover the original assets. As a result, these derivatives become worthless, since the redemption of the underlying assets requires burning the original/native stablecoin. Having a native stablecoin in each ecosystem is crucial for building long term stability and value.
 
-_[Learn more about the various risk factors that lead stablecoins to depeg.](https://medium.com/djed-alliance/understanding-why-and-how-stablecoins-depeg-f27e3d17357f)_
+*[Learn more about the various risk factors that lead stablecoins to depeg.](https://medium.com/djed-alliance/understanding-why-and-how-stablecoins-depeg-f27e3d17357f)*
 
 ## What are Native Stablecoins?
 
 Native stablecoins are stablecoins directly issued in a specific blockchain network. The issuers, such as Circle for USDC, Tether for USDT, or smart contracts for [algorithmic stablecoins](https://medium.com/djed-alliance/demystifying-algorithmic-stablecoins-4392e3b42b0e), retain control over the minting and burning of these stablecoins on their respective networks. Holders of native stablecoins have the option to redeem them for the underlying asset they are backed by, such as fiat currency in the case of USDC by Circle or a crypto asset in the case of a crypto-backed stablecoin, by requesting to burn the stablecoin at any time.
 
-_Note: It is not a native stablecoin if it is not issued and redeemable on the current chain._
+*Note: It is not a native stablecoin if it is not issued and redeemable on the current chain.*
 
 ## The Context
 

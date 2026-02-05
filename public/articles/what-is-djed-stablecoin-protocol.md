@@ -22,7 +22,7 @@ Djed sets itself apart by addressing all three critical aspects.
 
 Unique to Djed is its self-regulating mechanism that functions akin to an autonomous bank, algorithmically managing the buying and selling of stablecoins to keep their value stable without external intervention. In addition, Djed’s protocol is designed to be chain agnostic and open source, allowing for deployment across various networks to create native stablecoins.
 
-_[Learn how to deploy a Djed-based stablecoin on your blockchain](https://docs.djed.one/about-us/the-djed-alliance/create-a-djed-based-stablecoin)_
+*[Learn how to deploy a Djed-based stablecoin on your blockchain](https://docs.djed.one/about-us/the-djed-alliance/create-a-djed-based-stablecoin)*
 
 ## Battle-tested and proven
 
@@ -46,7 +46,10 @@ Learn more: Crypto-backed and crypto-collateralized are [two different concepts]
 
 ## How Djed works
 
-![How Djed Works](../images/how-djed-works.webp)
+<figure>
+  <img src="/images/how-djed-works.webp">
+  <figcaption>How Djed Works</figcaption>
+</figure>
 
 Djed is designed to be stable and redeemable under any circumstances. It seeks to maintain a minimum and maximum reserve ratio between 400% and 800%. This means even if the base coin’s value drops suddenly by 75%, Djed’s stability isn’t compromised.
 
@@ -62,11 +65,14 @@ The mechanism is designed to motivate base coin holders to provide liquidity by 
 
 - Djed-based stablecoins remain redeemable at all times.
 
-_[Learn more about the Djed Stablecoin design](https://iohk.io/en/research/library/papers/djed-a-formally-verified-crypto-backed-pegged-algorithmic-stablecoin/)_
+*[Learn more about the Djed Stablecoin design](https://iohk.io/en/research/library/papers/djed-a-formally-verified-crypto-backed-pegged-algorithmic-stablecoin/)*
 
 ## Djed compared to other stablecoins
 
-![Djed Compare to other stables](../images/comparing-djed-to-other-stablecoins.webp)
+<figure>
+  <img src="/images/comparing-djed-to-other-stablecoins.webp">
+  <figcaption>Djed Compare to other stables</figcaption>
+</figure>
 
 ## Final words
 
