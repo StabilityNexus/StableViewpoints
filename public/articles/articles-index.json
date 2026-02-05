@@ -37,6 +37,15 @@
         "featured": false
     },
     {
+        "slug": "djed-stablecoin-oracles-across-chains",
+        "title": "Djed Stablecoin Oracles Across Chains",
+        "author": "Wen-Chiao Su",
+        "date": "2025-02-10",
+        "image": "/images/djed-stablecoin-oracles.webp",
+        "excerpt": "Explains how Djed’s cross-chain price oracles gather reliable data and filter out outliers to protect stablecoin peg integrity.",
+        "featured": false
+    },
+    {
         "slug": "on-burning",
         "title": "On Burning…",
         "author": "Zahnentferner",
@@ -55,6 +64,15 @@
         "featured": false
     },
     {
+        "slug": "unleashing-the-potential-of-djed-powered-by-coti",
+        "title": "Unleashing the Potential of Djed Powered by COTI",
+        "author": "Zahnentferner",
+        "date": "2025-01-31",
+        "image": "/images/UI of Djed powered by COTI.webp",
+        "excerpt": "An In-depth analysis of Djed powered by COTI, its design, limitations, and opportunities to unlock its full potential within Cardano’s ecosystem.",
+        "featured": false
+    },
+    {
         "slug": "deploy-next-app-to-github-pages-guide",
         "title": "Improving Dapp Stability by Eliminating Dependencies to Centralized Services: A Complete Guide to Deploying a Next.js Application to GitHub Pages",
         "author": "Anjali Jha",
@@ -70,6 +88,15 @@
         "date": "2024-12-08",
         "image": "/images/deploy-react-app.webp",
         "excerpt": "Step-by-step guide to deploying a React.js application to GitHub Pages — ideal for decentralized web projects.",
+        "featured": false
+    },
+    {
+        "slug": "stablecoin-price-oracles-a-primer",
+        "title": "Stablecoin Price Oracles — A Primer",
+        "author": "Wen-Chiao Su",
+        "date": "2024-09-24",
+        "image": "/images/Stablecoin Price Oracles A Primer.webp",
+        "excerpt": "A clear primer on why price oracles are essential for stablecoins, how they work, and their key risks and challenges.",
         "featured": false
     },
     {
@@ -127,6 +154,24 @@
         "featured": false
     },
     {
+        "slug": "retrospective-2023",
+        "title": "Retrospective 2023",
+        "author": "2023-12-28",
+        "date": "2024-06-13",
+        "image": "/images/year-twenty-twenty-three-review.webp",
+        "excerpt": "Recaps Djed Alliance’s 2023: research breakthroughs, new stablecoin deployments, expanded chains and community growth.",
+        "featured": false
+    },
+    {
+        "slug": "ecsd-ethereum-classic-native-stablecoin-djed-protocol",
+        "title": "ECSD: Ethereum Classic’s native stablecoin built with Djed Stablecoin Protocol",
+        "author": "Wen-Chiao Su",
+        "date": "2024-06-13",
+        "image": "/images/Ethereum Classic’s native stablecoin built with Djed Stablecoin Protocol.webp",
+        "excerpt": "Overview of ECSD, Ethereum Classic’s native USD-pegged stablecoin built with Djed.",
+        "featured": false
+    },
+    {
         "slug": "basket-backing-challenges",
         "title": "The Challenges and Problems of Backing by a Basket of Assets",
         "author": "Zahnentferner",
@@ -136,12 +181,75 @@
         "featured": false
     },
     {
+        "slug": "buy-and-hodl-sigusd-rsv-on-cardano",
+        "title": "Using SigmaUSD on Cardano",
+        "author": "anon_real",
+        "date": "2024-05-08",
+        "image": "/images/using-sigmausd-on-cardano.webp",
+        "excerpt": "Guide on using SigmaUSD and SigRSV on Cardano, including how to transfer assets and buy/hold stablecoins.",
+        "featured": false
+    },
+    {
+        "slug": "why-native-stablecoins-are-essential-for-blockchains",
+        "title": "Why Native Stablecoins Are Essential for Blockchains",
+        "author": "Wen-Chiao Su",
+        "date": "2024-05-07",
+        "image": "/images/why-native-stablecoins-are-essential-for-blockchains.webp",
+        "excerpt": "Explores why native stablecoins matter for blockchain ecosystems, boosting liquidity, stability, and decentralized growth.",
+        "featured": false
+    },
+    {
         "slug": "introducing-gluon-on-ergo",
         "title": "Introducing Gluon, the future of stablecoin protocols on Ergo",
         "author": "Wen-Chiao Su",
         "date": "2024-05-01",
         "image": "/images/introducing-gluon-on-ergo.webp",
         "excerpt": "Gluon brings a physics-inspired, governance-free stablecoin protocol to the Ergo blockchain.",
+        "featured": false
+    },
+    {
+        "slug": "an-overview-of-djed-reservecoins-benefits-risks-and-more",
+        "title": "An Overview of Djed ReserveCoins: Benefits, Risks and More",
+        "author": "Zahnentferner",
+        "date": "2024-04-26",
+        "image": "/images/an-overview-of-djed-reservecoins-benefits-risks-and-more.webp",
+        "excerpt": "Overview of Djed Reservecoins, their benefits, risks, mechanisms, and role within the Djed stablecoin ecosystem.",
+        "featured": false
+    },
+    {
+        "slug": "demystifying-algorithmic-stablecoins",
+        "title": "Demystifying Algorithmic Stablecoins",
+        "author": "Wen-Chiao Su",
+        "date": "2024-04-19",
+        "image": "/images/Demystifying Algorithmic Stablecoins.webp",
+        "excerpt": "A clear guide to algorithmic stablecoins, how they work, key mechanisms, risks, and their role in crypto ecosystems.",
+        "featured": false
+    },
+    {
+        "slug": "understanding-why-and-how-stablecoins-depeg",
+        "title": "Understanding Why and How Stablecoins Depeg",
+        "author": "Wen-Chiao Su",
+        "date": "2024-04-08",
+        "image": "/images/understanding-why-and-how-stablecoins-depeg.webp",
+        "excerpt": "Explains why stablecoins depeg, the common causes and mechanisms behind depegging, and implications for holders and markets.",
+        "featured": false
+    },
+    {
+        "slug": "addressing-the-stablecoin-trilemma",
+        "title": "Addressing the Stablecoin Trilemma",
+        "author": "Wen-Chiao Su",
+        "date": "2024-03-27",
+        "image": "/images/addressing-the-stablecoin-trilemma.webp",
+        "excerpt": "An explanation of the stablecoin trilemma — balancing decentralization, price stability & capital efficiency in design choices.",
+        "featured": false
+    },
+    {
+        "slug": "what-is-djed-stablecoin-protocol",
+        "title": "What is the Djed Stablecoin Protocol?",
+        "author": "Wen-Chiao Su",
+        "date": "2024-03-19",
+        "image": "/images/djed-stablecoin-protocol.webp",
+        "excerpt": "Djed is a formally verified, crypto-backed stablecoin protocol that ensures decentralized, resilient price stability.",
         "featured": false
     },
     {
@@ -160,6 +268,15 @@
         "date": "2024-03-13",
         "image": "/images/what-is-the-djed-alliance.webp",
         "excerpt": "Learn about the Djed Alliance and its mission to bring stability to the decentralized economy through the Djed Stablecoin Protocol.",
+        "featured": false
+    },
+    {
+        "slug": "the-history-of-djed-and-the-djed-alliance",
+        "title": "The History of Djed and the Djed Alliance",
+        "author": "Zahnentferner",
+        "date": "2023-04-03",
+        "image": "/images/the-history-of-djed-and-the-djed-alliance.png",
+        "excerpt": "A concise history of Djed and the Djed Alliance, tracing its origins, development, and impact on stablecoin innovation.",
         "featured": false
     }
   ]

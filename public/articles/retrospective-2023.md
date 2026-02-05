@@ -2,7 +2,7 @@
 title: "Retrospective 2023"
 author: "Zahnentferner"
 date: "2023-12-28"
-image: "/images/2023-in-review.webp"
+image: "/images/year-twenty-twenty-three-review.webp"
 excerpt: "Recaps Djed Alliance’s 2023: research breakthroughs, new stablecoin deployments, expanded chains and community growth."
 ---
 

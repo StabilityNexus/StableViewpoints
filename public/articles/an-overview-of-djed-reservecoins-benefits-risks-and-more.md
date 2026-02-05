@@ -10,8 +10,8 @@ excerpt: "Overview of Djed Reservecoins, their benefits, risks, mechanisms, and 
 
 The Djed Stablecoin Protocol allows users to mint not only stablecoins but also reservecoins. But what are reservecoins? In short:
 
-_Reservecoins tokenize the reserve surplus._
-_Each reservecoin gives its holder the right to a portion of the reserve surplus._
+*Reservecoins tokenize the reserve surplus.*
+*Each reservecoin gives its holder the right to a portion of the reserve surplus.*
 
 Let’s dive deeper into what this means!
 

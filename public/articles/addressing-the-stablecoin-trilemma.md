@@ -33,7 +33,10 @@ The real question isn’t if a stablecoin fully achieves these attributes, but w
 
 ## Exploring the Types of Stablecoins
 
-![stablecoins as the backbone of our digital economy](../images/stablecoins-as-the-backbone-of-digital-economy.webp)
+<figure>
+  <img src="/images/stablecoins-as-the-backbone-of-digital-economy.webp">
+  <figcaption>stablecoins as the backbone of our digital economy</figcaption>
+</figure>
 
 Stablecoins are the backbone of our digital economy — according to CoinGecko, the current total market cap of stablecoins is valued at $151 billion with daily trading volume amounting close to $80 billion.
 
@@ -41,7 +44,10 @@ Most of these stablecoins can fall under one of 4 categories below:
 
 ## Fiat-Backed Stablecoins
 
-![Fiat-Backed Stablecoins](../images/fiat-backed-stablecoins.webp)
+<figure>
+  <img src="/images/fiat-backed-stablecoins.webp">
+  <figcaption>Fiat-Backed Stablecoins</figcaption>
+</figure>
 
 Fiat-backed stablecoins mirror the value of fiat currencies, like USDC and USDT, which are the most used stablecoins. Pegged to traditional currencies, they are both stable and capital efficient but fall short on decentralization as they generally rely on a centralized structure with regulated entities. Given the centralized nature, these institutions can be susceptible to censorship, can engage in censorship, and notably, their actions raise concerns regarding transparency. Furthermore, their existence depends on the financial health of their operators.
 
@@ -49,7 +55,10 @@ USDT, by Tether, is a [notable example](https://blockworks.co/news/us-judge-orde
 
 ## Crypto-Collateralized Stablecoins
 
-![Crypto-Collateralized Stablecoins](../images//Crypto-Collateralized%20Stablecoins.webp)
+<figure>
+  <img src="/images//Crypto-Collateralized%20Stablecoins.webp">
+  <figcaption>Crypto-Collateralized Stablecoins</figcaption>
+</figure>
 
 Crypto-collateralized stablecoins achieve decentralization often at the cost of stability and capital efficiency. These stablecoins are created and issued as loans collateralized by top-performing digital assets (e.g.,ETH), locked in smart contracts. Because the collateral-to-loan ratio needs to be high to absorb price shocks, the excess collateral remains unused until the borrower repays the loan or faces liquidation. This leads to capital inefficiency. Moreover, stablecoin holders can only convert their stablecoins back into collateral during liquidation or when repaying loans, which further compromises their price stability.
 
@@ -57,7 +66,10 @@ The most popular example of this type is undoubtedly DAI by MakerDAO.
 
 ## Unbacked Stablecoins
 
-![Unbacked Stablecoins](../images//Unbacked%20Stablecoins.webp)
+<figure>
+  <img src="/images//Unbacked%20Stablecoins.webp">
+  <figcaption>Unbacked Stablecoins</figcaption>
+</figure>
 
 Unbacked stablecoins attempt to eliminate the need for collateral or reserves through mechanisms that adjust supply based on price fluctuation. If the stablecoin’s price exceeds its target, the algorithm triggers to expand the supply, for instance, by minting new coins. If the price drops below the target, the algorithm encourages supply contraction — either by incentivizing users to burn or lock up their stablecoins — to push the price back up.
 
@@ -67,17 +79,20 @@ UST (and LUNA) on the Terra blockchain exemplifies this type of stablecoin. It c
 
 ## Crypto-Backed (Decentralized Reserve Protocols)
 
-![Crypto-Backed (Decentralized Reserve Protocols)](../images//Crypto-Backed%20(Decentralized%20Reserve%20Protocols).webp)
+<figure>
+  <img src="/images//Crypto-Backed%20(Decentralized%20Reserve%20Protocols).webp">
+  <figcaption>Crypto-Backed (Decentralized Reserve Protocols)</figcaption>
+</figure>
 
 This newer model, which is often confused with the _crypto-collateralized_ stablecoins, offers a unique blend of decentralization and stability through backing, and mechanisms such as reserve tokenization which ensure capital efficiency.
 
 This newer approach involves maintaining reserves of assets backing the stablecoins. One key difference between crypto-backed and crypto-collateralized is the ability to redeem stablecoins for a portion of the reserves at any time, without limitations such as repayment of loans or through liquidations. This improves price stability and gives users the confidence that, at any time, they can exchange their stablecoins for the backing asset, whose price is independent of the stablecoin protocol itself. This independence is essential to avoid and fully prevent death spirals.
 
-_The Djed Stablecoin Protocol is an example of a crypto-backed stablecoin protocol._
+*The Djed Stablecoin Protocol is an example of a crypto-backed stablecoin protocol.*
 
 Djed also allows users to mint and redeem so-called reservecoins, which represent portions of the reserve surplus. In other words, reservecoins tokenize the reserve surplus and are free to be used in any way. For example, they could be staked or lent. Therefore, in Djed, no portion of the reserve needs to remain idle as inefficient capital. The whole reserve is tokenized as stablecoins and reservecoins, which can be used freely and efficiently.
 
-_[Learn how the Djed Stablecoin Protocol fulfills all three attributes](https://medium.com/djed-alliance/what-is-the-djed-stablecoin-protocol-a4f49328d138)_
+*[Learn how the Djed Stablecoin Protocol fulfills all three attributes](https://medium.com/djed-alliance/what-is-the-djed-stablecoin-protocol-a4f49328d138)*
 
 ## Final Words
 

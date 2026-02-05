@@ -44,7 +44,9 @@ To transfer your assets to Ergo, follow the following steps:
 - Make sure you have your desired amount of ADA in a Cardano wallet such as [Eternl](https://eternl.io/).
 - Visit [app.rosen.tech](https://app.rosen.tech/) and select Cardano as source and Ergo as target blockchains.
 
-![Full History of Djed Alliance](../images/rosen-bridge.webp)
+<figure>
+  <img src="/images/rosen-bridge.webp">
+</figure>
 
 - Connect your Cardano wallet by clicking on “CONNECT WALLET”. Here we use Eternl.
 

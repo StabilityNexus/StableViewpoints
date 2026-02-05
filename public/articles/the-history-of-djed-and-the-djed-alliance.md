@@ -32,4 +32,7 @@ In February 2023, after a long and thorough peer-review process, an academic pap
 
 The Djed Alliance keeps growing beyond the original collaboration team and we welcome new collaborators who would like to work together to achieve our mission.
 
-![Full History of Djed Alliance](../images/Djed and Djed Alliance Full History.webp)
+<figure>
+  <img src="/images/Djed and Djed Alliance Full History.webp">
+  <figcaption>Full History of Djed Alliance</figcaption>
+</figure>

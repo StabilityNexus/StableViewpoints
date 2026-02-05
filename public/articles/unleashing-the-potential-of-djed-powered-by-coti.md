@@ -8,7 +8,7 @@ excerpt: "An In-depth analysis of Djed powered by COTI, its design, limitations,
 
 # Unleashing the Potential of Djed Powered by COTI
 
-_This article is part of a series of two articles covering both [Djed powered by COTI](https://djed.xyz/) and Milkomeda [Djed Osiris](https://milkomeda.djed.one/). These two articles have been funded by the Cardano Community through Catalyst. They are part of the deliverables of the [Djed Alliance Ecosystem Boost](https://cardano.ideascale.com/c/idea/112645/) project. The articles are written by Zahnentferner, founder of the Djed Alliance and one of the 5 engineers who were part of original R&D team that led to the Djed Stablecoin Protocols._
+*This article is part of a series of two articles covering both [Djed powered by COTI](https://djed.xyz/) and Milkomeda [Djed Osiris](https://milkomeda.djed.one/). These two articles have been funded by the Cardano Community through Catalyst. They are part of the deliverables of the [Djed Alliance Ecosystem Boost](https://cardano.ideascale.com/c/idea/112645/) project. The articles are written by Zahnentferner, founder of the Djed Alliance and one of the 5 engineers who were part of original R&D team that led to the Djed Stablecoin Protocols.*
 
 As one of the 5 engineers who worked on the R&D of Djed's first implementation (SigmaUSD on Ergo) before I even named the protocol "Djed", as the main author of the two Djed stablecoin papers, and as the founder of the Djed Alliance, I would like all Djed-based or Djed-inspired stablecoins to succeed.
 
@@ -52,20 +52,17 @@ The implementation is not open-source (in the sense of being licensed through an
 Instead of being transparent about the issues above, COTI either avoids these issues or deliberately claims the opposite of the truth. For example, as shown in the screenshots below, COTI's FAQ claims that Djed powered by COTI is decentralized and open-source.
 
 <figure>
-  <img src="/images/COTI falsely claiming that Djed powered by COTI is fully decentralized.webp" 
-    alt="COTI falsely claiming that Djed powered by COTI is fully decentralized">
+  <img src="/images/COTI falsely claiming that Djed powered by COTI is fully decentralized.webp">
   <figcaption>COTI falsely claiming that Djed powered by COTI is fully decentralized</figcaption>
 </figure>
 
 <figure>
-  <img src="/images/COTI falsely claiming that Djed powered by COTI is community-driven and allows open-source development.webp"
-    alt="COTI falsely claiming that Djed powered by COTI is community-driven and allows open-source development">
+  <img src="/images/COTI falsely claiming that Djed powered by COTI is community-driven and allows open-source development.webp">
   <figcaption>COTI falsely claiming that Djed powered by COTI is community-driven and allows open-source development</figcaption>
 </figure>
 
 <figure>
-  <img src="/images/COTI again falsely claiming that Djed powered by COTI is open source.webp" 
-    alt="COTI again falsely claiming that Djed powered by COTI is open source">
+  <img src="/images/COTI again falsely claiming that Djed powered by COTI is open source.webp">
   <figcaption>COTI again falsely claiming that Djed powered by COTI is open source</figcaption>
 </figure>
 
@@ -74,22 +71,19 @@ Instead of being transparent about the issues above, COTI either avoids these is
 COTI's FAQ is full of technical misconceptions and misunderstandings about the Djed Stablecoin Protocol itself. For example, COTI refers to Djed as "an overcollateralized stablecoin and not an algorithmic stablecoin".
 
 <figure>
-  <img src="/images/COTI wrongly referring to Djed as over-collateralized and not algorithmic..webp" 
-    alt="COTI wrongly referring to Djed as over-collateralized and not algorithmic.">
+  <img src="/images/COTI wrongly referring to Djed as over-collateralized and not algorithmic..webp">
   <figcaption>COTI wrongly referring to Djed as over-collateralized and not algorithmic.</figcaption>
 </figure>
 
 But the title of Djed's paper states that Djed is algorithmic and the "Related Work" section of the paper explains how a crypto-backed stablecoin protocol, like Djed, differs from crypto-collateralized stablecoin protocols.
 
 <figure>
-  <img src="/images/Title of Djed's paper, clearly stating that Djed is algorithmic and crypto-backed.webp" 
-    alt="Title of Djed's paper, clearly stating that Djed is algorithmic and crypto-backed">
+  <img src="/images/Title of Djed's paper, clearly stating that Djed is algorithmic and crypto-backed.webp">
   <figcaption>Title of Djed's paper, clearly stating that Djed is algorithmic and crypto-backed</figcaption>
 </figure>
 
 <figure>
-  <img src="/images/Related Work section, discussing how crypto-collateralized stablecoins are different from Djed.webp" 
-    alt='"Related Work" section, discussing how crypto-collateralized stablecoins are different from Djed'>
+  <img src="/images/Related Work section, discussing how crypto-collateralized stablecoins are different from Djed.webp">
   <figcaption>"Related Work" section, discussing how crypto-collateralized stablecoins are different from Djed</figcaption>
 </figure>
 
@@ -134,8 +128,7 @@ COTI's frontend for Djed powered by COTI restricts users from some countries. An
 Moreover, COTI imposes quite high minimum amounts to mint and redeem stablecoins and reservecoins. This effectively limits access to the contract only to wealthier users. Poorer users must resort to buying and selling stablecoins and reservecoins in secondary markets.
 
 <figure>
-  <img src="/images/High minimum amounts for minting and redemption transactions.webp"
-    alt="High minimum amounts for minting and redemption transactions">
+  <img src="/images/High minimum amounts for minting and redemption transactions.webp">
   <figcaption>High minimum amounts for minting and redemption transactions</figcaption>
 </figure>
 
