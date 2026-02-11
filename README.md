@@ -152,17 +152,17 @@ Don't worry if you're new to GitHub - here's a simple step-by-step guide:
    - Click the pencil icon to edit the file
    - Add your article information to the `articles` array at the top (it will appear first on the website)
    - Use this format:
-   \`\`\`json
+   ``` json
    {
-     "slug": "your-article-title",
-     "title": "Your Article Title Here",
-     "author": "Your Name",
-     "date": "2024-01-25",
-     "image": "/images/your-header-image.jpg",
-     "excerpt": "A brief description of your article that will appear on the homepage.",
-     "featured": false
+      "slug": "your-article-filename", // Must exactly match your markdown filename (without the ".md" extension)
+      "title": "Your Article Title Here",
+      "author": "Your Name",
+      "date": "YYYY-MM-DD", // Example: "2024-01-25"
+      "image": "/images/your-header-image.jpg",
+      "excerpt": "A brief description of your article that appears on the homepage.", // Meta description for SEO
+      "featured": false // Set to true only if the article should be highlighted (ask first)
    }
-   \`\`\`
+   ```
    - **Important**: Add a comma after the previous entry and ensure proper JSON formatting
    - **Featured articles**: Set `"featured": true` if you want your article highlighted with a star (ask us first)
    - Commit the changes with a message like "Add [article title] to index"
