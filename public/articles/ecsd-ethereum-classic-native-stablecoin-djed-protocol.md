@@ -36,13 +36,13 @@ The Ethereum Classic Stable Dollar (ECSD), created by The Stable Order, will be 
 
 - Fully backed: Backed by a reserve of ETC with a reserve ratio significantly greater than 100%.
 
-*_[Learn more about the Djed Stablecoin Protocol](https://viewpoints.stability.nexus/a/what-is-the-djed-alliance/)_*
+*[Learn more about the Djed Stablecoin Protocol](https://viewpoints.stability.nexus/a/what-is-the-djed-alliance/)*
 
 ### The Djed Alliance
 
 The Djed Alliance unites all Djed-based stablecoins. Currently, there are four different deployments of Djed-based stablecoins on four different blockchains. All of these deployments have been empirically battle-tested in periods of market instability and play significant roles in their respective blockchain ecosystems.
 
-*_[Learn more about the Djed Alliance](https://viewpoints.stability.nexus/a/what-is-the-djed-alliance/)_*
+*[Learn more about the Djed Alliance](https://viewpoints.stability.nexus/a/what-is-the-djed-alliance/)*
 
 ## Looking Forward
 
@@ -57,4 +57,3 @@ To stay updated on ECSD’s development, join us on [Discord](https://discord.gg
 The [Djed Alliance](https://djed.one/) aims to stabilize the digital economy through the Djed Stablecoin Protocol.
 
 The Djed Stablecoin Protocol is deployed across multiple networks and can be used to create your stablecoin. Join our [growing community](https://discord.gg/ggxP4ttHgN) and together, we will advance the future of the decentralized economy.
-

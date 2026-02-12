@@ -45,7 +45,7 @@ These factors can all destabilize the stablecoin, causing its price to deviate a
 Unbacked stablecoins and those collateralized with cryptocurrencies are particularly vulnerable to market volatility. Sharp market movements can affect these stablecoins’ supply and demand, leading to a deviation from the peg.
 
 <figure>
-  <img src="/images/USDT depegging to $0.95 shortly after the LUNA UST crisis. Source CoinMarketCap.webp" alt="USDT depegging to $0.95 shortly after the LUNA/UST crisis. Source:CoinMarketCap">
+  <img src="/images/USDT depegging to $0.95 shortly after the LUNA UST crisis. Source CoinMarketCap.webp">
   <figcaption>USDT depegging to $0.95 shortly after the LUNA/UST crisis. Source:CoinMarketCap</figcaption>
 </figure>
 
@@ -54,8 +54,7 @@ This usually starts when users question the stability or reliability of the issu
 ### Liquidity issues
 
 <figure>
-  <img src="/images/USDR loses its peg on Pearl DEX. Source DEXScreener.webp" 
-    alt="USDR loses its peg on Pearl DEX. Source: DEXScreener">
+  <img src="/images/USDR loses its peg on Pearl DEX. Source DEXScreener.webp">
   <figcaption>USDR loses its peg on Pearl DEX. Source: DEXScreener</figcaption>
 </figure>
 
@@ -64,8 +63,7 @@ Insufficient liquidity can hinder the ability to trade a stablecoin without affe
 ### Technical problems
 
 <figure>
-  <img src="/images/USP depegging to 0.47 after the flash loan attack. Source CoinMarketCap.webp" 
-    alt="USP depegging to 0.47 after the flash loan attack. Source:CoinMarketCap">
+  <img src="/images/USP depegging to 0.47 after the flash loan attack. Source CoinMarketCap.webp">
   <figcaption>USP depegging to 0.47 after the flash loan attack. Source:CoinMarketCap</figcaption>
 </figure>
 
@@ -74,8 +72,7 @@ Vulnerabilities in smart contracts or underlying technology can cause stablecoin
 ### Macro influence
 
 <figure>
-  <img src="/images/USDC depegging to 0.88 after the news broke. Source CoinMarketCap.webp" 
-    alt="USDC depegging to 0.88 after the news broke. Source:CoinMarketCap">
+  <img src="/images/USDC depegging to 0.88 after the news broke. Source CoinMarketCap.webp">
   <figcaption>USDC depegging to 0.88 after the news broke. Source:CoinMarketCap</figcaption>
 </figure>
 
@@ -86,8 +83,7 @@ Broader economic factors, such as inflation or changes in interest rates, can in
 Changes in regulatory frameworks or legal challenges can introduce uncertainty that affects stablecoin stability, highlighting the complex relationship between digital assets and the regulatory landscape.
 
 <figure>
-  <img src="/images/Kaiko Volatility Data.webp" 
-    alt="Kaiko Volatility Data">
+  <img src="/images/Kaiko Volatility Data.webp">
   <figcaption>Kaiko Volatility Data</figcaption>
 </figure>
 

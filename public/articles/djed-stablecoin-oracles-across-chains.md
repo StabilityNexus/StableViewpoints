@@ -26,8 +26,11 @@ Stablecoins rely on accurate oracles to prevent de-pegging from their target val
 
 ## Overview on Djed-based Stablecoins
 
-![Overview on Djed-based Stablecoins](../images/Overview%20on%20Djed-based%20Stablecoins.webp)
-
+<figure>
+    <img src="/images/Overview%20on%20Djed-based%20Stablecoins.webp">
+    <figcaption>Overview on Djed-based Stablecoins</figcaption>
+</figure>
+  
 To learn more about each oracle implementation, please refer to [this page](https://docs.stability.nexus/djed-stablecoin-protocols/deployments).
 
 ## Relevance of oracle sources
