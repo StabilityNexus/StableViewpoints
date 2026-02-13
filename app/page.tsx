@@ -7,6 +7,7 @@ import BlogCard from "@/components/blog-card"
 import Pagination from "@/components/pagination"
 import Link from "next/link"
 import Footer from "@/components/footer"
+import ThemeToggleButton from "@/components/ui/theme-toggle-button"
 
 interface BlogPost {
   slug: string
@@ -98,7 +99,7 @@ export default function HomePage() {
   const { posts, totalPages, hasNextPage, hasPrevPage } = paginatedData
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 dark:from-zinc-950 dark:via-zinc-900 dark:to-yellow-900/20">
       {/* Header */}
       <header className="border-b border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-4 md:py-6 flex justify-between items-center gap-4">
@@ -108,6 +109,7 @@ export default function HomePage() {
             </h1>
             <p className="text-gray-600 dark:text-gray-300 mt-1 md:mt-2 text-sm sm:text-base md:text-lg truncate">Independent Articles about Stability</p>
           </div>
+          <ThemeToggleButton />
           <Link
             href="/submit"
             className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#228B22] to-[#91A511] hover:from-[#3E921E] hover:to-[#ADAC0D] text-white px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 rounded whitespace-nowrap"
