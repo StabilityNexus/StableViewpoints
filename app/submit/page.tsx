@@ -183,7 +183,7 @@ Remember to cite your sources and provide value to our readers!`}</pre>
                     </span>
                     Go to our repository
                   </h4>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 repo-link-box">
                     Visit{" "}
                     <Link
                       href="https://github.com/StabilityNexus/StableViewpoints"
