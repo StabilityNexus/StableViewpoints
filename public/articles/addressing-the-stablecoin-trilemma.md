@@ -55,7 +55,7 @@ USDT, by Tether, is a [notable example](https://blockworks.co/news/us-judge-orde
 ## Crypto-Collateralized Stablecoins
 
 <figure>
-  <img src="/images/crypto-collateralized-Stablecoins.webp" alt="Crypto-Collateralized Stablecoins" />
+  <img src="/images/Crypto-Collateralized-Stablecoins.webp" alt="Crypto-Collateralized Stablecoins" />
   <figcaption>Crypto-Collateralized Stablecoins</figcaption>
 </figure>
 
@@ -79,7 +79,7 @@ UST (and LUNA) on the Terra blockchain exemplifies this type of stablecoin. It c
 ## Crypto-Backed (Decentralized Reserve Protocols)
 
 <figure>
-  <img src="/images/crypto-backed-decentralized-reserve-protocols.webp" alt="Crypto-Backed (Decentralized Reserve Protocols)" />
+  <img src="/images/Crypto-Backed-Decentralized-Reserve-Protocols.webp" alt="Crypto-Backed (Decentralized Reserve Protocols)" />
   <figcaption>Crypto-Backed (Decentralized Reserve Protocols)</figcaption>
 </figure>
 
