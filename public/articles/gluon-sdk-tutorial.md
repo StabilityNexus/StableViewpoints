@@ -26,8 +26,8 @@ npm install gluon-gold-sdk@1.0.0
 To use the SDK in a browser environment, you can dynamically import it as follows:
 
 ```
-if (typeof window !== 'undefined') {
-    gluon = import('gluon-gold-sdk');
+if (typeof window !== "undefined") {
+  const gluon = await import("gluon-gold-sdk");
 }
 ```
 
@@ -51,15 +51,19 @@ const config = new Config();
 
 ```
 // Set the network to the desired environment (e.g., 'mainnet' or 'testnet')
-config.NETWORK = 'mainnet'; // or 'testnet'
+config.NETWORK = "mainnet"; // or 'testnet'
+
 // Set the miner fee (in nanoERGs)
 config.MINER_FEE = 1000000; // Example: 0.001 ERG
+
 // Set the node URL for connecting to the Ergo blockchain
-config.NODE_URL = 'https://ergo-node.example.com';
+config.NODE_URL = "https://ergo-node.example.com";
+
 // Set the UI fee percentage: 1000 means 1% of the value of each operation that users perform will be sent to the UI devs
 config.UI_FEE = 1000; // Example: 1% fee
+
 // Set the UI tree where a predefined percentage of each operation will be sent to
-config.UI_TREE = 'your-ui-tree-value-here';
+config.UI_TREE = "your-ui-tree-value-here";
 ```
 
 By configuring these parameters, you ensure that the SDK is tailored to your application’s requirements, allowing for seamless interaction with the Gluon protocol. Adjust these values according to your specific needs and the environment in which your application will operate.
@@ -74,6 +78,7 @@ Here’s how you can set up the environment by fetching the required boxes:
 ```
 // Fetch the current unspent Gold Oracle Box
 const oracleBoxJs = await gluonInstance.getGoldOracleBox();
+
 // Fetch the current unspent Gluon Box
 const gluonBoxJs = await gluonInstance.getGluonBox();
 ```
@@ -99,7 +104,8 @@ It is desired to use as few boxes as possible to construct our necessary transac
 Fission is the process of converting ERGs into Neutrons (GAUs, stable coins) and Protons (GAUCs, volatile coins). Here’s how you can perform a fission operation:
 
 ```
-const amountToFission = ... // amount in nanoERGs
+const amountToFission = ...; // amount in nanoERGs
+
 const unsignedTransaction = await gluonInstance.fissionForEip12(gluonBoxJs, oracleBoxJs, userBoxes, amountToFission);
 ```
 
@@ -108,6 +114,7 @@ Fusion is the reverse process, where Neutrons (GAUs, stable coins) and Protons (
 
 ```
 const amountToFusion = ... // amount in nanoERGs
+
 const unsignedTransaction = await gluonInstance.fusionForEip12(gluonBoxJs, oracleBoxJs, userBoxes, amountToFusion);
 ```
 
@@ -116,8 +123,14 @@ This operation involves sending Protons (GAUCs) to the reactor to receive Neutro
 
 ```
 const protonsToTransmute = 5000000; // Example amount
-const height = await nodeService.getNetworkHeight(); // Get current network height
+
+// Get current network height
+const height = await nodeService.getNetworkHeight();
+
+// Fetch the Oracle BuyBack Box
 const oracleBuyBackJs = await gluonInstance.getOracleBuyBackBoxJs();
+
+// Create an unsigned transaction for transmuting to Gold
 const unsignedTransaction = await gluonInstance.transmuteToGoldForEip12(gluonBoxJs, oracleBoxJs, userBoxes, oracleBuyBackJs, protonsToTransmute, height);
 ```
 
@@ -126,6 +139,7 @@ This operation involves sending Neutrons (GAUs) to the reactor to receive Proton
 
 ```
 const neutronsToDecay = 2700000; // Example amount
+
 const unsignedTransaction = await gluonInstance.transmuteFromGoldForEip12(gluonBoxJs, oracleBoxJs, userBoxes, oracleBuyBackJs, neutronsToDecay, height);
 ```
 
@@ -155,6 +169,7 @@ For each operation, you can calculate the total fees and their breakdown:
 
 ```
 const fees = await gluonInstance.getTotalFeeAmountFission(gluonBoxJs, amountToFission);
+
 console.log(`Developer Fee: ${fees.devFee}, UI Fee: ${fees.uiFee}, Oracle Fee: ${fees.oracleFee}, Total Fee: ${fees.totalFee}`);
 ```
 
@@ -169,8 +184,12 @@ You can also display the current prices of Neutrons and Protons as well as the o
 ```
 const neutronPrice = await gluonInstance.neutronPrice(oracleBoxJs);
 const protonPrice = await gluonInstance.protonPrice(oracleBoxJs);
+
+// Fetch Gold prices from the Oracle Box
 const oracleGoldPricePerKg = await oracleBoxJs.getPrice();
 const oracleGoldPricePerGram = await oracleBoxJs.getPricePerGram();
+
+// Log the current prices
 console.log(`Neutron Price: ${neutronPrice}, Proton Price: ${protonPrice}, Gold Price: ${oracleGoldPricePerKg}, Gold Price Per Gram: ${oracleGoldPricePerGram}`);
 ```
 
@@ -180,11 +199,16 @@ These values should be displayed in the website to users so they know what the c
 The SDK provides methods to calculate volume of gold conversions over a specified number of days (up to 14 days). You can calculate the volume of protons to neutrons or neutrons to protons.
 
 ```
-// Calculate the n-day volume of protons to neutrons
-const n = 7; // specify the number of days, up to 14 days
+// Specify the number of days for volume calculation (up to 14 days)
+const n = 7;
+
+// Calculate the n-day volume of protons → neutrons
 const volumeProtonsToNeutrons = await gluon.accumulateVolumeProtonsToNeutrons(n);
-// Calculate the n-day volume of neutrons to protons
+
+// Calculate the n-day volume of neutrons → protons
 const volumeNeutronsToProtons = await gluon.accumulateVolumeNeutronsToProtons(n);
+
+// Log the calculated volumes
 console.log(`Volume of protons to neutrons over ${n} days:`, volumeProtonsToNeutrons);
 console.log(`Volume of neutrons to protons over ${n} days:`, volumeNeutronsToProtons);
 ```

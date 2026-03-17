@@ -112,7 +112,8 @@ export default function HomePage() {
             href="/submit"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-[#228B22] to-[#91A511] hover:from-[#3E921E] hover:to-[#ADAC0D] text-white px-4 py-2 md:px-6 md:py-3 text-sm md:text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 whitespace-nowrap"
           >
-            Submit an Article
+            <span className="hidden sm:inline">Submit an Article</span>
+            <span className="sm:hidden">Submit</span>
           </Link>
         </div>
       </header>

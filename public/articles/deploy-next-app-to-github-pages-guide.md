@@ -39,16 +39,22 @@ Here’s how to configure your `next.config.mjs`:
 
 ```
 const nextConfig = {
-output: 'export', // Tells Next.js to export the app statically
-distDir: 'out', // Output directory for the static files
-images: {
-unoptimized: true, // Disables Next.js image optimization (required for static export)
-loader: "custom", // Custom image loader for specific handling
-loaderFile: "./src/loaders/cloudinary-loader.ts", // Path to the custom image loader
-},
-reactStrictMode: true, // Optional: Enables React Strict Mode
-basePath: "/your-repository-name", // GitHub Pages requires the basePath for deployment under a repository. In case of custom domain name the basePath is not required
+  output: "export", // Tells Next.js to export the app statically
+  distDir: "out", // Output directory for the static files
+
+  images: {
+    unoptimized: true, // Disables Next.js image optimization (required for static export)
+    loader: "custom", // Custom image loader for specific handling
+    loaderFile: "./src/loaders/cloudinary-loader.ts", // Path to the custom image loader
+  },
+
+  reactStrictMode: true, // Optional: Enables React Strict Mode
+
+  basePath: "/your-repository-name", 
+  // GitHub Pages requires the basePath for deployment under a repository.
+  // In case of custom domain name the basePath is not required
 };
+
 export default nextConfig;
 ```
 
@@ -75,8 +81,11 @@ For a dynamic route like https://example.com/id/[param], where param can be any 
 
 ```
 export async function generateStaticParams() {
-const params = Array.from({ length: 100 }, (_, i) => i.toString()); // IDs 0 to 99
-return params.map((param) => ({ param }));
+  const params = Array.from({ length: 100 }, (_, i) => i.toString()); // IDs 0 to 99
+
+  return params.map((param) => ({
+    param,
+  }));
 }
 ```
 
@@ -84,8 +93,12 @@ For dynamic IDs fetched from an API:
 
 ```
 export async function generateStaticParams() {
-const data = await fetch('https://example.com/api/ids').then((res) => res.json());
-return data.map((id: string) => ({ param: id }));
+  const data = await fetch("https://example.com/api/ids")
+    .then((res) => res.json());
+
+  return data.map((id: string) => ({
+    param: id,
+  }));
 }
 ```
 
@@ -136,13 +149,16 @@ Example: yaml
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+
       - name: Build the Next.js app
         env:
           ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
@@ -161,15 +177,19 @@ Example: yaml
 jobs:
   build:
     runs-on: ubuntu-latest
+
     env:
       NEXT_PUBLIC_API_URL: https://api.example.com
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+
       - name: Build the Next.js app
         run: npm run build
 ```
@@ -209,10 +229,12 @@ If the exposed key is too risky, route requests through your backend to keep the
 
 ```
 export default async function handler(req, res) {
-const API_KEY = process.env.PRIVATE_API_KEY; // Kept private
-const response = await fetch(`https://api.example.com?apikey=${API_KEY}`);
-const data = await response.json();
-res.status(200).json(data);
+  const API_KEY = process.env.PRIVATE_API_KEY; // Kept private
+
+  const response = await fetch(`https://api.example.com?apikey=${API_KEY}`);
+  const data = await response.json();
+
+  res.status(200).json(data);
 }
 ```
 
@@ -233,8 +255,8 @@ name: Deploy Next.js site to Pages
 ```
 on:
   push:
-    branches: ["main"]  # Trigger deployment on push to the 'main' branch
-  workflow_dispatch:  # Manually trigger the deployment from GitHub Actions tab
+    branches: ["main"] # Trigger deployment on push to the 'main' branch
+  workflow_dispatch: # Manually trigger the deployment from GitHub Actions tab
 
 permissions:
   contents: read
@@ -248,9 +270,11 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     defaults:
       run:
-        working-directory: ./web  # Specify the directory of your Next.js app
+        working-directory: ./web # Specify the directory of your Next.js app
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -302,14 +326,16 @@ jobs:
       - name: Upload static files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./web/out  # Specify the output directory for static files
+          path: ./web/out # Specify the output directory for static files
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
