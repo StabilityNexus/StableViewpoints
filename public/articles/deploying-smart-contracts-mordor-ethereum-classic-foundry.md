@@ -45,10 +45,10 @@ Modify your foundry.toml file to set evm_version to “paris”:
 
 ```
 [profile.default]
-src = “src”
-out = “out”
-libs = [“lib”]
-evm_version = “paris” # Ensures compatibility with Mordor & Ethereum Classic
+src = "src"
+out = "out"
+libs = ["lib"]
+evm_version = "paris" # Ensures compatibility with Mordor & Ethereum Classic
 ```
 
 After updating, verify the EVM version by running:
@@ -84,19 +84,24 @@ If you already have a deployment script, you can reuse it. Otherwise, create a D
 ```
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
+
 import "forge-std/Script.sol";
 import "../src/YourContract.sol";
+
 contract DeployContract is Script {
- function setUp() public {}
- function run() external {
- vm.startBroadcast();
- 
- // Deploy your contract
- YourContract contractInstance = new YourContract();
- //Replace with your contract
-vm.stopBroadcast();
- console.log("Contract deployed at:", address(contractInstance));
- }
+    function setUp() public {}
+
+    function run() external {
+        vm.startBroadcast();
+
+        // Deploy your contract
+        YourContract contractInstance = new YourContract();
+        // Replace with your contract
+
+        vm.stopBroadcast();
+
+        console.log("Contract deployed at:", address(contractInstance));
+    }
 }
 
 ```
@@ -109,11 +114,11 @@ Run the deployment script with:
 
 ```
 forge script script/Deploy.s.sol:DeployContract \
- --rpc-url $MORDOR_RPC_URL \
- --private-key $PRIVATE_KEY \
- --broadcast \
- --evm_version paris \
- --legacy
+  --rpc-url $MORDOR_RPC_URL \
+  --private-key $PRIVATE_KEY \
+  --broadcast \
+  --evm-version paris \
+  --legacy
 ```
 
 ### Deploying to Ethereum Classic
@@ -122,12 +127,12 @@ Run the deployment script with:
 
 ```
 forge script script/Deploy.s.sol:DeployContract \
- --rpc-url $ETC_RPC_URL \
- --private-key $PRIVATE_KEY \
- --broadcast \
- --evm_version paris \
- --legacy
-+ ```
+  --rpc-url $ETC_RPC_URL \
+  --private-key $PRIVATE_KEY \
+  --broadcast \
+  --evm-version paris \
+  --legacy  
+```
 
  Make sure you have PRIVATE_KEY set in your .env file before running the deployment script.
 

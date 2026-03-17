@@ -32,7 +32,10 @@ It’s important to note that the attributes in stablecoins aren’t binary. Ins
 The real question isn’t if a stablecoin fully achieves these attributes, but whether it does so to a sufficient degree.
 
 ## Exploring the Types of Stablecoins
-![stablecoins as the backbone of our digital economy](/images/stablecoins-as-the-backbone-of-digital-economy.webp)
+<figure>
+  <img src="/images/stablecoins-as-the-backbone-of-digital-economy.webp" alt="Stablecoins as the backbone of our digital economy" />
+  <figcaption>Stablecoins as the backbone of the digital economy</figcaption>
+</figure>
 
 Stablecoins are the backbone of our digital economy — according to CoinGecko, the current total market cap of stablecoins is valued at $151 billion with daily trading volume amounting close to $80 billion.
 
@@ -40,7 +43,10 @@ Most of these stablecoins can fall under one of 4 categories below:
 
 ## Fiat-Backed Stablecoins
 
-![Fiat-Backed Stablecoins](/images/fiat-backed-stablecoins.webp)
+<figure>
+  <img src="/images/fiat-backed-stablecoins.webp" alt="Fiat-Backed Stablecoins" />
+  <figcaption>Fiat-Backed Stablecoins</figcaption>
+</figure>
 
 Fiat-backed stablecoins mirror the value of fiat currencies, like USDC and USDT, which are the most used stablecoins. Pegged to traditional currencies, they are both stable and capital efficient but fall short on decentralization as they generally rely on a centralized structure with regulated entities. Given the centralized nature, these institutions can be susceptible to censorship, can engage in censorship, and notably, their actions raise concerns regarding transparency. Furthermore, their existence depends on the financial health of their operators.
 
@@ -48,7 +54,10 @@ USDT, by Tether, is a [notable example](https://blockworks.co/news/us-judge-orde
 
 ## Crypto-Collateralized Stablecoins
 
-![Crypto-Collateralized Stablecoins](/images//Crypto-Collateralized%20Stablecoins.webp)
+<figure>
+  <img src="/images/crypto-collateralized-Stablecoins.webp" alt="Crypto-Collateralized Stablecoins" />
+  <figcaption>Crypto-Collateralized Stablecoins</figcaption>
+</figure>
 
 Crypto-collateralized stablecoins achieve decentralization often at the cost of stability and capital efficiency. These stablecoins are created and issued as loans collateralized by top-performing digital assets (e.g.,ETH), locked in smart contracts. Because the collateral-to-loan ratio needs to be high to absorb price shocks, the excess collateral remains unused until the borrower repays the loan or faces liquidation. This leads to capital inefficiency. Moreover, stablecoin holders can only convert their stablecoins back into collateral during liquidation or when repaying loans, which further compromises their price stability.
 
@@ -56,7 +65,10 @@ The most popular example of this type is undoubtedly DAI by MakerDAO.
 
 ## Unbacked Stablecoins
 
-![Unbacked Stablecoins](/images//Unbacked%20Stablecoins.webp)
+<figure>
+  <img src="/images/Unbacked-Stablecoins.webp" alt="Unbacked Stablecoins" />
+  <figcaption>Unbacked Stablecoins</figcaption>
+</figure>
 
 Unbacked stablecoins attempt to eliminate the need for collateral or reserves through mechanisms that adjust supply based on price fluctuation. If the stablecoin’s price exceeds its target, the algorithm triggers to expand the supply, for instance, by minting new coins. If the price drops below the target, the algorithm encourages supply contraction — either by incentivizing users to burn or lock up their stablecoins — to push the price back up.
 
@@ -66,7 +78,10 @@ UST (and LUNA) on the Terra blockchain exemplifies this type of stablecoin. It c
 
 ## Crypto-Backed (Decentralized Reserve Protocols)
 
-![Crypto-Backed (Decentralized Reserve Protocols)](/images//Crypto-Backed%20(Decentralized%20Reserve%20Protocols).webp)
+<figure>
+  <img src="/images/crypto-backed-decentralized-reserve-protocols.webp" alt="Crypto-Backed (Decentralized Reserve Protocols)" />
+  <figcaption>Crypto-Backed (Decentralized Reserve Protocols)</figcaption>
+</figure>
 
 This newer model, which is often confused with the _crypto-collateralized_ stablecoins, offers a unique blend of decentralization and stability through backing, and mechanisms such as reserve tokenization which ensure capital efficiency.
 
