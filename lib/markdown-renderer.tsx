@@ -1,7 +1,9 @@
+"use client"
+
 import ReactMarkdown from "react-markdown"
 import type { Components } from "react-markdown"
 
-const BASE_PATH = process.env.NODE_ENV === "production" ? "/StableViewpoints" : ""
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 
 const components: Components = {
   h1: ({ children }) => <h1 className="text-3xl font-bold text-gray-900 mt-8 mb-4">{children}</h1>,
@@ -25,9 +27,10 @@ const components: Components = {
 
   hr: () => <hr className="my-8 border-gray-300" />,
 
-  // use the `inline` prop to distinguish block vs inline code
-  code: ({ inline, className, children, ...props }: { inline?: boolean; className?: string; children?: React.ReactNode }) => {
-    if (inline) {
+  // inline prop removed in react-markdown v9 — use className to distinguish block vs inline
+  code: ({ className, children, ...props }: { className?: string; children?: React.ReactNode }) => {
+    const isInline = !className?.includes("language-")
+    if (isInline) {
       return <code className="bg-gray-100 px-1 py-0.5 rounded text-sm" {...props}>{children}</code>
     }
     return <code className={className}>{children}</code>
@@ -37,11 +40,19 @@ const components: Components = {
     <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto my-4 text-sm">{children}</pre>
   ),
 
-  a: ({ href, children }) => (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="text-[#228B22] hover:text-[#3E921E] underline">
-      {children}
-    </a>
-  ),
+  // only open external links in a new tab
+  a: ({ href, children }) => {
+    const isExternal = href?.startsWith("http") || href?.startsWith("//")
+    return (
+      <a
+        href={href}
+        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        className="text-[#228B22] hover:text-[#3E921E] underline"
+      >
+        {children}
+      </a>
+    )
+  },
 
   // no <div> wrapper — avoids invalid <p><div></div></p> nesting
   img: ({ src, alt }) => {
