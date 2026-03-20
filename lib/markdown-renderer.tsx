@@ -1,6 +1,5 @@
 import ReactMarkdown from "react-markdown"
 import type { Components } from "react-markdown"
-import matter from "gray-matter"
 
 const BASE_PATH = process.env.NODE_ENV === "production" ? "/StableViewpoints" : ""
 
@@ -26,10 +25,12 @@ const components: Components = {
 
   hr: () => <hr className="my-8 border-gray-300" />,
 
-  code: ({ className, children, ...props }) => {
-    const isBlock = Boolean(className)
-    if (isBlock) return <code className={className}>{children}</code>
-    return <code className="bg-gray-100 px-1 py-0.5 rounded text-sm" {...props}>{children}</code>
+  // use the `inline` prop to distinguish block vs inline code
+  code: ({ inline, className, children, ...props }: { inline?: boolean; className?: string; children?: React.ReactNode }) => {
+    if (inline) {
+      return <code className="bg-gray-100 px-1 py-0.5 rounded text-sm" {...props}>{children}</code>
+    }
+    return <code className={className}>{children}</code>
   },
 
   pre: ({ children }) => (
@@ -42,14 +43,11 @@ const components: Components = {
     </a>
   ),
 
+  // no <div> wrapper — avoids invalid <p><div></div></p> nesting
   img: ({ src, alt }) => {
     const resolvedSrc = typeof src === "string" && src.startsWith("/") ? `${BASE_PATH}${src}` : src
-    return (
-      <div className="my-8">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={resolvedSrc} alt={alt ?? ""} className="rounded-lg w-full h-auto max-w-2xl mx-auto shadow-lg" />
-      </div>
-    )
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img src={resolvedSrc} alt={alt ?? ""} className="my-8 block rounded-lg w-full h-auto max-w-2xl mx-auto shadow-lg" />
   },
 }
 
@@ -58,11 +56,9 @@ interface MarkdownRendererProps {
 }
 
 export function MarkdownRenderer({ content }: MarkdownRendererProps) {
-  const { content: body } = matter(content)
-
   return (
     <div className="prose prose-lg max-w-none">
-      <ReactMarkdown components={components}>{body}</ReactMarkdown>
+      <ReactMarkdown components={components}>{content}</ReactMarkdown>
     </div>
   )
 }
