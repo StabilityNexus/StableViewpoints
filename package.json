@@ -19,7 +19,8 @@
     "react-dom": "^19",
     "serve": "^14.2.4",
     "tailwind-merge": "^2.5.5",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "react-markdown": "^9.0.2"
   },
   "devDependencies": {
     "@types/node": "^22",
