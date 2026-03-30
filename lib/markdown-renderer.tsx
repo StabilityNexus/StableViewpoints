@@ -56,7 +56,18 @@ const components: Components = {
 
   // no <div> wrapper — avoids invalid <p><div></div></p> nesting
   img: ({ src, alt }) => {
-    const resolvedSrc = typeof src === "string" && src.startsWith("/") ? `${BASE_PATH}${src}` : src
+    let resolvedSrc = src
+    if (typeof src === "string") {
+      // Handle relative paths like ../images/ - assumes images are in public/images/
+      if (src.startsWith("../")) {
+        resolvedSrc = src.replace("../", "/")
+      }
+
+      // Prepend BASE_PATH if it's a root-relative path
+      if (resolvedSrc?.startsWith("/") && !resolvedSrc.startsWith(BASE_PATH)) {
+        resolvedSrc = `${BASE_PATH}${resolvedSrc}`
+      }
+    }
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={resolvedSrc} alt={alt ?? ""} className="my-8 block rounded-lg w-full h-auto max-w-2xl mx-auto shadow-lg" />
   },
