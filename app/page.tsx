@@ -7,7 +7,7 @@ import BlogCard from "@/components/blog-card"
 import Pagination from "@/components/pagination"
 import Link from "next/link"
 import Footer from "@/components/footer"
-
+import Loading from "@/app/loading"
 interface BlogPost {
   slug: string
   title: string
@@ -75,14 +75,7 @@ export default function HomePage() {
   )
 
   if (loading) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#228B22] mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading articles...</p>
-        </div>
-      </div>
-    )
+    return <Loading message="Loading articles..." />
   }
 
   if (!paginatedData) {
