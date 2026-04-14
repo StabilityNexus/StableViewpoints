@@ -1,16 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { User, Star } from "lucide-react"
-
-interface BlogPost {
-  slug: string
-  title: string
-  author: string
-  date: string
-  image: string
-  excerpt: string
-  featured: boolean
-}
+import type { BlogPost } from "@/types/blog"
 
 interface BlogCardProps {
   post: BlogPost

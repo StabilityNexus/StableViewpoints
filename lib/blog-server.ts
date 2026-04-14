@@ -2,17 +2,7 @@ import { readFileSync, existsSync } from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 import articlesIndex from '../public/articles/articles-index.json'
-
-export interface BlogPost {
-  slug: string
-  title: string
-  author: string
-  date: string
-  image: string
-  excerpt: string
-  content: string
-  featured: boolean
-}
+import type { BlogPost } from '@/types/blog'
 
 // Server-side function to get post by slug with actual markdown content
 export function getPostBySlugServer(slug: string): BlogPost | null {
