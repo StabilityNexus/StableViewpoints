@@ -1,15 +1,5 @@
 import articlesIndex from '../public/articles/articles-index.json'
-
-export interface BlogPost {
-  slug: string
-  title: string
-  author: string
-  date: string
-  image: string
-  excerpt: string
-  content: string
-  featured: boolean
-}
+import type { BlogPost, PaginatedPosts } from '@/types/blog'
 
 // Get all posts from articles index (client-safe)
 export function getAllPosts(): BlogPost[] {
@@ -39,13 +29,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
 export function getPaginatedPosts(
   page = 1,
   limit = 6,
-): {
-  posts: BlogPost[]
-  totalPages: number
-  currentPage: number
-  hasNextPage: boolean
-  hasPrevPage: boolean
-} {
+): PaginatedPosts {
   const allPosts = getAllPosts()
   const totalPosts = allPosts.length
   const totalPages = Math.ceil(totalPosts / limit)

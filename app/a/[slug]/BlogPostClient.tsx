@@ -6,7 +6,7 @@ import { ArrowLeft, Calendar, User } from "lucide-react"
 import Image from "next/image"
 import { MarkdownRenderer } from "@/lib/markdown-renderer"
 import Footer from "@/components/footer"
-import { BlogPost } from "@/lib/blog"
+import type { BlogPost } from "@/types/blog"
 
 export default function BlogPostPage({ post }: { post: BlogPost }) {
   const [copied, setCopied] = useState(false)
