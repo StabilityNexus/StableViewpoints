@@ -3,9 +3,10 @@ import { join } from 'path'
 import matter from 'gray-matter'
 import articlesIndex from '../public/articles/articles-index.json'
 import type { BlogPost } from '@/types/blog'
+import { cache } from 'react'
 
-// Server-side function to get post by slug with actual markdown content
-export function getPostBySlugServer(slug: string): BlogPost | null {
+// Server-side function to get post by slug with actual markdown content, cached per request lifecycle
+export const getPostBySlugServer = cache((slug: string): BlogPost | null => {
   try {
     const markdownPath = join(process.cwd(), 'public/articles', `${slug}.md`)
     
@@ -40,4 +41,5 @@ export function getPostBySlugServer(slug: string): BlogPost | null {
     console.error(`Error reading markdown file for ${slug}:`, error)
     return null
   }
-} 
+})
+ 
