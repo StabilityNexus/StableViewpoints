@@ -4,6 +4,15 @@
         "slug": "randomness",
         "title": "Randomness for Fairness and Stability",
         "author": "Zahnentferner",
+        "date": "2026-07-26",
+        "image": "/images/coin-rollercoaster.png",
+        "excerpt": "An explanation of stablecoins, their importance and their types.",
+        "featured": false
+    },
+    {
+        "slug": "randomness",
+        "title": "Randomness for Fairness and Stability",
+        "author": "Zahnentferner",
         "date": "2026-05-24",
         "image": "/images/randomness.png",
         "excerpt": "Why randomness is, counter-intuitively, necessary.",
