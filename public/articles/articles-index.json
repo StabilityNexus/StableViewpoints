@@ -1,6 +1,15 @@
 {
   "articles":  [
     {
+        "slug": "self-issuance",
+        "title": "Who is the Issuer of Self-Issuing Money?",
+        "author": "Zahnentferner",
+        "date": "2026-09-27",
+        "image": "/images/autonomous-stablecoin-car.svg",
+        "excerpt": "A technical insight that continues being overlooked by current cryptocurrency regulations.",
+        "featured": false
+    },
+    {
         "slug": "stablecoins-foreign",
         "title": "Autonomous Stablecoins as Globally Foreign Currencies",
         "author": "Zahnentferner",
