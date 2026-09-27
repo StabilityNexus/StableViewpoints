@@ -8,9 +8,9 @@ excerpt: "An unusual observation relevant for regulation of autonomous stablecoi
 
 By virtue of the autonomy of some stablecoin protocols and by the decentralized nature of blockchains, deployments of these protocols can be considered:
 
-* **globally non-territorial**: their tokens are not issued within any particular geographical location (unless the underlying blockchain is tied exclusively to such a location).
+**- globally non-territorial**: their tokens are not issued within any particular geographical location (unless the underlying blockchain is tied exclusively to such a location).
 
-* **de facto sovereignty-resistant**: they can continue to run by themselves autonomously on blockchain nodes that are outside the reach of sovereign entities trying to regulate them.
+**- de facto sovereignty-resistant**: they can continue to run by themselves autonomously on blockchain nodes that are outside the reach of sovereign entities trying to regulate them.
 
 A corollary of the two facts above is that autonomous stablecoins are best seen as foreign currencies in every country.
 
