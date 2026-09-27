@@ -1,6 +1,15 @@
 {
   "articles":  [
     {
+        "slug": "stablecoins-foreign",
+        "title": "Autonomous Stablecoins as Globally Foreign Currencies",
+        "author": "Zahnentferner",
+        "date": "2026-08-20",
+        "image": "/images/earth-coin-orbits.png",
+        "excerpt": "An unusual observation relevant for regulation of autonomous stablecoins.",
+        "featured": false
+    },
+    {
         "slug": "stablecoins",
         "title": "What Are Stablecoins?",
         "author": "Zahnentferner",
