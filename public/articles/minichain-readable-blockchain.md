@@ -1,10 +1,12 @@
 ---
 title: "A blockchain you can actually read in one sitting"
-author: "Siddhant Kaushik"
+author: "siddhantcookie"
 date: "2026-11-15"
 image: "/images/minichain-banner.png"
 excerpt: "MiniChain is a complete blockchain in about 2,800 lines of Python: real proof-of-work, real signatures, a Merkle Patricia Trie, libp2p networking and smart contracts written in Python."
 ---
+
+*By [siddhantcookie](https://github.com/SIDDHANTCOOKIE)*
 
 I have a confession.
 
@@ -210,10 +212,6 @@ Nodes talk over libp2p, the same networking stack behind IPFS and Ethereum's con
 When a node hears about a transaction or block, it relays it to its peers while keeping a bounded 10,000-entry Least Recently Used (LRU) set of recently seen IDs so the same message doesn't echo around the network forever (and an attacker can't trigger an unbounded memory leak).
 
 To handle bad actors, p2p.py implements misbehavior scoring. Every peer message is graded:
-
-- **Malformed** (garbled or unparseable): the peer is always disconnected, and banned once it reaches 15 strikes.
-- **Failed** (a message that doesn't pass checks): dropped silently, and the peer is banned and disconnected at 15 strikes.
-- **Invalid** (for example a block with fake proof-of-work): the peer is banned and disconnected immediately, since the default threshold is 1.
 
 Counters decay over time with a default 10-minute half-life (which is configurable), so a flaky connection isn't punished forever. Send a single block with a fake proof-of-work, however, and you're banned immediately.
 

@@ -3,7 +3,7 @@
     {
         "slug": "minichain-readable-blockchain",
         "title": "A blockchain you can actually read in one sitting",
-        "author": "Siddhant Kaushik",
+        "author": "siddhantcookie",
         "date": "2026-11-15",
         "image": "/images/minichain-banner.png",
         "excerpt": "MiniChain is a complete blockchain in about 2,800 lines of Python: real proof-of-work, real signatures, a Merkle Patricia Trie, libp2p networking and smart contracts written in Python.",
