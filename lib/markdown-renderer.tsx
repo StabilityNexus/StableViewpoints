@@ -2,6 +2,7 @@
 
 import ReactMarkdown from "react-markdown"
 import type { Components } from "react-markdown"
+import rehypeRaw from "rehype-raw"
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 
@@ -82,7 +83,7 @@ interface MarkdownRendererProps {
 export function MarkdownRenderer({ content }: MarkdownRendererProps) {
   return (
     <div className="prose prose-lg max-w-none">
-      <ReactMarkdown components={components}>{content}</ReactMarkdown>
+      <ReactMarkdown components={components} rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
     </div>
   )
 }
