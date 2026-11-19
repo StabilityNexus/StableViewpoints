@@ -39,7 +39,8 @@ const components: Components = {
   hr: () => <hr className="my-8 border-gray-300" />,
 
   // inline prop removed in react-markdown v9 — use className to distinguish block vs inline
-  code: ({ className, children, ...props }: { className?: string; children?: React.ReactNode }) => {
+  // `node` (the hast node) must not be spread onto the DOM element
+  code: ({ node: _node, className, children, ...props }) => {
     const isInline = !className?.includes("language-")
     if (isInline) {
       return <code className="bg-gray-100 px-1 py-0.5 rounded text-sm" {...props}>{children}</code>
