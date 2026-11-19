@@ -15,8 +15,10 @@ const components: Components = {
   strong: ({ children }) => <strong className="font-semibold text-gray-900">{children}</strong>,
   em: ({ children }) => <em className="italic">{children}</em>,
 
-  ul: ({ children }) => <ul className="list-disc list-inside mb-4 text-gray-700 space-y-1">{children}</ul>,
-  ol: ({ children }) => <ol className="list-decimal list-inside mb-4 text-gray-700 space-y-1">{children}</ol>,
+  // list-outside (default) + pl-6: in loose lists, items wrap their text in <p>,
+  // which with list-inside would push the text onto a new line below the bullet
+  ul: ({ children }) => <ul className="list-disc pl-6 mb-4 text-gray-700 space-y-1 [&_li>p]:mb-0">{children}</ul>,
+  ol: ({ children }) => <ol className="list-decimal pl-6 mb-4 text-gray-700 space-y-1 [&_li>p]:mb-0">{children}</ol>,
   li: ({ children }) => <li className="mb-1">{children}</li>,
 
   blockquote: ({ children }) => (
