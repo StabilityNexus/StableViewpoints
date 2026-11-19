@@ -1,7 +1,7 @@
 ---
 title: "Randomness for Fairness and Stability"
 author: "Zahnentferner"
-date: "2026-05-22"
+date: "2026-05-24"
 image: "/images/randomness.png"
 excerpt: "Why randomness is, counter-intuitively, necessary."
 ---

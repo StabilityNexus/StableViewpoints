@@ -1,5 +1,5 @@
 ---
-title: "Addressing the Stablecoin Trilemma"
+title: "Ethereum Classic Stable Dollar (ECSD) Launches on Mainnet"
 author: "Wen-Chiao Su"
 date: "2024-08-06"
 image: "/images/ethereum-classic-stable-dollar-ecsd-mainnet-launch.webp"

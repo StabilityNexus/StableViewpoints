@@ -163,6 +163,15 @@
         "featured": false
     },
     {
+        "slug": "ethereum-classic-stable-dollar-ecsd-mainnet-launch",
+        "title": "Ethereum Classic Stable Dollar (ECSD) Launches on Mainnet",
+        "author": "Wen-Chiao Su",
+        "date": "2024-08-06",
+        "image": "/images/ethereum-classic-stable-dollar-ecsd-mainnet-launch.webp",
+        "excerpt": "Ethereum Classic Stable Dollar (ECSD) launches on mainnet as a USD-pegged stablecoin using Djed.",
+        "featured": false
+    },
+    {
         "slug": "gluon-gold-vs-paxos-gold",
         "title": "Gluon Gold vs Paxos Gold: Understanding the Benefits and Risks",
         "author": "TheStophe",
@@ -201,8 +210,8 @@
     {
         "slug": "retrospective-2023",
         "title": "Retrospective 2023",
-        "author": "2023-12-28",
-        "date": "2024-06-13",
+        "author": "Zahnentferner",
+        "date": "2023-12-28",
         "image": "/images/year-twenty-twenty-three-review.webp",
         "excerpt": "Recaps Djed Alliance’s 2023: research breakthroughs, new stablecoin deployments, expanded chains and community growth.",
         "featured": false
