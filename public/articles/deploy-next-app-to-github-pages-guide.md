@@ -141,7 +141,7 @@ Store sensitive data like API keys securely in GitHub Secrets to prevent exposur
 
 ### Step 2: Reference Secrets in GitHub Actions
 
-Secrets can be securely referenced in your GitHub Actions workflow using the syntax secrets.<SECRET_NAME>.
+Secrets can be securely referenced in your GitHub Actions workflow using the syntax `secrets.<SECRET_NAME>`.
 
 Example: yaml
 

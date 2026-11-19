@@ -27,7 +27,7 @@ This makes GitHub Pages a solid option for those looking to deploy their static 
 
 ### Step 1: Configure vite.config.ts Base Path
 
-Before deploying to GitHub Pages, if you are using the default url for gh-pages https://<username>.github.io/<repository-name>/ we need to make sure that the base path is set to the repo name.
+Before deploying to GitHub Pages, if you are using the default url for gh-pages `https://<username>.github.io/<repository-name>/` we need to make sure that the base path is set to the repo name.
 
 Here’s how to configure your vite.config.ts:
 

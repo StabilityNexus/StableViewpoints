@@ -3,6 +3,14 @@
 import ReactMarkdown from "react-markdown"
 import type { Components } from "react-markdown"
 import rehypeRaw from "rehype-raw"
+import rehypeSanitize, { defaultSchema } from "rehype-sanitize"
+
+// GitHub-style allow-list, plus the extra tags articles use in raw HTML.
+// Strips scripts, event handlers (onerror=...), javascript: URLs, etc.
+const sanitizeSchema = {
+  ...defaultSchema,
+  tagNames: [...(defaultSchema.tagNames ?? []), "figure", "figcaption", "u"],
+}
 
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 
@@ -83,7 +91,7 @@ interface MarkdownRendererProps {
 export function MarkdownRenderer({ content }: MarkdownRendererProps) {
   return (
     <div className="prose prose-lg max-w-none">
-      <ReactMarkdown components={components} rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+      <ReactMarkdown components={components} rehypePlugins={[rehypeRaw, [rehypeSanitize, sanitizeSchema]]}>{content}</ReactMarkdown>
     </div>
   )
 }
