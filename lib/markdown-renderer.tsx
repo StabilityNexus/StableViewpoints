@@ -71,14 +71,13 @@ const components: Components = {
     let resolvedSrc = src
     if (typeof src === "string") {
       // Handle relative paths like ../images/ - assumes images are in public/images/
-      if (src.startsWith("../")) {
-        resolvedSrc = src.replace("../", "/")
-      }
+      let path = src.startsWith("../") ? src.replace("../", "/") : src
 
       // Prepend BASE_PATH if it's a root-relative path
-      if (resolvedSrc?.startsWith("/") && !resolvedSrc.startsWith(BASE_PATH)) {
-        resolvedSrc = `${BASE_PATH}${resolvedSrc}`
+      if (path.startsWith("/") && !path.startsWith(BASE_PATH)) {
+        path = `${BASE_PATH}${path}`
       }
+      resolvedSrc = path
     }
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={resolvedSrc} alt={alt ?? ""} className="my-8 block rounded-lg w-full h-auto max-w-2xl mx-auto shadow-lg" />
