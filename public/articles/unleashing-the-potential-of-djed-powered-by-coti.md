@@ -16,8 +16,6 @@ Nothing is ever perfect. Success comes not from "faking until you make it", not 
 
 In this article, I will discuss some shortcomings of Djed powered by COTI. The intention is not to spread FUD. (This would be against my own interests.) The intention is to pinpoint what is holding back this Djed deployment from further success. I have already done this for SigmaUSD (cf. [this video](https://www.youtube.com/watch?v=yTgapwydOW0&t=225s)) and the Ergo community has taken that into account in different directions (Dexy and Gluon), and it is only fair to do that for other Djed deployments as well. I hope that COTI will make good use of the feedback given here in order to unleash the full potential of its Djed-based stablecoin on Cardano.
 
-                                    ...
-
 But first, what is Djed powered by COTI?
 
 <figure>
@@ -32,8 +30,6 @@ Of the 4 live deployments of Djed today, at the time of writing (~2024–05–17
 (Note: TVL is an imperfect way of measuring success, but that's a topic for another day.)
 
 Yet, its TVL as a percentage of Cardano's market cap is only ~0.09%, about 20 times lower than SigmaUSD's (1.89%), 15 times lower than Milkomeda Djed Osiris's (1.36%)and 352 times lower than Zephyr's (31.70%), at the time of research. Imagine how good it would be for Cardano if it had a stablecoin with even just 3% of Cardano's market cap in TVL… So, what is holding back Djed powered by COTI from taking that spot?
-
-                                    ...
 
 ## Centralization
 
@@ -133,8 +129,6 @@ Moreover, COTI imposes quite high minimum amounts to mint and redeem stablecoins
 </figure>
 
 It pains me to see that a protocol that we designed to be financially inclusive and permissionless has been deployed in ways that are contrary to these ideals. But, beyond ideals, such restrictions also hinder and hold back adoption of Djed powered by COTI on Cardano.
-
-                                    ...
 
 ## Conclusions
 
