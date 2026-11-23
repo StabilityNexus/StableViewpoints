@@ -55,6 +55,7 @@ export default function HomePage() {
       if (page < 1) page = 1
       setCurrentPage(page)
       router.push(`/?page=${page}`, { scroll: false })
+      window.scrollTo({ top: 0, behavior: "smooth" })
     },
     [router],
   )
