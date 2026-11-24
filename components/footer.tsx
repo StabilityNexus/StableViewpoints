@@ -1,4 +1,4 @@
-import { Twitter } from "lucide-react"
+import { Github, Twitter } from "lucide-react"
 import Link from "next/link"
 
 // Custom Telegram icon since Lucide doesn't have one
@@ -68,6 +68,14 @@ export default function Footer() {
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
+              </Link>
+              <Link
+                href="https://github.com/StabilityNexus/StableViewpoints"
+                target="_blank"
+                className="p-3 rounded-full bg-gradient-to-r from-[#228B22] to-[#91A511] hover:from-[#3E921E] hover:to-[#ADAC0D] text-white transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                aria-label="GitHub Repository"
+              >
+                <Github className="w-5 h-5" />
               </Link>
             </div>
           </div>
