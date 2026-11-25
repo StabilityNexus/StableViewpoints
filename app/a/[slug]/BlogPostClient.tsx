@@ -1,11 +1,11 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import Link from "next/link"
-import { ArrowLeft, Calendar, User } from "lucide-react"
+import { Calendar, User } from "lucide-react"
 import Image from "next/image"
 import { MarkdownRenderer } from "@/lib/markdown-renderer"
 import Footer from "@/components/footer"
+import SiteHeader from "@/components/site-header"
 import type { BlogPost } from "@/types/blog"
 
 export default function BlogPostPage({ post }: { post: BlogPost }) {
@@ -20,18 +20,7 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-yellow-50 to-[#FFC517]/10">
-      {/* Header */}
-      <header className="border-b border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20 bg-white/90 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
-        <div className="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
-          <Link
-            href="/"
-            className="inline-flex items-center text-[#228B22] hover:text-[#3E921E] transition-colors font-semibold"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Stable Viewpoints
-          </Link>
-        </div>
-      </header>
+      <SiteHeader contentWidth="max-w-4xl" />
 
       {/* Article */}
       <article className="max-w-4xl mx-auto px-4 py-12">
