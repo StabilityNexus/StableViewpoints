@@ -42,28 +42,29 @@ export default function Pagination({
   // If onPageChange is provided, use it for client-side navigation
   if (onPageChange) {
     return (
-      <div className="flex items-center justify-center gap-2 mt-12">
+      <div className="mt-12 flex flex-wrap items-center justify-center gap-1 sm:gap-2">
         {/* Previous Button */}
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={!hasPrevPage || currentPage <= 1}
-          className={`flex items-center gap-1 px-4 py-2 transition-colors shadow-sm ${
+          aria-label="Previous page"
+          className={`flex items-center gap-1 px-2 py-2 transition-colors shadow-sm sm:px-4 ${
             hasPrevPage && currentPage > 1
               ? "bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22] hover:text-white cursor-pointer"
               : "bg-gray-100 text-gray-400 cursor-not-allowed"
           }`}
         >
           <ChevronLeft className="w-4 h-4" />
-          Previous
+          <span className="hidden sm:inline">Previous</span>
         </button>
 
         {/* Page Numbers */}
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-0.5 sm:gap-1">
           {getPageNumbers().map((pageNum) => (
             <button
               key={pageNum}
               onClick={() => onPageChange(pageNum)}
-              className={`px-4 py-2 transition-colors ${
+              className={`px-2 py-2 transition-colors sm:px-4 ${
                 pageNum === currentPage
                   ? "bg-gradient-to-r from-[#228B22] to-[#91A511] text-white shadow-md cursor-default"
                   : "bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22]/10 cursor-pointer"
@@ -78,13 +79,14 @@ export default function Pagination({
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={!hasNextPage || currentPage >= totalPages}
-          className={`flex items-center gap-1 px-4 py-2 transition-colors shadow-sm ${
+          aria-label="Next page"
+          className={`flex items-center gap-1 px-2 py-2 transition-colors shadow-sm sm:px-4 ${
             hasNextPage && currentPage < totalPages
               ? "bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22] hover:text-white cursor-pointer"
               : "bg-gray-100 text-gray-400 cursor-not-allowed"
           }`}
         >
-          Next
+          <span className="hidden sm:inline">Next</span>
           <ChevronRight className="w-4 h-4" />
         </button>
       </div>
@@ -93,33 +95,35 @@ export default function Pagination({
 
   // Otherwise, use Link for server-side navigation
   return (
-    <div className="flex items-center justify-center gap-2 mt-12">
+    <div className="mt-12 flex flex-wrap items-center justify-center gap-1 sm:gap-2">
       {/* Previous Button */}
       {hasPrevPage && currentPage > 1 ? (
         <Link
           href={`/?page=${currentPage - 1}`}
-          className="flex items-center gap-1 px-4 py-2 transition-colors shadow-sm bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22] hover:text-white cursor-pointer"
+          aria-label="Previous page"
+          className="flex items-center gap-1 px-2 py-2 transition-colors shadow-sm bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22] hover:text-white cursor-pointer sm:px-4"
         >
           <ChevronLeft className="w-4 h-4" />
-          Previous
+          <span className="hidden sm:inline">Previous</span>
         </Link>
       ) : (
         <button
           disabled
-          className="flex items-center gap-1 px-4 py-2 transition-colors shadow-sm bg-gray-100 text-gray-400 cursor-not-allowed"
+          aria-label="Previous page"
+          className="flex items-center gap-1 px-2 py-2 transition-colors shadow-sm bg-gray-100 text-gray-400 cursor-not-allowed sm:px-4"
         >
           <ChevronLeft className="w-4 h-4" />
-          Previous
+          <span className="hidden sm:inline">Previous</span>
         </button>
       )}
 
       {/* Page Numbers */}
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-0.5 sm:gap-1">
         {getPageNumbers().map((pageNum) => (
           pageNum === currentPage ? (
             <span
               key={pageNum}
-              className="px-4 py-2 bg-gradient-to-r from-[#228B22] to-[#91A511] text-white shadow-md cursor-default"
+              className="px-2 py-2 bg-gradient-to-r from-[#228B22] to-[#91A511] text-white shadow-md cursor-default sm:px-4"
             >
               {pageNum}
             </span>
@@ -127,7 +131,7 @@ export default function Pagination({
             <Link
               key={pageNum}
               href={`/?page=${pageNum}`}
-              className="px-4 py-2 transition-colors bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22]/10 cursor-pointer"
+              className="px-2 py-2 transition-colors bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22]/10 cursor-pointer sm:px-4"
             >
               {pageNum}
             </Link>
@@ -139,17 +143,19 @@ export default function Pagination({
       {hasNextPage && currentPage < totalPages ? (
         <Link
           href={`/?page=${currentPage + 1}`}
-          className="flex items-center gap-1 px-4 py-2 transition-colors shadow-sm bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22] hover:text-white cursor-pointer"
+          aria-label="Next page"
+          className="flex items-center gap-1 px-2 py-2 transition-colors shadow-sm bg-white border border-[#228B22]/20 text-[#228B22] hover:bg-[#228B22] hover:text-white cursor-pointer sm:px-4"
         >
-          Next
+          <span className="hidden sm:inline">Next</span>
           <ChevronRight className="w-4 h-4" />
         </Link>
       ) : (
         <button
           disabled
-          className="flex items-center gap-1 px-4 py-2 transition-colors shadow-sm bg-gray-100 text-gray-400 cursor-not-allowed"
+          aria-label="Next page"
+          className="flex items-center gap-1 px-2 py-2 transition-colors shadow-sm bg-gray-100 text-gray-400 cursor-not-allowed sm:px-4"
         >
-          Next
+          <span className="hidden sm:inline">Next</span>
           <ChevronRight className="w-4 h-4" />
         </button>
       )}
