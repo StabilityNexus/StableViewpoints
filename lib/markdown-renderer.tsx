@@ -31,19 +31,35 @@ const components: Components = {
   li: ({ children }) => <li className="mb-1">{children}</li>,
 
   blockquote: ({ children }) => (
-    <blockquote className="border-l-4 border-[#FFBF00] pl-4 italic text-gray-600 my-6 bg-yellow-50 py-2">
+    <blockquote className="border-l-4 border-[#FFBF00] pl-4 py-2 italic text-gray-600 my-6 bg-yellow-50/80 rounded-r-md">
       {children}
     </blockquote>
   ),
 
   hr: () => <hr className="my-8 border-gray-300" />,
 
+  // Table wrapper and styling for responsive display on mobile
+  table: ({ children }) => (
+    <div className="overflow-x-auto my-6 border border-gray-200 rounded-lg">
+      <table className="min-w-full divide-y divide-gray-200 text-left text-sm">{children}</table>
+    </div>
+  ),
+  thead: ({ children }) => <thead className="bg-gray-50">{children}</thead>,
+  tbody: ({ children }) => <tbody className="divide-y divide-gray-200 bg-white">{children}</tbody>,
+  tr: ({ children }) => <tr>{children}</tr>,
+  th: ({ children }) => <th className="px-4 py-3 font-semibold text-gray-900">{children}</th>,
+  td: ({ children }) => <td className="px-4 py-3 text-gray-700">{children}</td>,
+
   // inline prop removed in react-markdown v9 — use className to distinguish block vs inline
   // `node` (the hast node) must not be spread onto the DOM element
   code: ({ node: _node, className, children, ...props }) => {
     const isInline = !className?.includes("language-")
     if (isInline) {
-      return <code className="bg-gray-100 px-1 py-0.5 rounded text-sm" {...props}>{children}</code>
+      return (
+        <code className="bg-gray-100 px-1.5 py-0.5 rounded text-sm break-words [word-break:break-word]" {...props}>
+          {children}
+        </code>
+      )
     }
     return <code className={className}>{children}</code>
   },
@@ -59,7 +75,7 @@ const components: Components = {
       <a
         href={href}
         {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-        className="text-[#228B22] hover:text-[#3E921E] underline"
+        className="text-[#228B22] hover:text-[#3E921E] underline break-words [word-break:break-word]"
       >
         {children}
       </a>

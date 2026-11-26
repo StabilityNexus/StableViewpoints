@@ -35,7 +35,7 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
 
       {/* Article */}
       <article className="max-w-4xl mx-auto px-4 py-12">
-        <div className="bg-white shadow-xl overflow-hidden border border-gradient-to-r from-[#228B22]/10 to-[#FFBF00]/10">
+        <div className="bg-white shadow-xl overflow-hidden border border-[#228B22]/15">
           {/* Hero Image */}
           {post.image && (
             <div className="relative w-full">
@@ -58,7 +58,7 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
               {post.title}
             </h1>
 
-            <div className="flex items-center gap-6 text-gray-600 mb-8 pb-8 border-b border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20">
+            <div className="flex items-center gap-6 text-gray-600 mb-8 pb-8 border-b border-[#228B22]/20">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4 text-[#228B22]" />
                 <span className="font-medium">{post.author}</span>
@@ -76,7 +76,7 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
             </div>
 
             {/* Social Share Buttons */}
-            <div className="mb-8 pb-8 border-b border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20">
+            <div className="mb-8 pb-8 border-b border-[#228B22]/20">
               <p className="text-sm font-medium text-gray-600 mb-4">Share this article:</p>
               <div className="flex flex-wrap items-center gap-3">
                 {/* Twitter/X Share */}
@@ -202,7 +202,7 @@ export default function BlogPostPage({ post }: { post: BlogPost }) {
               <MarkdownRenderer content={post.content} />
             </div>
 
-            <div className="mt-12 pt-8 border-t border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20">
+            <div className="mt-12 pt-8 border-t border-[#228B22]/20">
               <p className="text-sm text-gray-500 italic">
                 © {new Date(post.date).getFullYear()} {post.author}. All rights reserved.
               </p>

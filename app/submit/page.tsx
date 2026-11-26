@@ -26,7 +26,7 @@ export default function SubmitPage() {
 
       {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 py-8 md:py-12">
-        <div className="bg-white shadow-xl overflow-hidden border border-gradient-to-r from-[#228B22]/10 to-[#FFBF00]/10">
+        <div className="bg-white shadow-xl overflow-hidden border border-[#228B22]/15">
           <div className="p-4 sm:p-6 md:p-12">
             {/* Title */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-playfair bg-gradient-to-r from-[#228B22] via-[#91A511] to-[#E4B905] bg-clip-text text-transparent mb-6 leading-tight pb-2">
@@ -595,7 +595,7 @@ Remember to cite your sources and provide value to our readers!`}</pre>
             </section>
 
             {/* Footer Message */}
-            <div className="border-t border-gradient-to-r from-[#228B22]/20 to-[#FFBF00]/20 pt-8">
+            <div className="border-t border-[#228B22]/20 pt-8">
               <p className="text-gray-600 italic text-center">
                 Stable Viewpoints is committed to fostering thoughtful dialogue about the challenges and opportunities
                 of our time. We believe that through careful analysis and open discussion, we can work together toward a
